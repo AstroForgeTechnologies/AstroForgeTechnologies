@@ -1,4 +1,3 @@
 baseURL = 'https://astroforgetechnologies.github.io/'
 languageCode = 'en-us'
 title = 'AstroForge Technologies'
-theme = 'blowfish'
