@@ -10,3 +10,5 @@ hugo.exe
 hugo.linux
 hugo.darwin
 .env
+
+.idea
