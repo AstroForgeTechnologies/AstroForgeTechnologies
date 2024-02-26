@@ -17,12 +17,12 @@ export default defineConfig({
 
   build: {
     outputFolder: "admin",
-    publicFolder: "static",
+    publicFolder: "public",
     basePath: "AstroForgeTechnologies"
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "src",
       publicFolder: "assets",
     },
   },
@@ -30,24 +30,91 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
-        fields: [
+        name: "blog",
+        label: "Blogs",
+        path: "src/content/blog",
+        format: "mdx",
+        frontmatterFormat: "yaml",
+        frontmatterDelimiters: "---",
+        ui: {
+          beforeSubmit: async (
+            { values }) => {
+            const keys = Object.keys(values);
+            if (keys.includes("initialCreation")) {
+              if (values.initialCreation || values.initialCreation === "true")
+                delete values.initialCreation
+                return values;
+            }
+
+            return {
+              ...values,
+              modDatetime: new Date().toISOString(),
+            }},
+        },
+        templates: [
           {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
+            name: "posts",
+            label: "Post",
+            ui: {
+              defaultItem: () => {
+                return {
+                  pubDatetime: new Date().toISOString(),
+                  initialCreation: true,
+                }
+              },
+            },
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "string",
+                name: "description",
+                label: "Description",
+                required: true,
+              },
+              {
+                label: 'Tags',
+                name: 'tags',
+                type: 'string',
+                list: true,
+              },
+              {
+                type: "string",
+                name: "slug",
+                label: "Slug",
+              },
+              {
+                type: "datetime",
+                name: "pubDatetime",
+                label: "Publish Date",
+                description: "Automatically Filled In.",
+              },
+              {
+                type: "datetime",
+                name: "modDatetime",
+                label: "Modified Date",
+                description: "Automatically Filled In, When Needed.",
+              },
+              {
+                type: "boolean",
+                name: "initialCreation",
+                label: "Initial Creation",
+                description: "Do Not Change!",
+              },
+              {
+                type: "rich-text",
+                name: "body",
+                label: "Body",
+                isBody: true,
+                required: true,
+              },
+            ],
+          }],
       },
     ],
   },
