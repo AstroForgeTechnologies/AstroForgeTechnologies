@@ -18,7 +18,6 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "public",
-    basePath: "AstroForgeTechnologies"
   },
   media: {
     tina: {
