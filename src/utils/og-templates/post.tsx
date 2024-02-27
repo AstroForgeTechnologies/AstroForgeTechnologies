@@ -81,7 +81,7 @@ export default (post: CollectionEntry<"blog">) => {
                 "
               </span>
               <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-                {post.data.author}
+                {post.data.authors ? post.data.authors[0] : ""}
               </span>
             </span>
 

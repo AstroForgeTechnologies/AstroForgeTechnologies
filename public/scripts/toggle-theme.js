@@ -1,9 +1,13 @@
+// This has to be a js file, in public, because this script is called as `is:inline`
+// That makes it pause rendering to load this script (which we need)
+// But causes Astro to not process this script.
+
 const primaryColorScheme = ""; // "light" | "dark"
 
 // Get theme data from local storage
 const currentTheme = localStorage.getItem("theme");
 
-function getPreferTheme() {
+function getTheme() {
   // return theme value in local storage if it is set
   if (currentTheme) return currentTheme;
 
@@ -16,7 +20,7 @@ function getPreferTheme() {
     : "light";
 }
 
-let themeValue = getPreferTheme();
+let themeValue = getTheme();
 
 function setPreference() {
   localStorage.setItem("theme", themeValue);
@@ -24,7 +28,8 @@ function setPreference() {
 }
 
 function reflectPreference() {
-  document.firstElementChild.setAttribute("data-theme", themeValue);
+  if (document.firstElementChild)
+    document.firstElementChild.setAttribute("data-theme", themeValue);
 
   document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
 
