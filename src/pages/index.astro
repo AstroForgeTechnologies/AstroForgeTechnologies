@@ -9,6 +9,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
+import HomePageCards from "../groups/HomePageCards";
 
 const posts = await getCollection("blog");
 
@@ -47,6 +48,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         out of the box. Light and dark mode are supported by default. Moreover,
         additional color schemes can also be configured.
       </p>
+
+      <HomePageCards client:only="react" />
+
       <p>
         Read the blog posts or check
         <LinkButton

@@ -17,13 +17,13 @@ const { post } = Astro.props;
 
 const {
   title,
-  author,
   description,
   ogImage,
   canonicalURL,
   pubDatetime,
   modDatetime,
   tags,
+  authors,
 } = post.data;
 
 const { Content } = await post.render();
@@ -36,7 +36,6 @@ const ogUrl = new URL(
 
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
-  author,
   description,
   pubDatetime,
   modDatetime,

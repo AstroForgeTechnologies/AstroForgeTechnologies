@@ -37,7 +37,7 @@ export default defineConfig({
         frontmatterDelimiters: "---",
         ui: {
           beforeSubmit: async (
-            { values }) => {
+            { values}) => {
             const keys = Object.keys(values);
             if (keys.includes("initialCreation")) {
               if (values.initialCreation || values.initialCreation === "true")
@@ -81,6 +81,33 @@ export default defineConfig({
                 name: 'tags',
                 type: 'string',
                 list: true,
+                required: true,
+              },
+              {
+                label: 'Authors',
+                name: 'authors',
+                type: 'string',
+                list: true,
+                required: true,
+                options: [
+                  {
+                    value: 'isaac',
+                    label: 'Isaac',
+                  },
+                  {
+                    value: 'will',
+                    label: 'Will',
+                  },
+                  {
+                    value: 'christy',
+                    label: 'Christy',
+                  },
+                ],
+              },
+              {
+                type: "boolean",
+                name: "featured",
+                label: "Featured",
               },
               {
                 type: "string",

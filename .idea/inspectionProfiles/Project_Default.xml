@@ -5,7 +5,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="27">
+          <list size="32">
             <item index="0" class="java.lang.String" itemvalue="transition:name" />
             <item index="1" class="java.lang.String" itemvalue="pubDatetime" />
             <item index="2" class="java.lang.String" itemvalue="modDatetime" />
@@ -33,6 +33,11 @@
             <item index="24" class="java.lang.String" itemvalue="titleTransition" />
             <item index="25" class="java.lang.String" itemvalue="dateTime" />
             <item index="26" class="java.lang.String" itemvalue="category" />
+            <item index="27" class="java.lang.String" itemvalue="translateZ" />
+            <item index="28" class="java.lang.String" itemvalue="rotateX" />
+            <item index="29" class="java.lang.String" itemvalue="rotateZ" />
+            <item index="30" class="java.lang.String" itemvalue="as" />
+            <item index="31" class="java.lang.String" itemvalue="translateX" />
           </list>
         </value>
       </option>
