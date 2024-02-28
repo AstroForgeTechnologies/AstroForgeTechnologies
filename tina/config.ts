@@ -7,6 +7,9 @@ const branch =
   process.env.HEAD ||
   "main";
 
+const invalid = /^[^\\/#?\s]+$/;
+const invalidGlobal = /[\\/#?\s]/gm;
+
 export default defineConfig({
   branch,
 
@@ -39,6 +42,15 @@ export default defineConfig({
           beforeSubmit: async (
             { values}) => {
             const keys = Object.keys(values);
+
+            if (keys.includes("tags")) {
+              const list = values.tags as string[]
+              for (let i = 0; i < list.length; i++) {
+                list[i] = list[i].replaceAll(invalidGlobal, "-")
+              }
+              values.tags = list;
+            }
+
             if (keys.includes("initialCreation")) {
               if (values.initialCreation || values.initialCreation === "true")
                 delete values.initialCreation
@@ -82,6 +94,8 @@ export default defineConfig({
                 type: 'string',
                 list: true,
                 required: true,
+                description: "Any Invalid Characters ('\\', '/', '#', '?', ' ')," +
+                  "will be replaced by '-' !",
               },
               {
                 label: 'Authors',
@@ -113,13 +127,16 @@ export default defineConfig({
                 type: "string",
                 name: "slug",
                 label: "Slug",
+                description: "Optional.",
                 ui: {
                   validate: (value: string) => {
-                    if (!/^[^/#?]+$/.test(value)) {
-                      return "Slug is Not Valid!"
+                    if (!value) return;
+                    if (!invalid.test(value)) {
+                      return "Slug is Not Valid!";
                     }
-                  }
-                }
+                    return undefined;
+                  },
+                },
               },
               {
                 type: "datetime",
