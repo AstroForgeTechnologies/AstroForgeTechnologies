@@ -113,6 +113,13 @@ export default defineConfig({
                 type: "string",
                 name: "slug",
                 label: "Slug",
+                ui: {
+                  validate: (value: string) => {
+                    if (!/^[^/#?]+$/.test(value)) {
+                      return "Slug is Not Valid!"
+                    }
+                  }
+                }
               },
               {
                 type: "datetime",
