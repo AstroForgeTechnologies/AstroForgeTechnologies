@@ -127,7 +127,6 @@ export default defineConfig({
                 type: "string",
                 name: "slug",
                 label: "Slug",
-                description: "Optional.",
                 ui: {
                   validate: (value: string) => {
                     if (!value) return;
