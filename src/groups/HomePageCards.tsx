@@ -1,5 +1,4 @@
 import { CardContainer, CardBody, CardItem } from "@components/Card3D.tsx";
-import { Button } from "tinacms";
 
 export default function HomePageCards() {
   return (
