@@ -9,14 +9,14 @@ export default function HomePageCards() {
           translateZ={100}
           className="text-xl font-bold text-neutral-600 dark:text-white"
         >
-          Make things float in air
+          Make things float in air!!!
         </CardItem>
         <CardItem
           translateZ={75}
           className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
           as="p"
         >
-          Hover over this card to unleash the power of CSS perspective
+          Demo of Floating 3D Cards.
         </CardItem>
         <CardItem
           translateZ={50}
@@ -35,20 +35,18 @@ export default function HomePageCards() {
           <CardItem
             as="button"
             translateZ={100}
-            translateY={10}
             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
             params={{onClick: () => alert("Nope You Can't... Yet")}}
           >
-            Try now →
+            Try Now →
           </CardItem>
           <CardItem
             translateZ={100}
-            translateY={10}
             as="button"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
             params={{onClick: () => alert("Sign Up to What?")}}
           >
-            Sign up
+            Sign Up Today!
           </CardItem>
         </div>
       </CardBody>
