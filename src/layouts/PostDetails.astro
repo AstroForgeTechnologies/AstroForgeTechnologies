@@ -24,7 +24,6 @@ const {
   pubDatetime,
   modDatetime,
   tags,
-  authors,
 } = post.data;
 
 const { Content } = await post.render();
@@ -46,8 +45,6 @@ const layoutProps = {
 };
 
 const uniqueTags = getUniqueTagsOfTags(tags);
-
-const safeAuthors = authors ? authors : [];
 ---
 
 <Layout {...layoutProps}>
