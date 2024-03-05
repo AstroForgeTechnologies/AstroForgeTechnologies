@@ -116,12 +116,14 @@ export default defineConfig({
                 label: "Title",
                 isTitle: true,
                 required: true,
+                description: "Required. Title of the Page. Used as the Filename if Slug is not Provided.",
               },
               {
                 type: "string",
                 name: "description",
                 label: "Description",
                 required: true,
+                description: "Required. Description of the Page, shown in Post Lists.",
               },
               {
                 label: 'Tags',
@@ -129,7 +131,7 @@ export default defineConfig({
                 type: 'string',
                 list: true,
                 required: true,
-                description: "Emojis are allowed, and encouraged!",
+                description: "Emojis are Allowed, and Encouraged!",
               },
               {
                 label: 'Authors',
@@ -137,6 +139,7 @@ export default defineConfig({
                 type: 'string',
                 list: true,
                 required: true,
+                description: "Required. Currently Not Implemented.",
                 options: [
                   {
                     value: 'isaac',
@@ -156,24 +159,25 @@ export default defineConfig({
                 type: "boolean",
                 name: "featured",
                 label: "Featured",
+                description: "Whether this post should be on the Featured List on the Home Page.",
               },
               {
                 type: "string",
                 name: "slug",
                 label: "Slug",
-                description: "Optional. Emojis are allowed, but discouraged."
+                description: "Optional. The Filename. Emojis are Allowed, but Discouraged."
               },
               {
                 type: "datetime",
                 name: "pubDatetime",
                 label: "Publish Date",
-                description: "Automatically Filled In.",
+                description: "Do Not Change! Automatically Filled In.",
               },
               {
                 type: "datetime",
                 name: "modDatetime",
                 label: "Modified Date",
-                description: "Automatically Filled In, When Needed.",
+                description: "Do Not Change! Automatically Filled In, When Needed.",
               },
               {
                 type: "boolean",
@@ -187,6 +191,7 @@ export default defineConfig({
                 label: "Body",
                 isBody: true,
                 required: true,
+                description: "Required. Main Body of the Page.",
                 templates: [
                   tinaTableTemplate,
                 ]
