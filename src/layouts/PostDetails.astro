@@ -9,7 +9,6 @@ import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
 import { getUniqueTagsOfTags } from "../utils/tagHelper";
-import Author from "../components/Author.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -93,10 +92,6 @@ const safeAuthors = authors ? authors : [];
         <Datetime dateTime={pubDatetime} size="lg" className="my-2" />
       )
     }
-
-    <ul class="my-8">
-      {safeAuthors.map(author => <Author author={author} />)}
-    </ul>
 
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
