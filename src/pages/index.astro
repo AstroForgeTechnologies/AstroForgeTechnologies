@@ -9,7 +9,9 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
-import HomePageCards from "../groups/HomePageCards";
+import HomePageCards from "../layouts/HomePageCards";
+import ModelViewer from "../components/ModelViewer";
+import { slugifyStr } from "../utils/slugify";
 
 const posts = await getCollection("blog");
 
@@ -18,7 +20,6 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
-
 ---
 
 <Layout>
@@ -52,6 +53,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <HomePageCards client:only="react" />
 
+      <ModelViewer
+        modelPath="./assets/models/rocket.glb"
+        scale={4}
+        client:only="react"
+      />
 
       <p>
         Read the blog posts or check
@@ -83,7 +89,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <ul>
               {featuredPosts.map(({ data, slug }) => (
                 <Card
-                  href={`/posts/${slug}/`}
+                  href={`/posts/${slugifyStr(slug)}/`}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -104,7 +110,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
               ({ data, slug }, index) =>
                 index < 4 && (
                   <Card
-                    href={`/posts/${slug}/`}
+                    href={`/posts/${slugifyStr(slug)}/`}
                     frontmatter={data}
                     secHeading={false}
                   />

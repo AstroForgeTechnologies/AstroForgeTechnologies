@@ -5,16 +5,18 @@ import PostDetails from "@layouts/PostDetails.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getPageNumbers from "@utils/getPageNumbers";
 import getPagination from "@utils/getPagination";
+import postFilter from "../../../utils/postFilter";
+import { slugifyStr } from "../../../utils/slugify";
 
 export interface Props {
   post: CollectionEntry<"blog">;
 }
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  const posts = await getCollection("blog", data => postFilter(data));
 
   const postResult = posts.map(post => ({
-    params: { slug: post.slug },
+    params: { slug: slugifyStr(post.slug) },
     props: { post },
   }));
 

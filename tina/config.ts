@@ -1,4 +1,6 @@
-import { defineConfig } from "tinacms";
+import { defineConfig, tinaTableTemplate } from "tinacms";
+import { unemojify } from "node-emoji";
+import { slugifyStr } from "../src/utils/slugify";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -6,9 +8,6 @@ const branch =
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
   "main";
-
-const invalid = /^[^\\/#?\s]+$/;
-const invalidGlobal = /[\\/#?\s]/gm;
 
 export default defineConfig({
   branch,
@@ -24,8 +23,8 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "src",
-      publicFolder: "assets",
+      mediaRoot: "assets/images",
+      publicFolder: "public",
     },
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
@@ -41,16 +40,46 @@ export default defineConfig({
         ui: {
           beforeSubmit: async (
             { values}) => {
-            const keys = Object.keys(values);
-
-            if (keys.includes("tags")) {
-              const list = values.tags as string[]
-              for (let i = 0; i < list.length; i++) {
-                list[i] = list[i].replaceAll(invalidGlobal, "-")
+            // Remove Empty Values and Values in Arrays & Unemojify
+            for (const key of Object.keys(values)) {
+              if (!values[key]) {
+                delete values[key];
+                continue;
               }
-              values.tags = list;
+
+              if (!Array.isArray(values[key])) {
+                if (typeof values[key] !== "string") continue;
+                values[key] = unemojify(values[key] as string);
+                continue;
+              }
+
+              const list: unknown[] = values[key] as unknown[];
+              if (!list || list.length === 0) {
+                delete values[key];
+                continue;
+              }
+
+              const newList = list.filter((value) => value);
+
+              if (newList.length === 0) {
+                delete values[key];
+                continue;
+              }
+
+              if (typeof newList[0] !== "string") {
+                values[key] = newList;
+                continue;
+              }
+
+              values[key] = newList.map((value) => {
+                if (typeof value !== "string") return value;
+                return unemojify(value as string);
+              });
             }
 
+            const keys = Object.keys(values);
+
+            // Mod Date Time Handling
             if (keys.includes("initialCreation")) {
               if (values.initialCreation || values.initialCreation === "true")
                 delete values.initialCreation
@@ -61,6 +90,12 @@ export default defineConfig({
               ...values,
               modDatetime: new Date().toISOString(),
             }},
+          filename: {
+            readonly: true,
+            slugify: (values) => {
+              return slugifyStr(values?.slug ? values.slug : values?.title ?? "")
+            },
+          }
         },
         templates: [
           {
@@ -94,8 +129,7 @@ export default defineConfig({
                 type: 'string',
                 list: true,
                 required: true,
-                description: "Any Invalid Characters ('\\', '/', '#', '?', ' ')," +
-                  "will be replaced by '-' !",
+                description: "Emojis are allowed, and encouraged!",
               },
               {
                 label: 'Authors',
@@ -127,15 +161,7 @@ export default defineConfig({
                 type: "string",
                 name: "slug",
                 label: "Slug",
-                ui: {
-                  validate: (value: string) => {
-                    if (!value) return;
-                    if (!invalid.test(value)) {
-                      return "Slug is Not Valid!";
-                    }
-                    return undefined;
-                  },
-                },
+                description: "Optional. Emojis are allowed, but discouraged."
               },
               {
                 type: "datetime",
@@ -161,6 +187,9 @@ export default defineConfig({
                 label: "Body",
                 isBody: true,
                 required: true,
+                templates: [
+                  tinaTableTemplate,
+                ]
               },
             ],
           }],

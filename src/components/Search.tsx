@@ -2,6 +2,7 @@ import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo } from "react";
 import Card from "@components/Card";
 import type { CollectionEntry } from "astro:content";
+import { slugifyStr } from "@utils/slugify.ts";
 
 export type SearchItem = {
   title: string;
@@ -35,7 +36,7 @@ export default function SearchBar({ searchList }: Props) {
       new Fuse(searchList, {
         keys: ["title", "description"],
         includeMatches: true,
-        minMatchCharLength: 2,
+        minMatchCharLength: 1,
         threshold: 0.5,
       }),
     [searchList]
@@ -58,7 +59,7 @@ export default function SearchBar({ searchList }: Props) {
   useEffect(() => {
     // Add search result only if
     // input value is more than one character
-    let inputResult = inputVal.length > 1 ? fuse.search(inputVal) : [];
+    let inputResult = inputVal.length > 0 ? fuse.search(inputVal) : [];
     setSearchResults(inputResult);
 
     // Update search string in URL
@@ -98,7 +99,7 @@ export default function SearchBar({ searchList }: Props) {
         />
       </label>
 
-      {inputVal.length > 1 && (
+      {inputVal.length > 0 && (
         <div className="mt-8">
           Found {searchResults?.length}
           {searchResults?.length && searchResults?.length === 1
@@ -112,7 +113,7 @@ export default function SearchBar({ searchList }: Props) {
         {searchResults &&
           searchResults.map(({ item, refIndex }) => (
             <Card
-              href={`/posts/${item.slug}/`}
+              href={`/posts/${slugifyStr(item.slug)}/`}
               frontmatter={item.data}
               key={`${refIndex}-${item.slug}`}
             />

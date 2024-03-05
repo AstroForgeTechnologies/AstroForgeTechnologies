@@ -7,30 +7,31 @@ import Footer from "@components/Footer.astro";
 import Card from "@components/Card";
 import Pagination from "@components/Pagination.astro";
 import { SITE } from "@config";
+import { type Tag } from "../utils/tagHelper";
+import { slugifyStr } from "../utils/slugify";
 
 export interface Props {
   currentPage: number;
   totalPages: number;
   paginatedPosts: CollectionEntry<"blog">[];
-  tag: string;
-  tagName: string;
+  tag: Tag;
 }
 
-const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
+const { currentPage, totalPages, paginatedPosts, tag } = Astro.props;
 ---
 
-<Layout title={`Tag: ${tagName} | ${SITE.title}`}>
+<Layout title={`Tag: ${tag.tagName} | ${SITE.title}`}>
   <Header activeNav="tags" />
   <Main
-    pageTitle={[`Tag:`, `${tagName}`]}
-    titleTransition={tag}
-    pageDesc={`All the articles with the tag "${tagName}".`}
+    pageTitle={[`Tag:`, `${tag.tagName}`]}
+    titleTransition={tag.tagSlug}
+    pageDesc={`All the articles with the tag "${tag.tagName}".`}
   >
-    <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
+    <h1 slot="title" transition:name={tag.tagSlug}>{`Tag:${tag.tagName}`}</h1>
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/posts/${slug}/`} frontmatter={data} />
+          <Card href={`/posts/${slugifyStr(slug)}/`} frontmatter={data} />
         ))
       }
     </ul>
@@ -39,10 +40,10 @@ const { currentPage, totalPages, paginatedPosts, tag, tagName } = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/tags/${tag}${
+    prevUrl={`/tags/${tag.tagSlug}${
       currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""
     }/`}
-    nextUrl={`/tags/${tag}/${currentPage + 1}/`}
+    nextUrl={`/tags/${tag.tagSlug}/${currentPage + 1}/`}
   />
 
   <Footer noMarginTop={totalPages > 1} />

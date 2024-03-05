@@ -17,3 +17,9 @@ export type SocialObjects = {
   active: boolean;
   linkTitle: string;
 }[];
+
+export type Authors = {
+  name: string;
+  desc?: string;
+  img?: string;
+};

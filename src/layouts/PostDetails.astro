@@ -8,6 +8,8 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
+import { getUniqueTagsOfTags } from "../utils/tagHelper";
+import Author from "../components/Author.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -43,6 +45,10 @@ const layoutProps = {
   ogImage: ogUrl,
   scrollSmooth: true,
 };
+
+const uniqueTags = getUniqueTagsOfTags(tags);
+
+const safeAuthors = authors ? authors : [];
 ---
 
 <Layout {...layoutProps}>
@@ -67,32 +73,37 @@ const layoutProps = {
   <main id="main-content">
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
 
-    {useModDateTime(pubDatetime, modDatetime) ? (
-      <Datetime
-        dateTime={pubDatetime}
-        category="Originally Published"
-        size="lg"
-        className="my-2"
-      />
-      <Datetime
-        dateTime={modDatetime}
-        category="Updated"
-        size="lg"
-        className="my-2"
-      />
-    ) : (
-      <Datetime
-        dateTime={pubDatetime}
-        size="lg"
-        className="my-2"
-      />
-    )}
+    {
+      useModDateTime(pubDatetime, modDatetime) ? (
+        <>
+          <Datetime
+            dateTime={pubDatetime}
+            category="Originally Published"
+            size="lg"
+            className="my-2"
+          />
+          <Datetime
+            dateTime={modDatetime}
+            category="Updated"
+            size="lg"
+            className="my-2"
+          />
+        </>
+      ) : (
+        <Datetime dateTime={pubDatetime} size="lg" className="my-2" />
+      )
+    }
+
+    <ul class="my-8">
+      {safeAuthors.map(author => <Author author={author} />)}
+    </ul>
+
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
 
     <ul class="my-8">
-      {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
+      {uniqueTags.map(tag => <Tag tag={tag} />)}
     </ul>
 
     <div

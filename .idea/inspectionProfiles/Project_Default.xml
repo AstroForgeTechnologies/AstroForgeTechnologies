@@ -1,11 +1,10 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
-    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="32">
+          <list size="36">
             <item index="0" class="java.lang.String" itemvalue="transition:name" />
             <item index="1" class="java.lang.String" itemvalue="pubDatetime" />
             <item index="2" class="java.lang.String" itemvalue="modDatetime" />
@@ -38,6 +37,10 @@
             <item index="29" class="java.lang.String" itemvalue="rotateZ" />
             <item index="30" class="java.lang.String" itemvalue="as" />
             <item index="31" class="java.lang.String" itemvalue="translateX" />
+            <item index="32" class="java.lang.String" itemvalue="modelPath" />
+            <item index="33" class="java.lang.String" itemvalue="scale" />
+            <item index="34" class="java.lang.String" itemvalue="authorID" />
+            <item index="35" class="java.lang.String" itemvalue="author" />
           </list>
         </value>
       </option>

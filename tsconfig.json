@@ -1,6 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "exclude": ["public/admin/*", "*.js", "tina/*"],
+  "exclude": ["public/admin/*", "dist/*", "*.js", "tina/*"],
   "compilerOptions": {
     "baseUrl": "src",
     "jsx": "react-jsx",
@@ -13,6 +13,7 @@
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
+      "@data/*": ["data/*"],
     },
   },
 }
