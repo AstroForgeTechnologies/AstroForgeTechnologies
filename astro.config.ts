@@ -22,7 +22,7 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [
-      remarkToc(),
+      remarkToc,
       [
         remarkCollapse,
         {
