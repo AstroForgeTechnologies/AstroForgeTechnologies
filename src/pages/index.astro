@@ -12,6 +12,7 @@ import { SOCIALS } from "@config";
 import HomePageCards from "../layouts/HomePageCards";
 import ModelViewer from "../components/ModelViewer";
 import { slugifyStr } from "../utils/slugify";
+import { UnfoldingRover } from "../components/UnfoldingRover";
 
 const posts = await getCollection("development");
 
@@ -89,7 +90,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <ul>
               {featuredPosts.map(({ data, slug }) => (
                 <Card
-                  href={`/posts/${slugifyStr(slug)}/`}
+                  href={`/development/${slugifyStr(slug)}/`}
                   frontmatter={data}
                   secHeading={false}
                 />
