@@ -7,7 +7,7 @@ import { slugifyStr } from "@utils/slugify.ts";
 export type SearchItem = {
   title: string;
   description: string;
-  data: CollectionEntry<"blog">["data"];
+  data: CollectionEntry<"development">["data"];
   slug: string;
 };
 
@@ -113,7 +113,7 @@ export default function SearchBar({ searchList }: Props) {
         {searchResults &&
           searchResults.map(({ item, refIndex }) => (
             <Card
-              href={`/posts/${slugifyStr(item.slug)}/`}
+              href={`/development/${slugifyStr(item.slug)}/`}
               frontmatter={item.data}
               key={`${refIndex}-${item.slug}`}
             />

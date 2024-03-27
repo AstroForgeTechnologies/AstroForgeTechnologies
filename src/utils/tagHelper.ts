@@ -25,7 +25,9 @@ export function hasTag(tags: string[], tag: Tag): boolean {
   return false;
 }
 
-export default function getUniqueTags(posts: CollectionEntry<"blog">[]): Tag[] {
+export default function getUniqueTags(
+  posts: CollectionEntry<"development">[]
+): Tag[] {
   return posts
     .flatMap(post => post.data.tags)
     .map(tag => {

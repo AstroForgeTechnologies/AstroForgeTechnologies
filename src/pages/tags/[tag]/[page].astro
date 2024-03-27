@@ -8,12 +8,12 @@ import getPagination from "@utils/getPagination";
 import { type Tag } from "../../../utils/tagHelper";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"development">;
   tag: Tag;
 }
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("development");
 
   const tags = getUniqueTags(posts);
 
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 const { page } = Astro.params;
 const { tag } = Astro.props;
 
-const posts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = await getCollection("development", ({ data }) => !data.draft);
 
 const postsByTag = getPostsByTag(posts, tag);
 

@@ -12,19 +12,22 @@ import { slugifyStr } from "../utils/slugify";
 export interface Props {
   currentPage: number;
   totalPages: number;
-  paginatedPosts: CollectionEntry<"blog">[];
+  paginatedPosts: CollectionEntry<"development">[];
 }
 
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
-  <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
+<Layout title={`Development Posts | ${SITE.title}`}>
+  <Header activeNav="developments" />
+  <Main
+    pageTitle="Development"
+    pageDesc="Keep Up To Date with Progress at Astro Forge Technologies!"
+  >
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/posts/${slugifyStr(slug)}/`} frontmatter={data} />
+          <Card href={`/development/${slugifyStr(slug)}/`} frontmatter={data} />
         ))
       }
     </ul>
@@ -33,8 +36,8 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
   <Pagination
     {currentPage}
     {totalPages}
-    prevUrl={`/posts${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/posts/${currentPage + 1}/`}
+    prevUrl={`/development${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
+    nextUrl={`/development/${currentPage + 1}/`}
   />
 
   <Footer noMarginTop={totalPages > 1} />

@@ -8,7 +8,7 @@ import Tag from "@components/Tag.astro";
 import getUniqueTags from "../../utils/tagHelper";
 import { SITE } from "@config";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("development");
 
 let tags = getUniqueTags(posts);
 ---

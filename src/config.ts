@@ -7,7 +7,7 @@ export const SITE: Site = {
   title: "Astro Forge Technologies",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerPage: 15,
+  postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 

@@ -9,11 +9,11 @@ import postFilter from "../../../utils/postFilter";
 import { slugifyStr } from "../../../utils/slugify";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"development">;
 }
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", data => postFilter(data));
+  const posts = await getCollection("development", data => postFilter(data));
 
   const postResult = posts.map(post => ({
     params: { slug: slugifyStr(post.slug) },
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 
-const posts = await getCollection("blog");
+const posts = await getCollection("development");
 
 const sortedPosts = getSortedPosts(posts);
 

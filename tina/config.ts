@@ -31,9 +31,9 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "blog",
-        label: "Blogs",
-        path: "src/content/blog",
+        name: "development",
+        label: "Development Posts",
+        path: "src/content/development",
         format: "mdx",
         frontmatterFormat: "yaml",
         frontmatterDelimiters: "---",
@@ -100,12 +100,13 @@ export default defineConfig({
         templates: [
           {
             name: "posts",
-            label: "Post",
+            label: "Development Posts",
             ui: {
               defaultItem: () => {
                 return {
                   pubDatetime: new Date().toISOString(),
                   initialCreation: true,
+                  tags: ["chart_with_upwards_trend: Development"],
                 }
               },
             },

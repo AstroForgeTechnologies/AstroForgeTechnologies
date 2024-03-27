@@ -13,7 +13,7 @@ import { slugifyStr } from "../utils/slugify";
 export interface Props {
   currentPage: number;
   totalPages: number;
-  paginatedPosts: CollectionEntry<"blog">[];
+  paginatedPosts: CollectionEntry<"development">[];
   tag: Tag;
 }
 
@@ -31,7 +31,7 @@ const { currentPage, totalPages, paginatedPosts, tag } = Astro.props;
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/posts/${slugifyStr(slug)}/`} frontmatter={data} />
+          <Card href={`/development/${slugifyStr(slug)}/`} frontmatter={data} />
         ))
       }
     </ul>

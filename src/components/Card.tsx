@@ -4,7 +4,7 @@ import type { CollectionEntry } from "astro:content";
 
 export interface Props {
   href?: string;
-  frontmatter: CollectionEntry<"blog">["data"];
+  frontmatter: CollectionEntry<"development">["data"];
   secHeading?: boolean;
 }
 
@@ -29,8 +29,12 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
         )}
       </a>
       <Datetime
-        dateTime={useModDateTime(pubDatetime, modDatetime) ? modDatetime : pubDatetime}
-        category={useModDateTime(pubDatetime, modDatetime) ? "Updated" : "Published"}
+        dateTime={
+          useModDateTime(pubDatetime, modDatetime) ? modDatetime : pubDatetime
+        }
+        category={
+          useModDateTime(pubDatetime, modDatetime) ? "Updated" : "Published"
+        }
       />
       <p>{description}</p>
     </li>

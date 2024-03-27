@@ -11,7 +11,7 @@ import { SITE } from "@config";
 import { getUniqueTagsOfTags } from "../utils/tagHelper";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"development">;
 }
 
 const { post } = Astro.props;
@@ -30,7 +30,7 @@ const { Content } = await post.render();
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
-  ogImageUrl ?? `/posts/${slugifyStr(title)}.png`,
+  ogImageUrl ?? `/development/${slugifyStr(title)}.png`,
   Astro.url.origin
 ).href;
 
