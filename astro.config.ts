@@ -6,8 +6,9 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 // noinspection ES6PreferShortImport
 import { SITE } from "./src/config";
-
 import mdx from "@astrojs/mdx";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -41,4 +42,6 @@ export default defineConfig({
     },
   },
   scopedStyleStrategy: "where",
+  output: "server",
+  adapter: vercel(),
 });
