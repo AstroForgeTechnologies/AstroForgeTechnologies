@@ -6,6 +6,8 @@ import getPagination from "@utils/getPagination";
 import getUniqueTags from "../../../utils/tagHelper";
 import postFilter from "../../../utils/postFilter";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getCollection("development", postFilter);
 

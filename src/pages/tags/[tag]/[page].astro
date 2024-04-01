@@ -7,6 +7,8 @@ import getPageNumbers from "@utils/getPageNumbers";
 import getPagination from "@utils/getPagination";
 import { type Tag } from "../../../utils/tagHelper";
 
+export const prerender = true;
+
 export interface Props {
   post: CollectionEntry<"development">;
   tag: Tag;
