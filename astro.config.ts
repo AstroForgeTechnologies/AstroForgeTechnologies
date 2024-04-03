@@ -18,7 +18,7 @@ if (envKeyStatic) includeKeyStatic = JSON.parse(envKeyStatic);
 
 let envBuildStatic = process.env.BUILD_STATIC;
 let buildStatic = false;
-if (envBuildStatic) envBuildStatic = JSON.parse(envBuildStatic);
+if (envBuildStatic) buildStatic = JSON.parse(envBuildStatic);
 
 // https://astro.build/config
 export default defineConfig({
