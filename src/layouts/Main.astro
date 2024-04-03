@@ -11,6 +11,7 @@ interface ArrayTitleProp {
   pageTitle: [string, string];
   titleTransition: string;
   pageDesc?: string;
+  excludePathSpec?: boolean;
 }
 
 export type Props = StringTitleProp | ArrayTitleProp;
