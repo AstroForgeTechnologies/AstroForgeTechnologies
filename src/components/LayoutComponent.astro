@@ -1,0 +1,18 @@
+---
+export interface Props {
+  layout: number[];
+}
+
+const { layout } = Astro.props;
+---
+
+<div
+  style={{
+    marginBlock: "0.75em",
+    gap: "12px",
+    display: "grid",
+    gridTemplateColumns: `repeat(${layout.length}, 1fr)`,
+  }}
+>
+  <slot />
+</div>

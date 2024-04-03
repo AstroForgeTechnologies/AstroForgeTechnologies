@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Canvas, type Vector3 } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import GltfModel from "@components/GltfModel.tsx";

@@ -11,16 +11,21 @@ export interface Tag {
   tagName: string;
 }
 
-export function getTag(tag: string): Tag {
+export function getTag(tag: InputTag): Tag {
+  return getTagString(tag.value ?? tag.discriminant);
+}
+
+export function getTagString(tag: string): Tag {
   return {
     tagSlug: slugifyStr(tag),
     tagName: emojify(tag),
   };
 }
 
-export function hasTag(tags: string[], tag: Tag): boolean {
+export function hasTag(tags: InputTag[], tag: Tag): boolean {
   for (const value of tags) {
-    if (slugifyStr(value) === tag.tagSlug) return true;
+    if (slugifyStr(value.value ?? value.discriminant) === tag.tagSlug)
+      return true;
   }
   return false;
 }
@@ -31,17 +36,22 @@ export default function getUniqueTags(
   return posts
     .flatMap(post => post.data.tags)
     .map(tag => {
-      return getTag(tag);
+      return getTag(tag as InputTag);
     })
     .filter(uniqueSlug)
     .sort((tagA, tagB) => tagA.tagSlug.localeCompare(tagB.tagSlug));
 }
 
-export function getUniqueTagsOfTags(tags: string[]): Tag[] {
+export function getUniqueTagsOfTags(tags: InputTag[]): Tag[] {
   return tags
     .map(tag => {
       return getTag(tag);
     })
     .filter(uniqueSlug)
     .sort((tagA, tagB) => tagA.tagSlug.localeCompare(tagB.tagSlug));
+}
+
+export interface InputTag {
+  discriminant: string;
+  value?: string;
 }

@@ -1,0 +1,23 @@
+---
+import { parseHTML } from "linkedom";
+import cn from "../utils/cn";
+
+const html = await Astro.slots.render("default");
+const { document } = parseHTML(html);
+const children = document.children;
+
+for (let i = 0; i < children.length; i++) {
+  const child: Element | null = children.item(i);
+  if (child && child.tagName === "P") {
+    // Change Margins on Top and Bottom to be 0. (Assumes no current style)
+    child.className = cn(child.className, "my-0");
+  }
+}
+---
+
+<div
+  class="border border-dashed border-skin-line rounded-lg"
+  style="padding: 15px;"
+>
+  <Fragment set:html={document} />
+</div>

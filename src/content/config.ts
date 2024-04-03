@@ -9,7 +9,14 @@ const development = defineCollection({
       title: z.string(),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
-      tags: z.array(z.string()).default(["others"]),
+      tags: z
+        .array(
+          z.object({
+            discriminant: z.string(),
+            value: z.string().optional().nullable(),
+          })
+        )
+        .default([{ discriminant: "Other" }]),
       authors: z.array(z.string()).optional(),
       ogImage: image()
         .refine(img => img.width >= 1200 && img.height >= 630, {

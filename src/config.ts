@@ -5,6 +5,7 @@ export const SITE: Site = {
   author: "Astro Forge Technologies",
   desc: "Forging Tomorrow's Spacecraft Today!",
   title: "Astro Forge Technologies",
+  shortTitle: "AFT",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 5,

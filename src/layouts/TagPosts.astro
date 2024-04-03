@@ -9,6 +9,7 @@ import Pagination from "@components/Pagination.astro";
 import { SITE } from "@config";
 import { type Tag } from "../utils/tagHelper";
 import { slugifyStr } from "../utils/slugify";
+import BackButton from "../components/BackButton.astro";
 
 export interface Props {
   currentPage: number;
@@ -22,10 +23,12 @@ const { currentPage, totalPages, paginatedPosts, tag } = Astro.props;
 
 <Layout title={`Tag: ${tag.tagName} | ${SITE.title}`}>
   <Header activeNav="tags" />
+  <BackButton />
   <Main
     pageTitle={[`Tag:`, `${tag.tagName}`]}
     titleTransition={tag.tagSlug}
     pageDesc={`All the articles with the tag "${tag.tagName}".`}
+    excludePathSpec={true}
   >
     <h1 slot="title" transition:name={tag.tagSlug}>{`Tag:${tag.tagName}`}</h1>
     <ul>

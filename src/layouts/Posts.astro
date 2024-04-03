@@ -8,6 +8,9 @@ import Pagination from "@components/Pagination.astro";
 import Card from "@components/Card";
 import { SITE } from "@config";
 import { slugifyStr } from "../utils/slugify";
+import LayoutArea from "../components/LayoutArea.astro";
+import LayoutComponent from "../components/LayoutComponent.astro";
+import LinkButton from "../components/LinkButton.astro";
 
 export interface Props {
   currentPage: number;
@@ -24,6 +27,21 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
     pageTitle="Development"
     pageDesc="Keep Up To Date with Progress at Astro Forge Technologies!"
   >
+    <LayoutComponent layout={[1, 1]}>
+      <LayoutArea>
+        <div style="text-align: center">
+          <LinkButton href="/tags">Sort by Tags</LinkButton>
+        </div>
+      </LayoutArea>
+      <LayoutArea>
+        <div style="text-align: center">
+          <!--<LinkButton style="text-align: center" href="/authors">Sort by Authors</LinkButton> -->
+          <LinkButton href="/authors" disabled={true}
+            >Sort by Authors (WIP)</LinkButton
+          >
+        </div>
+      </LayoutArea>
+    </LayoutComponent>
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (

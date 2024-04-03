@@ -40,18 +40,14 @@ jobs:
             ~/.npm
             ./.cache
             ./tools/node_modules
-          key: ${{ runner.os }}-astro-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}
+          key: "${{ runner.os }}-astro-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}"
           restore-keys: ${{ runner.os }}-astro-
 
       - name: Setup NPM
         run: npm ci
 
       - name: Build
-        env:
-          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-          TINA_SEARCH_TOKEN: ${{ secrets.TINA_SEARCH_TOKEN }}
-        run: npm run tinaBuild
+        run: npm run staticBuild
 
       - name: Upload Built Website
         uses: actions/upload-pages-artifact@v3
