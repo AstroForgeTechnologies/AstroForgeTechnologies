@@ -106,21 +106,14 @@ export default config({
             validation: { length: { min: 1 }},
           }
         ),
-        authors: fields.array(
-          fields.select({
-            label: "Authors",
-            options: [
-              ...Object.keys(authors).map((authorID) => {
-                return {
-                  label: authors[authorID], value: authorID
-                }}),
-            ],
-            defaultValue: "isaac",
-          }),
-          {
-            label: "Authors",
-            itemLabel: (props) => authors[props.value],
-            validation: { length: { min: 1 }},
+        authors: fields.multiselect({
+          label: "Authors",
+          options: [
+            ...Object.keys(authors).map((authorID) => {
+              return {
+                label: authors[authorID], value: authorID
+              }}),
+          ],
           },
         ),
         content: fields.document({
