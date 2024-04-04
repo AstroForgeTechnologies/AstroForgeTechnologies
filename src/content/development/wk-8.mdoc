@@ -1,11 +1,15 @@
 ---
-title: Week 8 Progress Log
-description: The Progress Log for Week 8.
+title: Week 8 Development
+description: Week 8 of Development!
 pubDatetime: 2024-03-25T10:53:00.000Z
 modDatetime: 2024-04-04T11:32:00.000Z
 featured: false
 tags:
   - discriminant: 📈 Development
+  - discriminant: newTag
+    value: 🚀 Ship Design
+  - discriminant: newTag
+    value: 🏥 Health of Astronauts
 authors:
   - isaac
   - christy
@@ -41,9 +45,45 @@ The factor of keeping bones and muscles strong throughout the journey was made m
 
 However, we rated the concern of the astronauts health as not a major priority, as with nuclear rockets, the journey to Mars was only 45 days. However, we still decided that a centrifuge was needed, as the astronauts physical health still needs to be in a fairly good condition once on Mars.
 
-After that, we looked at the current largest capacity of a spaceship. We found that the **SpaceX** ***Starship*** had the highest capacity of any spaceship today, both in capacity and in mass. It is also designed to be completely reusable. It is currently in development, with a recent third test flight resulting in the ***Starship*** burning during re-orbit, but it is expected to be usable in the near future. (Figure 3)
+We also decided on making our ship be separated into 'modules', which are connected in space. This is similar to the ISS. (Figure 3)
+
+{% image
+   img="/src/assets/images/wk-8/ISSModulesBackground.png"
+   alt="Modules of the ISS"
+   caption="Figure 3: The Many Interlocking Modules of the ISS" /%}
+
+After that, we looked at the current largest capacity of a spaceship. We found that the **SpaceX** ***Starship*** had the highest capacity of any spaceship today, both in capacity and in mass. It is also designed to be completely reusable. It is currently in development, with a recent third test flight resulting in the ***Starship*** burning during re-orbit, but it is expected to be usable in the near future. (Figure 4)
 
 {% image
    img="/src/assets/images/wk-8/starship.png"
    alt="Starship"
-   caption="Figure 3: SpaceX Starship: The Rocket with the Largest Payload Capacity and Weight" /%}
+   caption="Figure 4: SpaceX Starship: The Rocket with the Largest Payload Capacity and Weight" /%}
+
+We found that the ***Starship*** could carry a maximum payload capacity of 8m (diameter) by 22m (length), and a maximum payload weight of 150 tonnes to Low Earth Orbit. It could also carry 22 tonnes to Geostationary Earth Orbit, or 150 tonnes to Geostationary Earth Orbit if another ***Starship*** refills it in Low Earth Orbit. (Figure 5)
+
+{% image
+   img="/src/assets/images/wk-8/starshipPayloadWeight.png"
+   alt="Starship Payload Weight Compared to Other Rockets"
+   caption="Figure 5: Starship's Max Payload Weight Compared to Other Rockets, In Different Orbits" /%}
+
+We also found that the ***Starship*** was *by far* one of the cheapest available options for launching something into space. (Figure 6)
+
+{% image
+   img="/src/assets/images/wk-8/StarshipPayloadCost.png"
+   alt="Cost of Starship Launches Compared to Other Rockets"
+   caption="Figure 6: Cost of Starship Launches Compared to Other Rockets" /%}
+
+Finally, we looked at power on the ship. We looked at the fuel of nuclear engines, Hydrogen, and realised the need for refrigeration. Therefore, we decided on a 'hybrid' type power system:
+
+- Chemical Engines for Escaping Orbits
+- Nuclear Engines for Consistent Power throughout the Journey, and whilst orbiting Mars
+- Solar Panels
+  - Power the Ship's Electrical Systems
+  - Keep Liquid Oxygen (for Chemical Engines) and Liquid Hydrogen (for Nuclear Engines) Cryogenic
+  - Backup Thrusters, for Use in Case of Emergency or during Mars Orbit
+
+Since we realised the ship could not land on Mars, we decided to send small spacecraft, perhaps **SpaceX Starships,** to and from Mars to the ship, which would either stay in Geostationary Mars Orbit or Low Mars Orbit.
+
+However, this would also require consistent burning of fuel or use of electrical energy; thus electrical thrusters would most likely be heavily used, but Liquid Hydrogen would also be shipped periodically from Mars to Earth.
+
+From this, we also decided on our next research point when we had time: Initial Production of resources on Mars.
