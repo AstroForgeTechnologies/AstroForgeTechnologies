@@ -21,7 +21,7 @@ We thank the Open Source Community for the amazing resources, tools and librarie
 ## Bibliography
 
 - Astronomy Staff 2024, Why isn’t there a device to clean the solar panels on Mars rovers?, Astronomy Magazine, \<https://www.astronomy.com/space-exploration/why-doesnt-nasa-clean-the-solar-panels-on-rovers/>.
--
+
 - Burrows, L 2019, Making Mars habitable, Harvard Gazette, \<https://news.harvard.edu/gazette/story/2019/07/making-mars-habitable/>.
 
 - Cartier, KMS 2018, Tests Indicate Which Edible Plants Could Thrive on Mars, Eos, \<https://eos.org/articles/tests-indicate-which-edible-plants-could-thrive-on-mars#:~:text=With%20soil%20aeration%20and%20moisture>.
