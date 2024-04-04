@@ -6,7 +6,7 @@ export const SITE: Site = {
   desc: "Forging Tomorrow's Spacecraft Today!",
   title: "Astro Forge Technologies",
   shortTitle: "AFT",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "google-touch-icon.png",
   lightAndDarkMode: true,
   postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes

@@ -1,8 +1,12 @@
 import { defineMarkdocConfig, component, nodes } from '@astrojs/markdoc/config';
-import prism from "@astrojs/markdoc/prism";
+import shiki from '@astrojs/markdoc/shiki';
 
 export default defineMarkdocConfig({
-  extends: [prism()],
+  extends: [shiki({
+    theme: 'dracula-soft',
+    wrap: true,
+    langs: [],
+  })],
   nodes: {
     document: {
       ...nodes.document,
