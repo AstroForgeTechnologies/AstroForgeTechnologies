@@ -26,7 +26,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>AST</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -44,30 +44,17 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <span class="sr-only">RSS Feed</span>
       </a>
 
+      <p>Welcome to <b>Astro Forge Technologies</b>' Home Page!</p>
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        development theme. This theme follows best practices and provides
-        accessibility out of the box. Light and dark mode are supported by
-        default. Moreover, additional color schemes can also be configured.
+        Development Logs/Progress Logs are in the Development Tab, and
+        Credits/Bibliography is in the Credits Tab.
+      </p>
+      <p>This is a <em>Work in Progress</em>.</p>
+      <p>
+        Below you will find some random features that we are planning of putting
+        in our website in the future!
       </p>
 
-      <HomePageCards client:only="react" />
-
-      <ModelViewer
-        modelPath="./assets/models/rocket.glb"
-        scale={4}
-        client:only="react"
-      />
-
-      <p>
-        Read the development posts or check
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
@@ -77,6 +64,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           </div>
         )
       }
+
+      <HomePageCards client:only="react" />
+
+      <ModelViewer
+        modelPath="./assets/models/rocket.glb"
+        scale={4}
+        client:only="react"
+      />
     </section>
 
     <Hr />
