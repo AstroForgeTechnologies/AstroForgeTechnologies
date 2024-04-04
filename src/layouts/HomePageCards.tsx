@@ -4,15 +4,12 @@ export default function HomePageCards() {
   return (
     <CardContainer className="inter-var" reducer={10}>
       <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-        <CardItem
-          translateZ={100}
-          className="text-xl font-bold text-neutral-600 dark:text-white"
-        >
+        <CardItem translateZ={100} className="text-xl font-bold text-white">
           Make things float in air!!!
         </CardItem>
         <CardItem
           translateZ={75}
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+          className="text-sm max-w-sm mt-2 text-neutral-300"
           as="p"
         >
           Demo of Floating 3D Cards.
@@ -42,7 +39,7 @@ export default function HomePageCards() {
           <CardItem
             translateZ={100}
             as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+            className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"
             params={{ onClick: () => alert("Sign Up to What?") }}
           >
             Sign Up Today!

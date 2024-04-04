@@ -11,7 +11,7 @@ title: "Credits"
 - [React](https://react.dev/)
 - [Aceternity UI](https://ui.aceternity.com/components)
 - [TailwindCSS](https://tailwindcss.com/)
-- [AstroPaper Theme](https://github.com/satnaing/astro-pape)
+- [AstroPaper Theme](https://github.com/satnaing/astro-paper)
 - [KeyStatic CMS](https://keystatic.com/)
 
 We thank the Open Source Community for the amazing resources, tools and libraries which they provide!
