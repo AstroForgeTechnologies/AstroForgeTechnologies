@@ -15,9 +15,14 @@ function getTheme() {
   if (primaryColorScheme) return primaryColorScheme;
 
   // return user device's prefer color scheme
+  /*
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light";
+   */
+
+  // Return Dark as Default
+  return "dark";
 }
 
 let themeValue = getTheme();
