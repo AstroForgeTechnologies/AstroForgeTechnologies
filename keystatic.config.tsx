@@ -31,9 +31,16 @@ function toISOKeystaticString(date: Date) {
     ':' + pad(date.getUTCMinutes());
 }
 
+function isUseLocal() {
+  let envBuildStatic = import.meta.env.PUBLIC_USE_LOCAL;
+  let buildStatic = false;
+  if (envBuildStatic) buildStatic = JSON.parse(envBuildStatic);
+  return buildStatic;
+}
+
 export default config({
   storage: {
-    kind: 'github',
+    kind: isUseLocal() ? "local" : "github",
     repo: {
       owner: "AstroForgeTechnologies",
       name: "AstroForgeTechnologies.github.io",
