@@ -10,12 +10,42 @@ tags:
 authors:
   - will
 ---
-In this week we discussed moving site and get ready for a prototype and continued the progress log.
+In this week we discussed moving site, getting ready for a prototype, and improving and continuing the progress log.
 
 ---
 
-For the first one about moving site, the one that we had at that moment, Tina, had a lot of issues such as the difficulty to log in. The work that Isaac put in keeping it running and preventing it from crashing was not sustainable. So we a looked at different sites that can replace Tina, which Isaac did for the week.
+Firstly, our website design was due for an update. For example, the CMS that we were using at that moment, [Tina](https://tina.io/), had a lot of issues such as the difficulty to log in, slow performance, and inability to add custom components, which was needed to allow usages of images with captions. (Figure 1)
+
+{% image
+   img="/src/assets/images/wk-9/tinaErrors.png"
+   alt="Tina's Constant Log In Errors"
+   caption="Figure 1: Tina's Constant Log In Errors" /%}
+
+The work that Isaac put in keeping it running and preventing it from crashing was not sustainable. So we a looked at different sites that can replace Tina, which Isaac did for the week.
+
+We eventually decided on [KeyStatic](https://keystatic.com/), another Open Source Git Based CMS, which had much simpler log in methods, was less susceptible to crashing, saved periodical drafts, and allowed for expansion and replacement of components. The UI was also much improved, as shown in Figure 2, 3 and 4.
+
+{% image
+   img="/src/assets/images/wk-9/tinaUI.png"
+   alt="Tina's UI"
+   caption="Figure 2: Tina's UI (Currently Erroring, Not Showing the Project)" /%}
+
+{% image
+   img="/src/assets/images/wk-9/keystaticUI.png"
+   alt="KeyStatic's UI in the Dashboard"
+   caption="Figure 3: KeyStatic's UI in the Dashboard" /%}
+
+{% image
+   img="/src/assets/images/wk-9/keystaticEditor.png"
+   alt="KeyStatic's Editor UI"
+   caption="Figure 4: KeyStatic's Editor UI" /%}
+
+Furthermore, as KeyStatic used Server Side Hosting (which was available for free with Vercel) instead of a Cloud Sync like Tina, we were also able to get rid of constraints such as slow performance, limit of 2 people, and inability to fully test locally.
+
+Furthermore, the UI was also much cleaner, as shown in Figure 2 and 3.
+
+Due to constraints around time, during this week, Isaac was unable to fully setup KeyStatic, and thus some features such as updating Modification Dates and Tables were not implemented yet.
 
 ---
 
-The thing that took us the most time by far is adding new and improving old progress logs to more accurately reflect our thought process during the project. We felt this was important because our progress logs felt very short and often misleading and confusing at times so we have put a lot of effort into fixing them.
+However, the objective that took us the most time by far during this week was adding new and improving old progress logs to more accurately reflect our thought process during the project. We felt this was important because our progress logs felt very short and often misleading and confusing at times, so we have put a lot of effort into fixing, improving and detailing them.
