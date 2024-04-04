@@ -15,10 +15,17 @@ const { noMarginTop = false } = Astro.props;
   <Hr noPadding />
   <div class="footer-wrapper">
     <Socials centered />
-    <div class="copyright-wrapper">
-      <span>Copyright &#169; {currentYear} AST</span>
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <span>MIT License.</span>
+    <div class="flex flex-col">
+      <div class="copyright-wrapper">
+        <span>Copyright &#169; {currentYear} AST</span>
+        <span class="separator-1">&nbsp;|&nbsp;</span>
+        <span>MIT License.</span>
+      </div>
+      <div class="disclaimer-wrapper">
+        <span class="text-gray-500 italic"
+          >Disclaimer: This Company is a Concept Only.</span
+        >
+      </div>
     </div>
   </div>
 </footer>
