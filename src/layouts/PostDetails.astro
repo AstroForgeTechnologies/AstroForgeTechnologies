@@ -25,6 +25,7 @@ const {
   pubDatetime,
   modDatetime,
   tags,
+  authors,
 } = post.data;
 
 const { Content } = await post.render();
@@ -37,6 +38,9 @@ const ogUrl = new URL(
 
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
+  author: authors
+    ? authors[0].substring(0, 1).toUpperCase() + authors[0].substring(1)
+    : SITE.author,
   description,
   pubDatetime,
   modDatetime,
