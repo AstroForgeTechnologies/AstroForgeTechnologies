@@ -83,8 +83,9 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
         <Datetime dateTime={pubDatetime} size="lg" className="my-2" />
       )
     }
+    <p class="font-bold">{description}</p>
 
-    <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+    <article id="article" role="article" class="prose mx-auto mt-10 max-w-3xl">
       <Content />
     </article>
 
@@ -224,8 +225,7 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
    * the "Back to Top" button is clicked. */
   function backToTop() {
     document.querySelector("#back-to-top")?.addEventListener("click", () => {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
   backToTop();
