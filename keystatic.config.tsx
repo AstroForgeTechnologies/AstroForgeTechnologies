@@ -15,6 +15,22 @@ const authors: Record<string, string> = {
   will: "Will",
 };
 
+// Keystatic currently only accepts dates with:
+// 1. No Seconds or Milliseconds
+// 2. No Time Zone (Assumes UTC)
+// Including 1 Causes Invalid Field when saving, Including 2 Crashes Keystatic
+function toISOKeystaticString(date: Date) {
+  const pad = (num: number) => {
+      return (num < 10 ? '0' : '') + num;
+    };
+
+  return date.getUTCFullYear() +
+    '-' + pad(date.getUTCMonth() + 1) +
+    '-' + pad(date.getUTCDate()) +
+    'T' + pad(date.getUTCHours()) +
+    ':' + pad(date.getUTCMinutes());
+}
+
 export default config({
   storage: {
     kind: 'github',
@@ -52,12 +68,13 @@ export default config({
         }),
         pubDatetime: fields.datetime({
           label: "Published Date",
-          description: "Do Not Change!",
+          description: "Do Not Change! (Displayed in UTC Time, To Fix)",
           validation: { isRequired: true },
-          defaultValue: new Date().toISOString(),
+          defaultValue: toISOKeystaticString(new Date()),
         }),
         modDatetime: fields.datetime({
           label: "Modified Date",
+          description: "To Fix: Does not Currently Change Automatically. (Displayed in UTC Time, To Fix)"
         }),
         featured: fields.checkbox(
           {
