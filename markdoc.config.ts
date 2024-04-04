@@ -3,7 +3,7 @@ import shiki from '@astrojs/markdoc/shiki';
 
 export default defineMarkdocConfig({
   extends: [shiki({
-    theme: 'dracula-soft',
+    theme: 'one-dark-pro',
     wrap: true,
     langs: [],
   })],
