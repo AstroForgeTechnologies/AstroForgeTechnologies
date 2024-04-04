@@ -71,19 +71,27 @@ export default (post: CollectionEntry<"development">) => {
               fontSize: 28,
             }}
           >
-            <span>
-              by{" "}
-              <span
-                style={{
-                  color: "transparent",
-                }}
-              >
-                "
+            {post.data.authors && (
+              <span>
+                by{" "}
+                <span
+                  style={{
+                    color: "transparent",
+                  }}
+                >
+                  "
+                </span>
+                <span style={{ overflow: "hidden", fontWeight: "bold" }}>
+                  {post.data.authors
+                    .map(
+                      author =>
+                        author.substring(0, 1).toLowerCase() +
+                        author.substring(1)
+                    )
+                    .join(", ")}
+                </span>
               </span>
-              <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-                {post.data.authors ? post.data.authors[0] : ""}
-              </span>
-            </span>
+            )}
 
             <span style={{ overflow: "hidden", fontWeight: "bold" }}>
               {SITE.title}
