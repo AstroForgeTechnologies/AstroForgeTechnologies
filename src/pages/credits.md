@@ -26,8 +26,9 @@ We used AI in Generating our Company Name, Company Slogan, and Company Icon, as 
 
 This usage of AI was approved by our supervisor at the time, _Mr. Peter Hughes_.
 
-_Simple and small Rocketship_ prompt. Firefly, 22 Feb. Version, Adobe, 22 Feb. 2024. \<<https://firefly.adobe.com>>.
-_Generate Me 20 Space Company Names and Slogans_ prompt. ChatGPT, 15 Feb. Version, OpenAI, 15 Feb. 2024, \<<https://chat.openai.com/chat>>. \<<https://chat.openai.com/share/52c2e260-8c30-427c-81a4-cede7620213a>>.
+- _Simple and small Rocketship_ prompt. Firefly, 22 Feb. Version, Adobe, 22 Feb. 2024. \<<https://firefly.adobe.com>>.
+
+- _Generate Me 20 Space Company Names and Slogans_ prompt. ChatGPT, 15 Feb. Version, OpenAI, 15 Feb. 2024, \<<https://chat.openai.com/chat>>. \<<https://chat.openai.com/share/52c2e260-8c30-427c-81a4-cede7620213a>>.
 
 ### General Sources
 
