@@ -20,41 +20,140 @@ We thank the Open Source Community for the amazing resources, tools and librarie
 
 ## Bibliography
 
+### AI Usage
+
+We used AI in Generating our Company Name, Company Slogan, and Company Icon, as of the 5th of April 2024.
+
+This usage of AI was approved by our supervisor at the time, _Mr. Peter Hughes_.
+
+_Simple and small Rocketship_ prompt. Firefly, 22 Feb. Version, Adobe, 22 Feb. 2024. \<<https://firefly.adobe.com>>.
+_Generate Me 20 Space Company Names and Slogans_ prompt. ChatGPT, 15 Feb. version, OpenAI, 15 Feb. 2024, \<<https://chat.openai.com/chat>>. \<<https://chat.openai.com/share/52c2e260-8c30-427c-81a4-cede7620213a>>.
+
 ### General Sources
+
+- ABC Science 2021, ‘The blue sunsets are spectacular but the radiation bites. Welcome to Mars’, ABC News, 20 February, viewed 5 April 2024, \<<https://www.abc.net.au/news/science/2021-02-21/mars-a-space-travellers-guide/13160206>>.
+
+- Alicia 2020, _The 20 Most Frequently Asked Questions about the International Space Station_, www.kennedyspacecenter.com.
+
+- Arizona State University 2019, _Mars Education | Developing the Next Generation of Explorers_, Asu.edu.
+
+- Associated Press 2023, International Space Station solar arrays installed, www.youtube.com, viewed 5 April 2024, \<<https://www.youtube.com/watch?v=7SAI7Xath5A>>.
+
+- Astronomy Staff 2024, Why isn’t there a device to clean the solar panels on Mars rovers?, Astronomy Magazine.
 
 - Astronomy Staff 2024, _Why isn’t there a device to clean the solar panels on Mars rovers?_, Astronomy Magazine, \<<https://www.astronomy.com/space-exploration/why-doesnt-nasa-clean-the-solar-panels-on-rovers/>>.
 
+- Battalio, JM & Wang, H 2018, The Aonia-Solis-Valles dust storm track in the southern hemisphere of Mars.
+
+- Berger, E 2020, SpaceX releases a Payload User’s Guide for its Starship rocket, Ars Technica.
+
+- Brandenburg, JE n.d., EVIDENCE FOR A LARGE, NATURAL, PALEO-NUCLEAR REACTOR ON MARS.
+
 - Burrows, L 2019, _Making Mars habitable_, Harvard Gazette, \<<https://news.harvard.edu/gazette/story/2019/07/making-mars-habitable/>>.
 
+- CDN 2024, Futurecdn.net, viewed 5 April 2024, \<<https://cdn.mos.cms.futurecdn.net/VTgJiiLKTKgPcKAG3qa773-1200-80.jpg.webp>>.
+
+- CNET n.d., It’s time we talked about how we could actually live on Mars, and maybe even survive there, CNET.
+
+- Carter, J 2024, Huge Reservoirs Of Water Ice Found On Mars Could Help First Astronauts, Say Scientists, Forbes, viewed 5 April 2024, \<<https://www.forbes.com/sites/jamiecartereurope/2024/01/19/massive-siloes-of-water-ice-found-on-mars-could-help-astronauts-say-scientists/?sh=1f29dd1536ac>>.
+
 - Cartier, KMS 2018, _Tests Indicate Which Edible Plants Could Thrive on Mars_, Eos, \<<https://eos.org/articles/tests-indicate-which-edible-plants-could-thrive-on-mars#:~:text=With%20soil%20aeration%20and%20moisture>>.
+
+- Clark, S 2021, New solar arrays ready to upgrade International Space Station’s power grid – Spaceflight Now, Spaceflight now.
+
+- Cosmic Ray Environment 2024, Imgur.com, viewed 5 April 2024, \<<https://i.stack.imgur.com/96U2v.jpg>>.
 
 - Cranford, N 2020, _Isolation – What Can We Learn From the Experiences of NASA Astronauts?_, NASA, \<<https://www.nasa.gov/humans-in-space/isolation-what-can-we-learn-from-the-experiences-of-nasa-astronauts/>>.
 
 - Dartnell, L 2022, _How astronauts can hide from radiation on Mars_, Sky Night Magazine, \<<https://www.skyatnightmagazine.com/space-missions/astronauts-hide-radiation-mars>>.
 
+- Dasgupta, A 2023, Wind Could Power Future Settlements on Mars, Eos.
+
+- Dasilva, M 2021, Components of a Nuclear Thermal Propulsion System.
+
 - Direct I.Q. n.d., _10 Advantages and 10 Disadvantages of Nuclear Rocket Engines_, Direct I.Q., \<<https://iq.direct/blog/416-10-advantages-and-10-disadvantages-of-nuclear-rocket-engines.html>>.
 
+- Dobrijevic, D 2017, Mars’ Atmosphere: Composition, Climate & Weather, Space.com.
+
+- ESA 2013, Mars dust map, www.esa.int, viewed 5 April 2024, \<<https://www.esa.int/ESA_Multimedia/Images/2013/05/Mars_dust_map>>.
+
 - Earth.com, n.d., _Nuclear powered spacecraft will take first humans to Mars n.d._, Earth.com., \<<https://www.earth.com/news/could-a-nuclear-powered-spacecraft-shorten-the-trip-to-mars/>>.
+
+- Encyclopedia.com 2019, Mars Bases | Encyclopedia.com, www.encyclopedia.com.
+
+- Energy from thorium 2011, LFTR Overview – Energy From Thorium, Energyfromthorium.com.
 
 - Fidler, K 2023, _A missile ‘plopping’ in the ocean isn’t the only nuclear sub disaster recently_, Metro, \<<https://metro.co.uk/2023/11/20/this-happen-nuclear-missiles-a-submarine-sank-19849656/#:~:text=This%20means%20a%20potential%20nuclear>>.
 
 - Florida Today n.d., _Astronauts in space: Can they eat, tweet, shower, FaceTime, use TikTok or Spotify? Mostly yes_, Florida Today, \<<https://www.floridatoday.com/story/tech/science/space/2023/05/19/astronauts-space-toilet-shower-sleep-foods-allowed-tiktok-instagram/70219786007/>>.
 
+- Foust, J 2023, Starship lunar lander missions to require nearly 20 launches, NASA says, SpaceNews.
+
 - Glenn Research Centre 2021, _Nuclear Rockets_, NASA, \<<https://www1.grc.nasa.gov/historic-facilities/rockets-systems-area/7911-2/#:~:text=The%20Nuclear%20Engine%20for%20Rocket%20Vehicle%20Applications%20%28NERVA%29>>.
 
-- Marspedia, n.d., _Gravity_, \<<https://marspedia.org/Gravity>>.
+- Glenn Research Centre 2023, Nuclear Thermal Propulsion Systems, Glenn Research Center | NASA.
 
-- Hossain, FMA & Ali, MdK 2014, ‘Relation between Individual and Society’, Open Journal of Social Sciences, vol. 02, no. 08, pp. 130–137.
+- Gough, E 2019, Earth has a Water Cycle. Mars has a Dust Cycle, Universe Today, viewed 5 April 2024, \<<https://www.universetoday.com/142554/earth-has-a-water-cycle-mars-has-a-dust-cycle/>>.
+
+- Greeley, R, Kuzmin, RO, Nelson, DM & Farmer, JD 2003, ‘Eos Chasma, Mars: Regional setting for a potential landing site for astrobiology’, Journal of Geophysical Research: Planets, vol. 108, no. E12.
+
+- Greshko, M 2024, On its third try, Starship rocket flies through space but fails during re-entry.
 
 - HRR, 2023, _Risk of Adverse Cognitive or Behavioral Conditions and Psychiatric Disorders_, Nasa.gov., \<<https://humanresearchroadmap.nasa.gov/Risks/risk.aspx?i=99>>.
 
+- Hargitai, H n.d., Mars climate zone map based on TES data, planetologia.elte.hu.
+
+- Hoffman, S, Andrews, A & Watts, K 2016, ‘Mining’ Water Ice on Mars An Assessment of ISRU Options in Support of Future Human Missions.
+
+- Hossain, FMA & Ali, MdK 2014, ‘Relation between Individual and Society’, Open Journal of Social Sciences, vol. 02, no. 08, pp. 130–137.
+
+- Howell, E 2018, International Space Station: Facts, History & Tracking, Space.com.
+
+- ISS National Laboratory 2019, History and Timeline of the ISS, ISS National Laboratory.
+
+- Interesting Engineering 2021, A 123,000 MPH Nuclear Rocket Could Reach Mars in Only One Month, interestingengineering.com.
+
 - Interesting Engineering 2021, _A 123,000 MPH Nuclear Rocket Could Reach Mars in Only One Month_, Interesting Engineering, \<<https://interestingengineering.com/science/a-123000-mph-nuclear-rocket-could-reach-mars-in-only-one-month>>.
+
+- JPL 2005, Five Years of Monitoring Mars’ Daytime Surface Temperatures (Animation), NASA Jet Propulsion Laboratory (JPL).
+
+- JPL 2019, A Water Ice Map for Mars, NASA Jet Propulsion Laboratory (JPL).
+
+- Jet propulsion Laboratory - NASA 1999, Temperature of the Martian Surface, NASA Jet Propulsion Laboratory (JPL).
+
+- Klotz, I 2017, Boiling Blood and Radiation: 5 Ways Mars Can Kill, Space.com.
+
+- Kongsberg NanoAvionics 2023, Satellite Solar Panel Deployment | Slow Motion, www.youtube.com, viewed 5 April 2024, \<<https://www.youtube.com/watch?v=jl850b84wYQ>>.
+
+- Lea, R 2023, UAE Mars orbiter creates stunning new map of the Red Planet, Space.com.
 
 - Luscombe, R 2023, ‘Nasa to test nuclear rockets that could fly astronauts to Mars in record time’, The Guardian, 24 January, \<<https://www.theguardian.com/science/2023/jan/24/nasa-mars-trip-nuclear-rocket>>.
 
+- Luscombe, R 2023, ‘Nasa to test nuclear rockets that could fly astronauts to Mars in record time’, The Guardian, 24 January.
+
 - Mars NASA, n.d., _MOXIE for Scientists_, \<<https://mars.nasa.gov/mars2020/spacecraft/instruments/moxie/for-scientists/#:~:text=MOXIE%20collects%20CO2%20from>>.
 
-- NASA, 2019, _MEPAG_, \<<https://mepag.jpl.nasa.gov/goal.cfm?goal=5>>.
+- Marspedia n.d., Geothermal energy, Marspedia.
+
+- Marspedia n.d., Radioactive Rarity on Mars, Marspedia, viewed 5 April 2024, \<<https://marspedia.org/Radioactive_Rarity_on_Mars#:~:text=Thorium%20and%20uranium%20are%20always>>.
+
+- Marspedia, n.d., _Gravity_, \<<https://marspedia.org/Gravity>>.
+
+- Mason, B n.d., A Beautifully Detailed New Geologic Map of Mars, Wired.
+
+- Mohon, L 2021, Space Launch System - NASA, NASA.
+
+- Moore, JM & Edgett, KS 1993, ‘Hellas Planitia, Mars: Site of net dust erosion and implications for the nature of basin floor deposits’, Geophysical Research Letters, vol. 20, no. 15, pp. 1599–1602.
+
+- Muransky, O 2023, Nuclear propulsion systems | ANSTO, www.ansto.gov.au.
+
+- NASA 2015, NASA Confirms Evidence That Liquid Water Flows on Today’s Mars - NASA, Nasa.gov.
+
+- NASA 2016a, Mars Gravity Map, NASA Mars Exploration, viewed 5 April 2024, \<<https://mars.nasa.gov/resources/20294/mars-gravity-map/>>.
+
+- NASA 2016b, Mars Gravity Map | Mars Video - NASA, mars.nasa.gov, viewed 5 April 2024, \<<https://mars.nasa.gov/odyssey/multimedia/videos/?v=294>>.
+
+- NASA 2018, Innovative Liquid Hydrogen Storage to Support Space Launch System - NASA.
 
 - NASA 2018, _Innovative Liquid Hydrogen Storage to Support Space Launch System_, NASA, viewed 4 April 2024, \<<https://www.nasa.gov/missions/artemis/innovative-liquid-hydrogen-storage-to-support-space-launch-system/>>.
 
@@ -64,25 +163,53 @@ We thank the Open Source Community for the amazing resources, tools and librarie
 
 - NASA 2020, _Trip to Mars_, \<<https://mars.nasa.gov/mars2020/timeline/cruise/#:~:text=The%20trip%20to%20Mars%20will>>.
 
+- NASA 2020a, Eight Potential Landing Sites, mars.nasa.gov.
+
+- NASA 2020b, The Propulsion We’re Supplying, It’s Electrifying - NASA, NASA.
+
+- NASA 2021, Where Should Future Astronauts Land on Mars? Follow the Water, NASA’s Mars Exploration Program.
+
 - NASA 2023, _NASA’s Oxygen-Generating Experiment MOXIE Completes Mars Mission_ - NASA, \<<https://www.nasa.gov/solar-system/nasas-oxygen-generating-experiment-moxie-completes-mars-mission/>>.
 
+- NASA 2023a, New Class of Bimodal NTP/NEP with a Wave Rotor Topping Cycle Enabling Fast Transit to Mars - NASA.
+
+- NASA 2023b, Northern Lowlands - Vastitas Borealis, Amazonaws.com.
+
+- NASA 2024, International Space Station Assembly Elements - NASA, NASA.
+
+- NASA Astrobiology n.d., NASA Astrobiology, astrobiology.nasa.gov.
+
+- NASA n.d., Human Landing Systems - NASA.
+
+- NASA n.d., Mars, mars.nasa.gov.
+
 - NASA n.d., _NASA Achieves Water Recovery Milestone on International Space Station_ - NASA, \<<https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/#:~:text=Each%20crew%20member%20needs%20about>>.
+
+- NASA, 2019, _MEPAG_, \<<https://mepag.jpl.nasa.gov/goal.cfm?goal=5>>.
 
 - NASA, n.d., _Designer Plants on Mars_, \<<https://www.nasa.gov/news-release/nasa-designer-plants-on-mars/#:~:text=NASA%20%E2%80%93%20Designer%20Plants%20on%20Mars&text=A%20tough%20plant%20%E2%80%9Cpioneer%E2%80%9D%20that>>.
 
 - NASA, n.d., _New Class of Bimodal NTP/NEP with a Wave Rotor Topping Cycle Enabling Fast Transit to Mars_, \<<https://www.nasa.gov/general/new-class-of-bimodal-ntp-nep-with-a-wave-rotor-topping-cycle-enabling-fast-transit-to-mars/>>.
 
-- Newcomb, T 2023, _The nuclear thermal rocket that could get us to mars in just 45 days, Popular Mechanics_, \<<https://www.popularmechanics.com/space/moon-mars/a44753442/nasa-nuclear-rocket-could-get-to-mars-in-45-days/>>.
+- National Geographic 2022, Atmospheric Pressure | National Geographic Society, education.nationalgeographic.org.
 
 - New Scientist n.d., _Space mirrors could create Earth-like haven on Mars_, New Scientist, \<<https://www.newscientist.com/article/dn10573-space-mirrors-could-create-earth-like-haven-on-mars/#:~:text=Mirrors%20in%20orbit%20around%20Mars%20could%20create%20Earth-like>>.
 
 - New York Times 2023, ‘NASA Seeks a Nuclear-Powered Rocket to Get to Mars in Half the Time’, 26 July, \<<https://www.nytimes.com/2023/07/26/science/nasa-nuclear-rocket-darpa.html>>.
 
+- Newcomb, T 2023, The nuclear thermal rocket that could get us to mars in just 45 days, Popular Mechanics.
+
+- Newcomb, T 2023, _The nuclear thermal rocket that could get us to mars in just 45 days, Popular Mechanics_, \<<https://www.popularmechanics.com/space/moon-mars/a44753442/nasa-nuclear-rocket-could-get-to-mars-in-45-days/>>.
+
+- PBS NewsHour 2023, WATCH LIVE: ISS astronauts take space walk to install solar array, www.youtube.com, viewed 5 April 2024, \<<https://www.youtube.com/watch?v=LbPwlfZcvpM>>.
+
 - Patel, ZS 2020, ‘Red risks for a journey to the red planet: The highest priority human health risks for a mission to Mars’, npj Microgravity, vol. 6, no. 1, pp. 1–13.
+
+- Physics World 2023, _Wind energy could power human habitations on Mars_, Physics World, \<<https://physicsworld.com/a/wind-energy-could-power-human-habitations-on-mars/#:~:text=Hartwick%20says%20that%20they%20%E2%80%9Cwere>>.
 
 - Physics World, n.d., _Nuclear-powered spacecraft: why dreams of atomic rockets are back on 2024_, Physics World, \<<https://physicsworld.com/a/nuclear-powered-spacecraft-why-dreams-of-atomic-rockets-are-back-on/>>.
 
-- Physics World 2023, _Wind energy could power human habitations on Mars_, Physics World, \<<https://physicsworld.com/a/wind-energy-could-power-human-habitations-on-mars/#:~:text=Hartwick%20says%20that%20they%20%E2%80%9Cwere>>.
+- Platt, J n.d., Location Maps - NASA, mars.nasa.gov, viewed 5 April 2024, \<<https://mars.nasa.gov/mer/mission/traverse-maps/>>.
 
 - Pultarova, T 2023, _NASA astronauts could hibernate on deep space missions thanks to arctic squirrels_, Space.com, \<<https://www.space.com/squirrel-hibernation-research-may-help-future-astronauts>>.
 
@@ -90,15 +217,51 @@ We thank the Open Source Community for the amazing resources, tools and librarie
 
 - RMG, n.d., _What do astronauts eat in space?_, \<<https://www.rmg.co.uk/stories/topics/what-do-astronauts-eat-space#:~:text=Primarily%2C%20zip%20lock%20bags%2C%20retort>>.
 
+- Ridgeway, B 2023, Space Nuclear Propulsion - NASA, NASA.
+
+- Ropelato, J 2023, Top 10 Largest Craters on Mars, WhiteClouds, viewed 5 April 2024, \<<https://www.whiteclouds.com/top-10/top-10-largest-craters-on-mars/>>.
+
+- Science Direct n.d., Cryogenic Hydrogen - an overview | ScienceDirect Topics, www.sciencedirect.com.
+
 - Science Learning Hub, 2015, _Types of chemical rocket engines_, Science Learning Hub, \<<https://www.sciencelearn.org.nz/resources/393-types-of-chemical-rocket-engines>>.
 
-- Wang, B 2020, _SpaceX Superheavy Starship Size, Payload and Cost Details_, NextBigFuture.com, viewed 4 April 2024, \<<https://www.nextbigfuture.com/2020/11/spacex-superheavy-starship-size-payload-and-cost-details.html>>.
+- SpaceX 2023, Starship, SpaceX.
+
+- SpaceX 2024, STARSHIP’S THIRD FLIGHT TEST, SpaceX.
+
+- Stanford 2022, MSR - Molten Salt Reactor.
 
 - Tech, JM-G 2021, _Mars-made rocket fuel could get astronauts back to Earth_, Futurity, \<<https://www.futurity.org/mars-rocket-fuel-space-travel-2647692/#:~:text=The%20Martian%20propellant%2C%20which%20is>>.
 
+- The Murray Lab - Global CTX Mosaic of Mars (powered by Esri) 2020, Caltech.edu.
+
+- The Planetary Society 2024, Map of Mars with major regions labeled, The Planetary Society.
+
 - The Times of India 2023, ‘Explained: How nuclear-powered rockets can send missions to Mars in 45 days’, 20 January, \<<https://timesofindia.indiatimes.com/gadgets-news/explained-how-nuclear-powered-rockets-can-send-missions-to-mars-in-45-days/articleshow/97176430.cms>>.
 
+- Turner, B 2023, NASA’s 1st nuclear-powered rocket could launch as soon as 2025, livescience.com.
+
 - Turner, B 2023, _NASA to test nuclear rocket engine that could take humans to Mars in 45 days_, livescience.com, \<<https://www.livescience.com/nasa-nuclear-powered-rocket#:~:text=NASA%20has%20revealed%20plans%20to%20create%20a%20nuclear-powered>>.
+
+- Turner, B 2024, SpaceX’s incredibly powerful Starship lost in the Indian Ocean after reaching orbit for 1st time, livescience.com, viewed 5 April 2024, \<<https://www.livescience.com/space/space-exploration/spacexs-incredibly-powerful-starship-lost-in-the-indian-ocean-after-reaching-orbit-for-1st-time>>.
+
+- VideoFromSpace 2023, See a roll-out solar array unfurl during spacewalk in amazing helmet cam view, www.youtube.com, viewed 5 April 2024, \<<https://www.youtube.com/watch?v=wkume9d4Ogw>>.
+
+- Waldek, S 2023, Zoom in on Mars like never before with this epic 3D map of the Red Planet, Space.com, viewed 5 April 2024, \<<https://www.space.com/high-resolution-3d-mars-map-mro>>.
+
+- Wallach, O 2021, Comparing the Size of The World’s Rockets, Past and Present, Visual Capitalist.
+
+- Wang, B 2020, SpaceX Superheavy Starship Size, Payload and Cost Details | NextBigFuture.com.
+
+- Wang, B 2020, _SpaceX Superheavy Starship Size, Payload and Cost Details_, NextBigFuture.com, viewed 4 April 2024, \<<https://www.nextbigfuture.com/2020/11/spacex-superheavy-starship-size-payload-and-cost-details.html>>.
+
+- Wikipedia 2022, List of terrae on Mars, Wikipedia, viewed 5 April 2024, \<<https://en.wikipedia.org/wiki/List_of_terrae_on_Mars>>.
+
+- Williams, M 2022, Which Parts of Mars are the Safest From Cosmic Radiation?, Universe Today, viewed 5 April 2024, \<<https://www.universetoday.com/155655/which-parts-of-mars-are-the-safest-from-cosmic-radiation/>>.
+
+- Xi-wan, S, Zhen-yun, G & Wei, H 2015, Passive zero-boil-off storage of liquid hydrogen for long-time space missions.
+
+- Zigler, JL & Nimz, K 2014, Gazetteer of Planetary Nomenclature.
 
 <hr>
 
