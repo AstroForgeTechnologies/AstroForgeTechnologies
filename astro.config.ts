@@ -11,6 +11,7 @@ import vercel from "@astrojs/vercel/serverless";
 
 import markdoc from "@astrojs/markdoc";
 import keystatic from "@keystatic/astro";
+import icon from "astro-icon";
 
 let envKeyStatic = process.env.INCLUDE_KEYSTATIC;
 let includeKeyStatic = false;
@@ -30,6 +31,12 @@ export default defineConfig({
     mdx(),
     markdoc({ allowHTML: true }),
     ...(includeKeyStatic && !buildStatic ? [keystatic()] : []),
+    icon({
+      iconDir: "src/assets/icons",
+      include: {
+        ph: ["*"],
+      },
+    }),
   ],
   markdown: {
     remarkPlugins: [

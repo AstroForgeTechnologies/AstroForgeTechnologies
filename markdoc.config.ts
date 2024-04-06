@@ -5,13 +5,12 @@ export default defineMarkdocConfig({
   extends: [shiki({
     theme: 'one-dark-pro',
     wrap: true,
-    langs: [],
   })],
   nodes: {
     document: {
       ...nodes.document,
       render: undefined,
-    }
+    },
   },
   tags: {
     image: {
