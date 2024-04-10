@@ -17,6 +17,125 @@ During Week 9 of Development, our major focuses were on finding a good CAD edito
 
 ## CAD Design Software
 
-For CAD software, we found a few possibilities:
+For CAD software, we found a few possibilities. We have a few main concerns relating to CAD software:
 
-### TinkerCad
+- **Must Be Free**
+- High Quality Export to GLB or FBX Files, as those are the recommended 3D Model Formats, which support Animations, for [React Three Fiber](https://github.com/pmndrs/react-three-fiber). However, for scenes where animations are not needed, exports to OBJ files will work.
+- Support for Animations, including exporting to GLB Files
+- Support for Rendering, both with Animations and Without
+
+### TinkerCAD
+
+{% image
+   img="/src/assets/images/wk-09/tinkercad.png"
+   alt="TinkerCAD Showcase"
+   caption="Figure 1: Showcase of TinkerCAD" /%}
+
+TinkerCAD is an online CAD editor, which has a lot of capabilities, but is also limited.
+
+#### Pros
+
+- Easy to Get Started
+- Simple Shape-Based CAD Editing
+- Easy Collaboration
+
+#### Cons
+
+- Can Crash or Slow Down with Large Objects
+- No Animations
+- Any Renders require Exporting to Fusion 360
+- Exports to GLB or FBX Files can Error, Especially with Large Objects
+- No Custom Properties (Glossiness, Displacement, etc.)
+- Limit of 25MB on Imported Designs
+  - Can import incorrectly
+  - Materials and Custom Properties are Not Imported
+
+### OnShape
+
+{% image
+   img="/src/assets/images/wk-09/onshape.png"
+   alt="OnShape Showcase"
+   caption="Figure 2: Showcase of OnShape" /%}
+
+OnShape is another Browser Based CAD Editor. Whilst it usually costs money, there is an education license which is available for our usage.
+
+#### Pros
+
+- Easy and Accessible Collaboration
+- Relatively Simple Sketch-Based CAD Editing
+- Has a Lot of Capabilities, Is a Professional Tool
+- Some Support of Exporting to Blender
+
+#### Cons
+
+- Rendering Costs Money
+- Unclear Documentation and Support for Export of GLB/FBX Files
+- Unclear Documentation for Animations and Exports
+
+### Fusion 360
+
+{% image
+   img="/src/assets/images/wk-09/fusion360.png"
+   alt="Fusion 360 Showcase"
+   caption="Figure 3: Showcase of Fusion 360" /%}
+
+Fusion 360 is a Desktop Based CAD Editor. It is made by the same creators as TinkerCAD. There is a free license available, of which fits our usage.
+
+#### Pros
+
+- Good Rendering Support & Wide Range of In-Built Materials
+- Somewhat Simple Sketch-Based CAD Editing
+- Support for Collaboration
+- Support for Animations
+- Support to Export to FBX
+
+#### Cons
+
+- Hard to Export to Blender
+- High Memory Usage
+- Free License only Gives 10 Editable Files
+- Unclear Documentation of Exporting Animations to FBX
+- Unclear Documentation of Exporting to GLB
+
+### Blender
+
+{% image
+   img="/src/assets/images/wk-09/blender.png"
+   alt="Blender Showcase"
+   caption="Figure 4: Showcase of Blender" /%}
+
+Blender is a Desktop-Based CAD Editor, famous for its ability to create amazing renders, and ease of use with animations.
+
+#### Pros
+
+- Very Good Support for Rendering
+- Very Good Support for Animations
+- Open Source, Completely Free
+
+#### Cons
+
+- No Default Collaboration Support
+  - Third Party Tools do Exist, such as [Ubisoft Mixer](https://ubisoft-mixer.readthedocs.io/en/latest/getting-started/features.html#features), but Pricing and Quality is unclear
+- High Memory Usage + Some Crashes
+- Errors and Incorrect Exports to GLB and FBX Files
+- Relatively More Difficult Vertex Based CAD Editing
+- No Units Available, More Artistic CAD Editing
+
+### CAD Choice
+
+After consideration of all four options, we decided on doing further experiments, such as exporting Fusion 360 or OnShape Files to Blender, doing Animations in Fusion 360 and OnShape, trying to streamline exporting to GLB and FBX files in Fusion 360, OnShape and Blender, and trying out third-party collaboration tools in Blender.\
+\
+However, due to the different style of creating CAD designs in Blender, which is more artistic, we decided on a most likely workflow. This is bound to change, especially if animations in Blender on exported files is hard, or if exporting to Blender from OnShape and Fusion 360 is very low quality.
+
+1. CAD Editing in OnShape/Fusion 360
+1. Export to Blender
+1. Apply Materials, Animations
+1. Appropriate Renders & Exports
+
+---
+
+## Progress Logs
+
+Due to us previously not writing much in our progress logs, missing details, and/or not writing them at all, we decided to refresh and improve our progress logs.
+
+Furthermore, we decided to add a 'Week 1' Progress Log, detailing why we started this project. We began this effort, but this was mostly planned to be a large project next week.
