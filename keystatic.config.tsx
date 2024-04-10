@@ -158,9 +158,6 @@ export default config({
                 caption: fields.text({ label: 'Caption' }),
               }
             }),
-            tableOfContents: component({
-              preview: ()
-            }),
           },
         }),
       },
