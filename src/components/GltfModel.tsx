@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { useLoader, useFrame, type Vector3 } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { Mesh } from "three";
+import { Html, useProgress } from "@react-three/drei";
 
 export interface Props {
   modelPath: string;
@@ -18,6 +19,8 @@ const GltfModel = ({ modelPath, scale = 40, position = [0, 0, 0] }: Props) => {
     ref.current?.rotateY(delta);
   });
 
+  const { progress } = useProgress();
+
   return (
     <>
       <primitive
@@ -28,6 +31,7 @@ const GltfModel = ({ modelPath, scale = 40, position = [0, 0, 0] }: Props) => {
         onPointerOver={() => hover(true)}
         onPointerOut={() => hover(false)}
       />
+      <Html center>{progress}% Loaded...</Html>
     </>
   );
 };
