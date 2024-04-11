@@ -12,6 +12,7 @@ import { SOCIALS } from "@config";
 import HomePageCards from "../layouts/HomePageCards";
 import ModelViewer from "../components/ModelViewer";
 import { slugifyStr } from "../utils/slugify";
+import Main from "../layouts/Main.astro";
 
 const posts = await getCollection("development");
 
@@ -24,7 +25,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
 <Layout>
   <Header />
-  <main id="main-content">
+  <Main topType="none">
     <section id="hero">
       <h1>AST</h1>
       <a
@@ -126,7 +127,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </svg>
       </LinkButton>
     </div>
-  </main>
+  </Main>
 
   <Footer />
 </Layout>

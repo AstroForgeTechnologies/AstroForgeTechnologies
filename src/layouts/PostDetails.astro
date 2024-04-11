@@ -9,7 +9,7 @@ import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
 import { getUniqueTagsOfTags, type InputTag } from "../utils/tagHelper";
-import BackButton from "../components/BackButton.astro";
+import Main from "./Main.astro";
 
 export interface Props {
   post: CollectionEntry<"development">;
@@ -59,10 +59,12 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
     <div class="progress-bar h-1 w-0 bg-skin-accent" id="myBar"></div>
   </div> -->
 
-  <BackButton />
-  <main id="main-content">
-    <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
-
+  <Main
+    pageTitle={title}
+    titleTransition={slugifyStr(title)}
+    headingClass="text-2xl font-semibold text-skin-accent"
+    topType="back"
+  >
     {
       useModDateTime(pubDatetime, modDatetime) ? (
         <>
@@ -110,7 +112,7 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
 
       <ShareLinks />
     </div>
-  </main>
+  </Main>
   <Footer />
 </Layout>
 

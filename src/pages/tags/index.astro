@@ -7,7 +7,6 @@ import Main from "@layouts/Main.astro";
 import Tag from "@components/Tag.astro";
 import getUniqueTags from "../../utils/tagHelper";
 import { SITE } from "@config";
-import BackButton from "../../components/BackButton.astro";
 
 const posts = await getCollection("development");
 
@@ -16,12 +15,7 @@ let tags = getUniqueTags(posts);
 
 <Layout title={`Tags | ${SITE.title}`}>
   <Header />
-  <BackButton />
-  <Main
-    pageTitle="Tags"
-    excludePathSpec={true}
-    pageDesc="All the tags used in posts."
-  >
+  <Main pageTitle="Tags" topType="back" pageDesc="All the tags used in posts.">
     <ul>
       {tags.map(tag => <Tag {tag} size="lg" />)}
     </ul>

@@ -1,39 +1,38 @@
 ---
 import Breadcrumbs from "@components/Breadcrumbs.astro";
+import BackButton from "../components/BackButton.astro";
 
 interface StringTitleProp {
-  pageTitle: string;
+  pageTitle?: string;
+  titleTransition?: string;
   pageDesc?: string;
-  excludePathSpec?: boolean;
+  topType?: "crumb" | "back" | "none";
+  mainClass?: string;
+  headingClass?: string;
 }
 
-interface ArrayTitleProp {
-  pageTitle: [string, string];
-  titleTransition: string;
-  pageDesc?: string;
-  excludePathSpec?: boolean;
-}
-
-export type Props = StringTitleProp | ArrayTitleProp;
+export type Props = StringTitleProp;
 
 const { props } = Astro;
 ---
 
-{!props.excludePathSpec && <Breadcrumbs />}
-<main id="main-content">
+{
+  !props.topType || props.topType === "crumb" ? (
+    <Breadcrumbs />
+  ) : (
+    props.topType === "back" && <BackButton />
+  )
+}
+
+<main id="main-content" class={props.mainClass}>
   {
-    "titleTransition" in props ? (
-      <h1>
-        {props.pageTitle[0]}
-        <span transition:name={props.titleTransition}>
-          {props.pageTitle[1]}
-        </span>
+    props.pageTitle && (
+      <h1 class={props.headingClass} transition:name={props.titleTransition}>
+        {props.pageTitle}
       </h1>
-    ) : (
-      <h1>{props.pageTitle}</h1>
     )
   }
-  <p>{props.pageDesc}</p>
+  {props.pageDesc && <p>{props.pageDesc}</p>}
   <slot />
 </main>
 

@@ -4,12 +4,12 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
+import Main from "../layouts/Main.astro";
 ---
 
 <Layout title={`404 Not Found | ${SITE.title}`}>
   <Header />
-
-  <main id="main-content">
+  <Main topType="none" mainClass="flex flex-1 justify-center items-center">
     <div class="not-found-wrapper">
       <h1 aria-label="404 Not Found">404</h1>
       <span aria-hidden="true">¯\_(ツ)_/¯</span>
@@ -21,15 +21,11 @@ import LinkButton from "@components/LinkButton.astro";
         Go Back Home
       </LinkButton>
     </div>
-  </main>
-
+  </Main>
   <Footer />
 </Layout>
 
 <style>
-  #main-content {
-    @apply flex flex-1 items-center justify-center;
-  }
   .not-found-wrapper {
     @apply mb-14 flex flex-col items-center justify-center;
   }
