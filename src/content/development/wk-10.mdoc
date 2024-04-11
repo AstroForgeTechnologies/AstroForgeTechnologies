@@ -47,6 +47,59 @@ Furthermore, the UI was also much cleaner, as shown in Figure 2 and 3.
 
 Due to constraints around time, during this week, Isaac was unable to fully setup KeyStatic, and thus some features such as updating Modification Dates and Tables were not implemented yet.
 
+However, both Image and Front Matter parts of Posts became slightly more complicated.
+
+### Front Matter
+
+**Before:**
+
+```yaml
+title: Week 7 Progress Log
+description: The Progress Log for Week 7.
+tags:
+  - ':clipboard: Progress Log'
+authors:
+  - christy
+pubDatetime: 2024-03-15T10:34:46.106Z
+modDatetime: 2024-04-01T22:59:48.191Z
+_template: posts
+```
+
+**After:**
+
+```yaml
+title: Week 7 Progress Log
+description: Week 7 of Development!
+pubDatetime: 2024-03-15T10:34:00.000Z
+modDatetime: 2024-04-01T22:59:00.000Z
+featured: false
+tags:
+  - discriminant: 📈 Development
+  - discriminant: newTag
+    value: 📦 Storage
+  - discriminant: 🚀 Ship Design
+  - discriminant: 📌 Location
+authors:
+  - christy
+```
+
+### Images
+
+**Before:**
+
+```markdown
+![](</assets/images/Screenshot 2024-04-02 at 09.38.47.png>)
+```
+
+**After:**
+
+```mdx
+{% image
+   img="/src/assets/images/wk-07/Screenshot 2024-04-02 at 09.38.47.png"
+   alt="Pros and Cons of Lava Tubes and Caves"
+   caption="Figure 3: Pros and Cons of Lava Tubes (Left) and Caves (Right)" /%}
+```
+
 Finally, in relation to normal website design, the Tags List was moved to be accessed in the Post List, and removed from the header. We also updated the home page and credits page, to be presentable.
 
 ---

@@ -125,7 +125,29 @@ export default config({
         ),
         content: fields.document({
           label: 'Content',
-          formatting: true,
+          formatting: {
+            inlineMarks: {
+              bold: true,
+              italic: true,
+              strikethrough: true,
+              code: true,
+              keyboard: true,
+              subscript: true,
+              superscript: true,
+              underline: true,
+            },
+            listTypes: {
+              ordered: true,
+              unordered: true,
+            },
+            headingLevels: [1, 2, 3, 4],
+            blockTypes: {
+              blockquote: true,
+              code: true,
+            },
+            alignment: true,
+            softBreaks: true,
+          },
           dividers: true,
           links: true,
           images: undefined,
