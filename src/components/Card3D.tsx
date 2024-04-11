@@ -1,23 +1,16 @@
-"use client";
-
 import cn from "@utils/cn";
-import React, {
-  useState,
-  useContext,
-  useRef,
-  useEffect,
-} from "react";
+import React, { useState, useContext, useRef, useEffect } from "react";
 import { MouseEnterContext } from "@components/contexts/MouseEnterContext.ts";
 
 /* Defaults */
 const DEFAULT_REDUCER: number = 25;
 
 export const CardContainer = ({
-                                children,
-                                className,
-                                containerClassName,
-                                reducer,
-                              }: {
+  children,
+  className,
+  containerClassName,
+  reducer,
+}: {
   children?: React.ReactNode;
   className?: string;
   containerClassName?: string;
@@ -78,9 +71,9 @@ export const CardContainer = ({
 };
 
 export const CardBody = ({
-                           children,
-                           className,
-                         }: {
+  children,
+  className,
+}: {
   children: React.ReactNode;
   className?: string;
 }) => {
@@ -97,17 +90,17 @@ export const CardBody = ({
 };
 
 export const CardItem = ({
-                           as: Tag = "div",
-                           children,
-                           className,
-                           translateX = 0,
-                           translateY = 0,
-                           translateZ = 0,
-                           rotateX = 0,
-                           rotateY = 0,
-                           rotateZ = 0,
-                           params = {}
-                         }: {
+  as: Tag = "div",
+  children,
+  className,
+  translateX = 0,
+  translateY = 0,
+  translateZ = 0,
+  rotateX = 0,
+  rotateY = 0,
+  rotateZ = 0,
+  params = {},
+}: {
   as?: React.ElementType;
   children: React.ReactNode;
   className?: string;
@@ -154,4 +147,3 @@ const useMouseEnter = () => {
   }
   return context;
 };
-
