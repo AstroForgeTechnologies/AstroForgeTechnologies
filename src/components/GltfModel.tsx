@@ -19,8 +19,6 @@ const GltfModel = ({ modelPath, scale = 40, position = [0, 0, 0] }: Props) => {
     ref.current?.rotateY(delta);
   });
 
-  const { progress } = useProgress();
-
   return (
     <>
       <primitive
@@ -31,7 +29,6 @@ const GltfModel = ({ modelPath, scale = 40, position = [0, 0, 0] }: Props) => {
         onPointerOver={() => hover(true)}
         onPointerOut={() => hover(false)}
       />
-      <Html center>{progress}% Loaded...</Html>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Canvas, type Vector3 } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { Html, OrbitControls, useProgress } from "@react-three/drei";
 import GltfModel from "@components/GltfModel.tsx";
 
 export interface Props {
@@ -8,6 +8,11 @@ export interface Props {
   scale?: number;
   position?: Vector3;
 }
+
+const Loader = () => {
+  const { progress } = useProgress();
+  return <Html center>{progress}% Loaded...</Html>;
+};
 
 const ModelViewer = ({
   modelPath,
@@ -25,7 +30,7 @@ const ModelViewer = ({
           <directionalLight position={[5, 5, 5]} intensity={5} />
           {/*<spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={10} />*/}
           <pointLight position={[-2, 1.25, -2]} intensity={5} />
-          <Suspense fallback={null}>
+          <Suspense fallback={<Loader />}>
             <GltfModel
               modelPath={modelPath}
               scale={scale}
