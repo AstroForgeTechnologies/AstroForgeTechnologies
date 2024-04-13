@@ -5,13 +5,12 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
-import Card from "@components/Card";
+import PostCards from "@layouts/PostCards.svelte";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 import HomePageCards from "@layouts/HomePageCards.svelte";
 import ModelViewer from "@components/ModelViewer";
-import { slugifyStr } from "@utils/slugify";
 import Main from "../layouts/Main.astro";
 
 const posts = await getCollection("development");
@@ -83,13 +82,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           <section id="featured">
             <h2>Featured</h2>
             <ul>
-              {featuredPosts.map(({ data, slug }) => (
-                <Card
-                  href={`/development/${slugifyStr(slug)}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
+              <PostCards posts={featuredPosts} />
             </ul>
           </section>
           {recentPosts.length > 0 && <Hr noPadding={true} />}
@@ -102,16 +95,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <section id="recent-posts">
           <h2>Recent Posts</h2>
           <ul>
-            {recentPosts.map(
-              ({ data, slug }, index) =>
-                index < 4 && (
-                  <Card
-                    href={`/development/${slugifyStr(slug)}/`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
-                )
-            )}
+            <PostCards posts={recentPosts.slice(0, 5)} />
           </ul>
         </section>
       )

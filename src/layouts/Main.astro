@@ -26,11 +26,14 @@ const { props } = Astro;
 
 <main id="main-content" class={props.mainClass}>
   {
-    props.pageTitle && (
-      <h1 class={props.headingClass} transition:name={props.titleTransition}>
-        {props.pageTitle}
-      </h1>
-    )
+    props.pageTitle &&
+      (props.titleTransition ? (
+        <h1 class={props.headingClass} transition:name={props.titleTransition}>
+          {props.pageTitle}
+        </h1>
+      ) : (
+        <h1 class={props.headingClass}>{props.pageTitle}</h1>
+      ))
   }
   {props.pageDesc && <p>{props.pageDesc}</p>}
   <slot />

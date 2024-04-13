@@ -5,7 +5,7 @@
 
   const DEFAULT_REDUCER: number = 25;
 
-  export interface Props {
+  interface Props {
     className?: string;
     containerClassName?: string;
     reducer?: number;

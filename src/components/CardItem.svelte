@@ -2,7 +2,7 @@
   import cn from "@utils/cn.ts";
   import { getContext } from "svelte";
 
-  export interface Props {
+  interface Props {
     type?: string;
     className?: string;
     translateX?: number | string;

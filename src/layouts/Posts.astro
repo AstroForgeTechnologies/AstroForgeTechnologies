@@ -5,12 +5,11 @@ import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Pagination from "@components/Pagination.astro";
-import Card from "@components/Card";
+import PostCards from "@layouts/PostCards.svelte";
 import { SITE } from "@config";
-import { slugifyStr } from "../utils/slugify";
-import LayoutArea from "../components/LayoutArea.astro";
-import LayoutComponent from "../components/LayoutComponent.astro";
-import LinkButton from "../components/LinkButton.astro";
+import LayoutArea from "@components/LayoutArea.astro";
+import LayoutComponent from "@components/LayoutComponent.astro";
+import LinkButton from "@components/LinkButton.astro";
 
 export interface Props {
   currentPage: number;
@@ -43,11 +42,7 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
       </LayoutArea>
     </LayoutComponent>
     <ul>
-      {
-        paginatedPosts.map(({ data, slug }) => (
-          <Card href={`/development/${slugifyStr(slug)}/`} frontmatter={data} />
-        ))
-      }
+      <PostCards posts={paginatedPosts} />
     </ul>
   </Main>
 
