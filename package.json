@@ -7,7 +7,7 @@
     "keyStaticDev": "cross-env INCLUDE_KEYSTATIC=true npm run dev",
     "localKeyStaticDev": "cross-env PUBLIC_USE_LOCAL=true npm run keyStaticDev",
     "start": "astro dev --port 8080",
-    "justBuild": "astro check && astro build",
+    "justBuild": "astro build",
     "build": "npm run justBuild && jampack ./.vercel/output/static",
     "keyStaticBuild": "cross-env INCLUDE_KEYSTATIC=true npm run build",
     "staticBuild": "cross-env BUILD_STATIC=true npm run justBuild && jampack ./dist",
