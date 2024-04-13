@@ -1,22 +1,18 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
-import remarkToc from "remark-toc";
-import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 // noinspection ES6PreferShortImport
 import { SITE } from "./src/config";
 import mdx from "@astrojs/mdx";
 import vercel from "@astrojs/vercel/serverless";
-
 import markdoc from "@astrojs/markdoc";
 import keystatic from "@keystatic/astro";
 import icon from "astro-icon";
-
+import svelte from "@astrojs/svelte";
 let envKeyStatic = process.env.INCLUDE_KEYSTATIC;
 let includeKeyStatic = false;
 if (envKeyStatic) includeKeyStatic = JSON.parse(envKeyStatic);
-
 let envBuildStatic = process.env.BUILD_STATIC;
 let buildStatic = false;
 if (envBuildStatic) buildStatic = JSON.parse(envBuildStatic);
@@ -25,29 +21,26 @@ if (envBuildStatic) buildStatic = JSON.parse(envBuildStatic);
 export default defineConfig({
   site: SITE.website,
   integrations: [
-    tailwind({ applyBaseStyles: false }),
+    tailwind({
+      applyBaseStyles: false,
+    }),
     react(),
+    svelte(),
     sitemap(),
     mdx(),
-    markdoc({ allowHTML: true }),
-    ...(includeKeyStatic && !buildStatic ? [keystatic()] : []),
+    markdoc({
+      allowHTML: true,
+    }),
     icon({
       iconDir: "src/assets/icons",
       include: {
         ph: ["*"],
       },
     }),
+    ...(includeKeyStatic && !buildStatic ? [keystatic()] : []),
   ],
   markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: "Table of Contents",
-        },
-      ],
-    ],
+    remarkPlugins: [],
     shikiConfig: {
       theme: "one-dark-pro",
       wrap: true,

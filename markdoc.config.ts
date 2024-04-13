@@ -29,6 +29,9 @@ export default defineMarkdocConfig({
     },
     "layout-area": {
       render: component("./src/components/LayoutArea.astro"),
+    },
+    mermaid: {
+      render: component("./src/components/MermaidGraph.astro"),
     }
   }
 })

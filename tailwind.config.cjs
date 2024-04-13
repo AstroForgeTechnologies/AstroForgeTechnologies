@@ -78,6 +78,7 @@ module.exports = {
   plugins: [
     require("@tailwindcss/typography"),
     addVariablesForColors,
+    require("@xpd/tailwind-3dtransforms"),
   ],
 };
 
