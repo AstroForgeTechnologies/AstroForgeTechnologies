@@ -9,9 +9,9 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
-import HomePageCards from "@components/groups/HomePageCards.svelte";
+import HomePageCards from "@layouts/HomePageCards.svelte";
 import ModelViewer from "../components/ModelViewer";
-import { slugifyStr } from "../utils/slugify";
+import { slugifyStr } from "@utils/slugify";
 import Main from "../layouts/Main.astro";
 
 const posts = await getCollection("development");

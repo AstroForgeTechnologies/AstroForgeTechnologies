@@ -1,7 +1,7 @@
 <script lang="ts">
-  import CardContainer from "@components/singular/CardContainer.svelte";
-  import CardBody from "@components/singular/CardBody.svelte";
-  import CardItem from "@components/singular/CardItem.svelte";
+  import CardContainer from "@components/CardContainer.svelte";
+  import CardBody from "@components/CardBody.svelte";
+  import CardItem from "@components/CardItem.svelte";
 </script>
 
 <CardContainer className="inter-var duration-500 hover:duration-200 ease-linear" reducer={10}>
