@@ -2,17 +2,14 @@
   import CardContainer from "@components/singular/CardContainer.svelte";
   import CardBody from "@components/singular/CardBody.svelte";
   import CardItem from "@components/singular/CardItem.svelte";
-
-  let mouseEntered = false;
 </script>
 
-<CardContainer bind:mouseEntered className="inter-var duration-500 hover:duration-200 ease-linear" reducer={10}>
+<CardContainer className="inter-var duration-500 hover:duration-200 ease-linear" reducer={10}>
   <CardBody className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border transition-all duration-1000 ease-in-out">
-    <CardItem {mouseEntered} translateZ=100 className="text-xl font-bold text-white">
+    <CardItem translateZ=100 className="text-xl font-bold text-white">
       Make things float in air!!!
     </CardItem>
     <CardItem
-      {mouseEntered}
       translateZ=75
       className="text-sm max-w-sm mt-2 text-neutral-300"
       type="p"
@@ -20,7 +17,6 @@
       Demo of Floating 3D Cards.
     </CardItem>
     <CardItem
-      {mouseEntered}
       translateZ={50}
       className="w-full mt-4"
       type="button"
@@ -35,7 +31,6 @@
     </CardItem>
     <div class="flex justify-between items-center mt-20">
       <CardItem
-        {mouseEntered}
         type="button"
         translateZ={100}
         className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
@@ -44,7 +39,6 @@
         Try Now →
       </CardItem>
       <CardItem
-        {mouseEntered}
         translateZ={100}
         type="button"
         className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"

@@ -1,5 +1,7 @@
 <script lang="ts">
   import cn from "@utils/cn.ts";
+  import { setContext } from "svelte";
+  import { writable } from "svelte/store";
 
   const DEFAULT_REDUCER: number = 25;
 
@@ -7,11 +9,13 @@
     className?: string;
     containerClassName?: string;
     reducer?: number;
-    mouseEntered?: boolean;
   }
 
-  let { className, containerClassName, reducer, mouseEntered = $bindable(false) }: Props = $props();
+  let { className, containerClassName, reducer }: Props = $props();
   let container: HTMLDivElement;
+  let mouseEntered = writable(false);
+
+  setContext("MOUSE_ENTERED", mouseEntered);
 
   const handleMouseMove = (mouse: MouseEvent) => {
     if (!container) return;
@@ -31,10 +35,10 @@
 >
   <div
     bind:this={container}
-    onmouseenter={() => mouseEntered = true}
+    onmouseenter={() => $mouseEntered = true}
     onmousemove={handleMouseMove}
     onmouseleave={() => {
-      mouseEntered = false;
+      $mouseEntered = false;
       container.style.transform = "";
     }}
     role="figure"
