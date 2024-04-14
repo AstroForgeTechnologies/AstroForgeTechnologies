@@ -180,6 +180,22 @@ export default config({
                 caption: fields.text({ label: 'Caption' }),
               }
             }),
+            mermaid: component({
+              preview: ({fields}) => (
+                <div style={{ padding: '1rem 0' /* styling is up to you */ }}>
+                  {fields.graph.element}
+                </div>
+              ),
+              label: "Mermaid Graph",
+              schema: {
+                graph: fields.child({
+                  kind: 'block',
+                  placeholder: 'Graph...',
+                  formatting: { inlineMarks: undefined, softBreaks: undefined },
+                  links: 'inherit',
+                })
+              },
+            })
           },
         }),
       },

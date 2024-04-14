@@ -75,6 +75,7 @@ module.exports = {
       },
     },
   },
+  darkMode: ['selector', '[data-theme="dark"]'],
   plugins: [
     require("@tailwindcss/typography"),
     addVariablesForColors,

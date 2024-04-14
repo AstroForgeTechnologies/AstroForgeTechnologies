@@ -1,0 +1,21 @@
+---
+import MermaidGraph from "./MermaidGraph.svelte";
+import { parseHTML } from "linkedom";
+
+const html = await Astro.slots.render("default");
+const { document } = parseHTML(html);
+const children = document.children;
+
+const props = Astro.props;
+
+let mermaidCode: string[] = [];
+
+for (let i = 0; i < children.length; i++) {
+  const child: Element | null = children.item(i);
+  if (child && child["innerText"]) {
+    mermaidCode.push(child["innerText"]);
+  }
+}
+---
+
+<MermaidGraph code={mermaidCode.join("\n")} {...props} client:only="svelte" />

@@ -14,7 +14,8 @@
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
-      "@data/*": ["data/*"]
+      "@data/*": ["data/*"],
+      "@store/*": ["store/*"]
     },
     "jsxImportSource": "react"
   }
