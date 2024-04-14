@@ -1,26 +1,6 @@
 <script lang="ts">
   import theme from "@store/themeStore";
 
-  theme.set(getTheme());
-
-  // Immediately Reflect Theme (early)
-  reflectTheme($theme);
-
-  $effect(() => {
-    // Save to Local Storage
-    localStorage.setItem("theme", $theme);
-
-    // Reflect Theme on Change to Theme Store, or Load
-    reflectTheme($theme);
-  });
-
-  // Sync with Preferred Color Scheme Changes
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", ({ matches: isDark }) => {
-      theme.set(isDark ? "dark" : "light");
-    });
-
   /** Section: Copied from `public/toggle-theme.js`.
    * No Way to Import Public JS Files.
    */
@@ -67,4 +47,28 @@
         ?.setAttribute("content", bgColor);
     }
   }
+
+  /**
+   * Normal Section
+   * Must Be Below Copied Section, Uses Functions from There
+   **/
+  theme.set(getTheme());
+
+  // Immediately Reflect Theme (early)
+  reflectTheme($theme);
+
+  $effect(() => {
+    // Save to Local Storage
+    localStorage.setItem("theme", $theme);
+
+    // Reflect Theme on Change to Theme Store, or Load
+    reflectTheme($theme);
+  });
+
+  // Sync with Preferred Color Scheme Changes
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", ({ matches: isDark }) => {
+      theme.set(isDark ? "dark" : "light");
+    });
 </script>

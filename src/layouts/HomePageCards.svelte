@@ -5,11 +5,11 @@
 </script>
 
 <CardContainer
-  className="inter-var duration-500 hover:duration-200 ease-linear"
+  className="inter-var duration-500 hover:duration-150 ease-linear"
   reducer={10}
 >
   <CardBody
-    className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border transition-all duration-1000 ease-in-out"
+    className="relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border transition-shadow duration-1000 ease-in-out"
   >
     <CardItem translateZ="100" className="text-xl font-bold text-white">
       Make things float in air!!!
