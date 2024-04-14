@@ -11,6 +11,14 @@ let themeValue = getTheme();
 // set early so no page flashes / CSS is made aware
 reflectTheme(themeValue);
 
+// Run Again on Load
+window.onload = () => {
+  reflectTheme(themeValue);
+
+  // Run on Astro Swap
+  document.addEventListener("astro:after-swap", () => reflectTheme(themeValue));
+};
+
 function getTheme() {
   const storageTheme = localStorage.getItem("theme");
 

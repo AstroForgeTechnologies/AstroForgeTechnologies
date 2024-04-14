@@ -41,6 +41,9 @@ const socialImageURL = new URL(
   class={`${scrollSmooth && "scroll-smooth"}`}
 >
   <head>
+    <!-- Set Theme Early, Prevent FOUC (Flash of Unstyled Content) -->
+    <script is:inline src="/scripts/toggle-theme.js"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#ffffff" />
@@ -112,9 +115,6 @@ const socialImageURL = new URL(
     }
 
     <ViewTransitions />
-
-    <!-- Set Theme Early, Prevent FOUC (Flash of Unstyled Content) -->
-    <script is:inline src="/scripts/toggle-theme.js"></script>
 
     <ThemeSetter client:only="svelte" />
   </head>

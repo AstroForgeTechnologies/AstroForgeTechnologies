@@ -7,6 +7,6 @@
   let { className }: Props = $props();
 </script>
 
-<div class={cn("h-96 w-96 transform-style-3d", className)}>
+<div class={cn("size-96 transform-style-3d", className)}>
   <slot />
 </div>

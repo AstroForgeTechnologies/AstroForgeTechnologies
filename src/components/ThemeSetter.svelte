@@ -6,11 +6,6 @@
    */
   const primaryColorScheme = "dark";
 
-  let themeValue = getTheme();
-
-  // set early so no page flashes / CSS is made aware
-  reflectTheme(themeValue);
-
   function getTheme() {
     const storageTheme = localStorage.getItem("theme");
 
@@ -54,9 +49,6 @@
    **/
   theme.set(getTheme());
 
-  // Immediately Reflect Theme (early)
-  reflectTheme($theme);
-
   $effect(() => {
     // Save to Local Storage
     localStorage.setItem("theme", $theme);
@@ -64,11 +56,4 @@
     // Reflect Theme on Change to Theme Store, or Load
     reflectTheme($theme);
   });
-
-  // Sync with Preferred Color Scheme Changes
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", ({ matches: isDark }) => {
-      theme.set(isDark ? "dark" : "light");
-    });
 </script>
