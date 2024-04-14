@@ -46,7 +46,7 @@
     }}
     role="figure"
     class={cn(
-      "relative flex items-center justify-center transition-all duration-300 ease-linear transform-style-3d",
+      `relative flex items-center justify-center transition-transform ease-linear transform-style-3d ${$mouseEntered ? "duration-150" : "duration-500"}`,
       className,
     )}
   >
