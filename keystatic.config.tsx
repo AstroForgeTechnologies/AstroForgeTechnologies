@@ -182,8 +182,11 @@ export default config({
             }),
             mermaid: component({
               preview: ({fields}) => (
-                <div style={{ padding: '1rem 0' /* styling is up to you */ }}>
-                  {fields.graph.element}
+                <div style={{ padding: "1rem 0" }}>
+                  <div style={{ padding: "1rem", borderStyle: "dashed", borderWidth: "2px" }}>
+                    {fields.graph.element}
+                  </div>
+                  <p style={{ textAlign: "center", fontWeight: 700 }}>{fields.caption.value ?? ""}</p>
                 </div>
               ),
               label: "Mermaid Graph",
@@ -193,7 +196,8 @@ export default config({
                   placeholder: 'Graph...',
                   formatting: { inlineMarks: undefined, softBreaks: undefined },
                   links: 'inherit',
-                })
+                }),
+                caption: fields.text({ label: 'Caption' }),
               },
             })
           },

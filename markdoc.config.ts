@@ -32,6 +32,9 @@ export default defineMarkdocConfig({
     },
     mermaid: {
       render: component("./src/components/MermaidWrapper.astro"),
+      attributes: {
+        caption: { type: String },
+      }
     }
   }
 })
