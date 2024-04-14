@@ -31,7 +31,7 @@ export function hasTag(tags: InputTag[], tag: Tag): boolean {
 }
 
 export default function getUniqueTags(
-  posts: CollectionEntry<"development">[]
+  posts: CollectionEntry<"development">[],
 ): Tag[] {
   return posts
     .flatMap(post => post.data.tags)

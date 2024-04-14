@@ -16,7 +16,7 @@
 
   const headerProps = {
     style: `view-transition-name: ${slugifyStr(title)}`,
-    "class": "text-lg font-medium decoration-dashed hover:underline",
+    class: "text-lg font-medium decoration-dashed hover:underline",
   };
 
   const useMod = useModDateTime(pubDatetime, modDatetime);
@@ -24,7 +24,7 @@
 
 <li class="my-6">
   <a
-    href={href}
+    {href}
     class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
   >
     {#if secHeading}
@@ -34,8 +34,8 @@
     {/if}
   </a>
   <Datetime
-    dateTime={ useMod ? modDatetime : pubDatetime }
-    category={ useMod ? "Updated" : "Published" }
+    dateTime={useMod ? modDatetime : pubDatetime}
+    category={useMod ? "Updated" : "Published"}
   />
   <p>{description}</p>
 </li>

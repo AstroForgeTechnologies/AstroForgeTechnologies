@@ -11,11 +11,11 @@ export interface Props {
 const { img, alt = "", caption = "" } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/**/*.{jpeg,jpg,png,gif}"
+  "/src/assets/**/*.{jpeg,jpg,png,gif}",
 );
 if (!images[img])
   throw new Error(
-    `"${img}" does not exist in glob: "/src/assets/*.{jpeg,jpg,png,gif}"`
+    `"${img}" does not exist in glob: "/src/assets/*.{jpeg,jpg,png,gif}"`,
   );
 ---
 

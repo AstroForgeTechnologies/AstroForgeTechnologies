@@ -1,9 +1,9 @@
-import { defineMarkdocConfig, component, nodes } from '@astrojs/markdoc/config';
-import shiki from '@astrojs/markdoc/shiki';
+import { component, defineMarkdocConfig, nodes } from "@astrojs/markdoc/config";
+import shiki from "@astrojs/markdoc/shiki";
 
 export default defineMarkdocConfig({
   extends: [shiki({
-    theme: 'one-dark-pro',
+    theme: "one-dark-pro",
     wrap: true,
   })],
   nodes: {
@@ -37,4 +37,4 @@ export default defineMarkdocConfig({
       }
     }
   }
-})
+});

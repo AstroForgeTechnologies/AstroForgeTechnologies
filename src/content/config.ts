@@ -14,7 +14,7 @@ const development = defineCollection({
           z.object({
             discriminant: z.string(),
             value: z.string().optional().nullable(),
-          })
+          }),
         )
         .default([{ discriminant: "Other" }]),
       authors: z.array(z.string()).optional(),

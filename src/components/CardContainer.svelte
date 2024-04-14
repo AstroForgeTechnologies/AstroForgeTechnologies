@@ -31,11 +31,14 @@
 </script>
 
 <div
-  class={ cn("py-20 flex items-center justify-center perspective-1000", containerClassName) }
+  class={cn(
+    "flex items-center justify-center py-20 perspective-1000",
+    containerClassName,
+  )}
 >
   <div
     bind:this={container}
-    onmouseenter={() => $mouseEntered = true}
+    onmouseenter={() => ($mouseEntered = true)}
     onmousemove={handleMouseMove}
     onmouseleave={() => {
       $mouseEntered = false;
@@ -43,9 +46,9 @@
     }}
     role="figure"
     class={cn(
-            `flex items-center justify-center relative transition-all duration-300 ease-linear transform-style-3d`,
-            className
-          )}
+      "relative flex items-center justify-center transition-all duration-300 ease-linear transform-style-3d",
+      className,
+    )}
   >
     <slot />
   </div>

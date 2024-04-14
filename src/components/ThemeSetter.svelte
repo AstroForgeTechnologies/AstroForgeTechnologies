@@ -12,7 +12,7 @@
 
     // Reflect Theme on Change to Theme Store, or Load
     reflectTheme($theme);
-  })
+  });
 
   // Sync with Preferred Color Scheme Changes
   window
@@ -22,8 +22,8 @@
     });
 
   /** Section: Copied from `public/toggle-theme.js`.
-    * No Way to Import Public JS Files.
-    */
+   * No Way to Import Public JS Files.
+   */
   const primaryColorScheme = "dark";
 
   let themeValue = getTheme();

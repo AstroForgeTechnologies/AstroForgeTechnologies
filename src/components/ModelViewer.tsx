@@ -20,9 +20,9 @@ const ModelViewer = ({
   position = [0, 0, 0],
 }: Props) => {
   return (
-    <div className="py-20 flex items-center justify-center">
+    <div className="flex items-center justify-center py-20">
       <div
-        className="flex items-center justify-center w-96 h-96 rounded-xl p-6"
+        className="flex h-96 w-96 items-center justify-center rounded-xl p-6"
         style={{ perspective: "1000px", backgroundColor: "black" }}
       >
         <Canvas camera={{ position: [2, 2, 4] }}>

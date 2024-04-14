@@ -4,7 +4,7 @@ import { generateOgImageForPost } from "@utils/generateOgImages.ts";
 
 export async function getStaticPaths() {
   const posts = await getCollection("development").then(p =>
-    p.filter(({ data }) => !data.draft && !data.ogImage)
+    p.filter(({ data }) => !data.draft && !data.ogImage),
   );
 
   return posts.map(post => ({
@@ -18,5 +18,5 @@ export const GET: APIRoute = async ({ props }) =>
     await generateOgImageForPost(props as CollectionEntry<"development">),
     {
       headers: { "Content-Type": "image/png" },
-    }
+    },
   );

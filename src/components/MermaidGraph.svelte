@@ -12,7 +12,7 @@
 
 <script lang="ts">
   import { HTMLElement, parse } from "node-html-parser";
-  import theme from "@store/themeStore"
+  import theme from "@store/themeStore";
 
   interface Props {
     code?: string;
@@ -24,7 +24,7 @@
   let currentGraphNum = graphNum++;
 
   let svgOut = $state();
-  $effect(() =>{
+  $effect(() => {
     const light = $theme === "light";
     mermaid.initialize({
       startOnLoad: false,
@@ -32,31 +32,35 @@
       darkMode: !light,
     });
 
-    svgOut = mermaid.render(`mermaid-graph-${currentGraphNum}`, code ?? "").then((value) => {
-      const svg = value.svg;
-      const root: HTMLElement = parse(svg);
+    svgOut = mermaid
+      .render(`mermaid-graph-${currentGraphNum}`, code ?? "")
+      .then(value => {
+        const svg = value.svg;
+        const root: HTMLElement = parse(svg);
 
-      root.firstChild.setAttribute("style", "width:100%; height:auto");
-      root.firstChild.setAttribute("role", "img");
-      root.firstChild.removeAttribute("width");
+        root.firstChild.setAttribute("style", "width:100%; height:auto");
+        root.firstChild.setAttribute("role", "img");
+        root.firstChild.removeAttribute("width");
 
-      if (caption) {
-        const captionID = `mermaid-graph-title-${currentGraphNum}`;
-        root.firstChild.setAttribute("aria-labelledby", captionID);
-        root.firstChild.appendChild(parse(`<title id="${captionID}">${caption}</title>`));
-      }
+        if (caption) {
+          const captionID = `mermaid-graph-title-${currentGraphNum}`;
+          root.firstChild.setAttribute("aria-labelledby", captionID);
+          root.firstChild.appendChild(
+            parse(`<title id="${captionID}">${caption}</title>`),
+          );
+        }
 
-      return root.toString();
-    });
+        return root.toString();
+      });
   });
 </script>
 
-<figure class="flex flex-col items-center justify-center rounded-xl my-8">
-  <div class="border-2 border-skin-line p-6 w-full h-full" bind:this={wrapper}>
+<figure class="my-8 flex flex-col items-center justify-center rounded-xl">
+  <div class="h-full w-full border-2 border-skin-line p-6" bind:this={wrapper}>
     {#await svgOut}
       <p>Loading...</p>
     {:then svg}
-        {@html svg}
+      {@html svg}
     {:catch error}
       <p class="font-bold">Something Went Wrong!</p>
       <p>{error}</p>

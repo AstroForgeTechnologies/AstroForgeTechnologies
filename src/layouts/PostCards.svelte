@@ -7,9 +7,12 @@
     posts: CollectionEntry<"development">[];
   }
 
-  let { posts }: Props = $props()
+  let { posts }: Props = $props();
 </script>
 
 {#each posts as post}
-  <PostCard href={`/development/${slugifyStr(post.slug)}/`} frontmatter={post.data} />
+  <PostCard
+    href={`/development/${slugifyStr(post.slug)}/`}
+    frontmatter={post.data}
+  />
 {/each}

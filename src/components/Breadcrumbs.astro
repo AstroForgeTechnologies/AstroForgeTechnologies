@@ -12,7 +12,7 @@ breadcrumbList[0] === "development" &&
   breadcrumbList.splice(
     0,
     2,
-    `Development Posts (page ${breadcrumbList[1] || 1})`
+    `Development Posts (page ${breadcrumbList[1] || 1})`,
   );
 
 // if breadcrumb is Home > Tags > [tag] > [page] <etc>
@@ -24,7 +24,7 @@ breadcrumbList[0] === "tags" &&
     3,
     `${breadcrumbList[1]} ${
       Number(breadcrumbList[2]) === 1 ? "" : "(page " + breadcrumbList[2] + ")"
-    }`
+    }`,
   );
 ---
 
@@ -51,7 +51,7 @@ breadcrumbList[0] === "tags" &&
             <a href={`/${breadcrumb}/`}>{breadcrumb}</a>
             <span aria-hidden="true">&raquo;</span>
           </li>
-        )
+        ),
       )
     }
   </ul>

@@ -86,7 +86,7 @@ export default (post: CollectionEntry<"development">) => {
                     .map(
                       author =>
                         author.substring(0, 1).toLowerCase() +
-                        author.substring(1)
+                        author.substring(1),
                     )
                     .join(", ")}
                 </span>
