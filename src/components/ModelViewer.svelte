@@ -3,7 +3,7 @@
   import { Canvas } from "@threlte/core";
 </script>
 
-<div class="h-96 w-full">
+<div class="h-[48rem] w-full">
   <Canvas>
     <ModelScene />
   </Canvas>

@@ -35,7 +35,7 @@
       <CardItem
         type="button"
         translateZ={100}
-        className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+        className="px-4 py-2 rounded-xl text-xs font-normal text-white"
         onclick={() => alert("Nope You Can't... Yet")}
       >
         Try Now →
