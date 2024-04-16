@@ -10,7 +10,7 @@ import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SOCIALS } from "@config";
 import HomePageCards from "@layouts/HomePageCards.svelte";
-import ModelViewer from "@components/ModelViewer";
+import ModelViewer from "@components/ModelViewer.svelte";
 import Main from "../layouts/Main.astro";
 
 const posts = await getCollection("development");
@@ -67,11 +67,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
       <HomePageCards client:load />
 
-      <ModelViewer
-        modelPath="./assets/models/rocket.glb"
-        scale={4}
-        client:only="react"
-      />
+      <ModelViewer client:load />
     </section>
 
     <Hr noPadding={true} />

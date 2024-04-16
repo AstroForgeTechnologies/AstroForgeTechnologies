@@ -10,6 +10,8 @@ import markdoc from "@astrojs/markdoc";
 import keystatic from "@keystatic/astro";
 import icon from "astro-icon";
 import svelte from "@astrojs/svelte";
+import { threeMinifier } from "@yushijinhun/three-minifier-rollup";
+
 let envKeyStatic = process.env.INCLUDE_KEYSTATIC;
 let includeKeyStatic = false;
 if (envKeyStatic) includeKeyStatic = JSON.parse(envKeyStatic);
@@ -47,8 +49,12 @@ export default defineConfig({
     },
   },
   vite: {
+    plugins: [{ ...threeMinifier(), enforce: "pre" }],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js", "keystatic"],
+    },
+    ssr: {
+      noExternal: ["three"],
     },
   },
   scopedStyleStrategy: "where",
