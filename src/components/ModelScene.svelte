@@ -6,7 +6,7 @@
   import toRadians from "@utils/toRadians.ts";
   import envMap from "@assets/images/main/envMap.jpg";
 
-  const cameraLookAt = new Vector3(-1.5, 0, 0);
+  const cameraLookAt = new Vector3(-2.75, 0, 0);
 
   const { renderer, invalidate } = useThrelte();
 

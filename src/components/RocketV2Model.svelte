@@ -1,25 +1,34 @@
 <script lang="ts">
   import { Group, Material, Mesh } from "three";
   import { T } from "@threlte/core";
-  import { type ThrelteGltf, useGltf } from "@threlte/extras";
+  import { GLTF, useGltf } from "@threlte/extras";
+  import type * as THREE from "three";
 
   export const ref = new Group();
 
   const version = "0.2";
 
-  const gltf = useGltf(`./assets/models/rocket-v${version}.glb`, {
+  type Model = {
+    nodes: {
+      Body1: THREE.Mesh;
+      Body2_1: THREE.Mesh;
+      Body2_2: THREE.Mesh;
+    };
+    materials: {
+      Steel: THREE.MeshStandardMaterial;
+      ["Titanium -  Pure"]: THREE.MeshStandardMaterial;
+      ["Solar Panel Lo Res"]: THREE.MeshStandardMaterial;
+    };
+  };
+
+  const gltf = useGltf<Model>(`./assets/models/rocket-v${version}.glb`, {
     useDraco: "https://www.gstatic.com/draco/v1/decoders/",
   });
 
   let { ...props } = $props();
 
   /* Remove Solar Panels from Tone Mapping so they are Not a Beacon. */
-  function getSolarPanelMaterial(
-    gltf: ThrelteGltf<{
-      nodes: Record<string, unknown>;
-      materials: Record<string, unknown>;
-    }>,
-  ): Material {
+  function getSolarPanelMaterial(gltf: GLTF & Model): Material {
     gltf.materials["Solar Panel Lo Res"].toneMapped = false;
     return gltf.materials["Solar Panel Lo Res"];
   }
