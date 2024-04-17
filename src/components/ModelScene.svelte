@@ -16,15 +16,6 @@
   });
 </script>
 
-<!--
-<Environment
-  path="/assets/images/"
-  files="desert_planet.hdr"
-  isBackground={true}
-  format="hdr"
-/>
--->
-
 <Environment files={envMap.src} isBackground={true} />
 
 <!-- Yes, this is cursed. Function Accepts V3 and not Array, Props accept Array and not V3. -->
