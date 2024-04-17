@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { Group, Mesh } from "three";
+  import { Group, Material, Mesh } from "three";
   import { T } from "@threlte/core";
-  import { useGltf } from "@threlte/extras";
+  import { type ThrelteGltf, useGltf } from "@threlte/extras";
 
   export const ref = new Group();
 
@@ -12,6 +12,17 @@
   });
 
   let { ...props } = $props();
+
+  /* Remove Solar Panels from Tone Mapping so they are Not a Beacon. */
+  function getSolarPanelMaterial(
+    gltf: ThrelteGltf<{
+      nodes: Record<string, unknown>;
+      materials: Record<string, unknown>;
+    }>,
+  ): Material {
+    gltf.materials["Solar Panel Lo Res"].toneMapped = false;
+    return gltf.materials["Solar Panel Lo Res"];
+  }
 </script>
 
 <T is={ref} dispose={false} {...props}>
@@ -33,7 +44,7 @@
         <T
           is={Mesh}
           geometry={gltf.nodes.Body2_2.geometry}
-          material={gltf.materials["Solar Panel Lo Res"]}
+          material={getSolarPanelMaterial(gltf)}
         />
       </T>
     </T>
