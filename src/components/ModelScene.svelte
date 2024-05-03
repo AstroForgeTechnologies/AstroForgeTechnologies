@@ -11,7 +11,7 @@
   const { renderer, invalidate } = useThrelte();
 
   $effect(() => {
-    renderer.toneMappingExposure = 20;
+    renderer.toneMappingExposure = 10;
     invalidate();
   });
 </script>

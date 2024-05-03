@@ -29,4 +29,12 @@ const development = defineCollection({
     }),
 });
 
-export const collections = { development };
+const section = defineCollection({
+  type: "content",
+  schema: () =>
+    z.object({
+      title: z.string(),
+    }),
+});
+
+export const collections = { development, section };

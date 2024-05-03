@@ -1,26 +1,26 @@
 ---
+import { type CollectionEntry, getEntry } from "astro:content";
 import { SITE } from "@config";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
-import Layout from "./Layout.astro";
-import Main from "./Main.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
 
-export interface Props {
-  frontmatter: {
-    title: string;
-    description?: string;
-  };
-}
+const credits: CollectionEntry<"section"> = await getEntry(
+  "section",
+  "credits",
+);
 
-const { frontmatter } = Astro.props;
+const { title } = credits.data;
+const { Content } = await credits.render();
 ---
 
-<Layout title={`${frontmatter.title} | ${SITE.title}`}>
+<Layout title={`${title} | ${SITE.title}`}>
   <Header activeNav="credits" />
   <Main>
     <article id="about" class="prose mb-16 max-w-3xl prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
-      <slot />
+      <h1 class="text-2xl tracking-wider sm:text-3xl">{title}</h1>
+      <Content />
     </article>
     <div class="flex justify-end pb-12">
       <button
