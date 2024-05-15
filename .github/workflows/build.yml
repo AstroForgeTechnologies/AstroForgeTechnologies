@@ -32,18 +32,18 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: Restore Cached Files
-        uses: actions/cache@v3
+      - name: Restore NPM Cached Files
+        uses: actions/cache@v4
         id: cache
         with:
           path: |
             ~/.npm
-            ./.cache
-            ./tools/node_modules
-          key: "${{ runner.os }}-astro-${{ hashFiles('**/.cache', '**/package-lock.json', '**/manifest.json') }}"
+            ./node_modules
+          key: "${{ runner.os }}-astro-${{ hashFiles('package-lock.json') }}"
           restore-keys: ${{ runner.os }}-astro-
 
       - name: Setup NPM
+        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Build
