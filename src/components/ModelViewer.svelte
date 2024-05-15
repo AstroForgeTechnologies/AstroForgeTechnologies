@@ -9,10 +9,14 @@
   const tweenedProgress = tweened($progress, {
     duration: 800,
   });
-  $effect(() => tweenedProgress.set($progress));
+  $effect(() => {
+    tweenedProgress.set($progress);
+  });
 </script>
 
-<div class="grid grid-cols-1 overflow-hidden rounded-3xl border-4 border-skin-line">
+<div
+  class="grid grid-cols-1 overflow-hidden rounded-3xl border-4 border-skin-line"
+>
   {#if $tweenedProgress < 1}
     <div
       transition:fade|local={{
@@ -25,16 +29,16 @@
         class="bar-wrapper my-2 h-5 w-1/2 overflow-hidden rounded-3xl border-4 border-skin-accent"
       >
         <div
-          class="bg-skin-line h-full rounded-3xl"
+          class="h-full rounded-3xl bg-skin-line"
           style="width: {$tweenedProgress * 100}%"
-        />
+        ></div>
       </div>
     </div>
   {/if}
 
   <div class="element z-0 h-[48rem] w-full">
     <Canvas>
-      <ModelScene />
+      <ModelScene useEnvMapBackground={true} />
     </Canvas>
   </div>
 </div>

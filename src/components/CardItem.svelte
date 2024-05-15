@@ -1,6 +1,6 @@
 <script lang="ts">
   import cn from "@utils/cn.ts";
-  import { getContext } from "svelte";
+  import { getContext, type Snippet } from "svelte";
 
   interface Props {
     type?: string;
@@ -11,6 +11,7 @@
     rotateX?: number | string;
     rotateY?: number | string;
     rotateZ?: number | string;
+    children: Snippet;
   }
 
   let {
@@ -22,6 +23,7 @@
     rotateX = 0,
     rotateY = 0,
     rotateZ = 0,
+    children,
     ...params
   }: Props = $props();
 
@@ -42,5 +44,5 @@
   class={cn("w-fit transition duration-300 ease-linear", className)}
   {...params}
 >
-  <slot />
+  {@render children()}
 </svelte:element>

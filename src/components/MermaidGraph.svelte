@@ -20,7 +20,6 @@
   }
 
   let { code, caption }: Props = $props();
-  let wrapper: HTMLDivElement;
   let currentGraphNum = graphNum++;
 
   let svgOut = $state();
@@ -37,15 +36,17 @@
       .then(value => {
         const svg = value.svg;
         const root: HTMLElement = parse(svg);
+        const child: HTMLElement = root.firstChild as HTMLElement;
+        if (!child) return svg;
 
-        root.firstChild.setAttribute("style", "width:100%; height:auto");
-        root.firstChild.setAttribute("role", "img");
-        root.firstChild.removeAttribute("width");
+        child.setAttribute("style", "width:100%; height:auto");
+        child.setAttribute("role", "img");
+        child.removeAttribute("width");
 
         if (caption) {
           const captionID = `mermaid-graph-title-${currentGraphNum}`;
-          root.firstChild.setAttribute("aria-labelledby", captionID);
-          root.firstChild.appendChild(
+          child.setAttribute("aria-labelledby", captionID);
+          child.appendChild(
             parse(`<title id="${captionID}">${caption}</title>`),
           );
         }
@@ -56,7 +57,7 @@
 </script>
 
 <figure class="my-8 flex flex-col items-center justify-center rounded-xl">
-  <div class="h-full w-full border-2 border-skin-line p-6" bind:this={wrapper}>
+  <div class="h-full w-full border-2 border-skin-line p-6">
     {#await svgOut}
       <p>Loading...</p>
     {:then svg}

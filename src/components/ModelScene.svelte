@@ -4,19 +4,41 @@
   import RocketV2Model from "@components/RocketV2Model.svelte";
   import { AmbientLight, PerspectiveCamera, Vector3 } from "three";
   import toRadians from "@utils/toRadians.ts";
-  import envMap from "@assets/images/main/envMap.jpg";
+  import type { ImageMetadata } from "astro";
 
-  const cameraLookAt = new Vector3(-2.75, 0, 0);
+  const cameraLookAt = new Vector3(0, 0, 0);
 
   const { renderer, invalidate } = useThrelte();
 
+  interface Props {
+    useEnvMapBackground?: boolean;
+  }
+
+  let { useEnvMapBackground = true }: Props = $props();
+
   $effect(() => {
-    renderer.toneMappingExposure = 10;
+    renderer.toneMappingExposure = 5;
     invalidate();
   });
+
+  const origImgPath = useEnvMapBackground
+    ? "/src/assets/images/main/starmap_2020_4k.jpg"
+    : "/src/assets/images/main/starmap_2020_4k_compressed.jpg";
+
+  let imgSrc = $state("");
+  const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/**/*.{jpeg,jpg,png,gif}",
+  );
+  if (!images[origImgPath])
+    throw new Error(
+      `"${origImgPath}" does not exist in glob: "/src/assets/*.{jpeg,jpg,png,gif}"`,
+    );
+  images[origImgPath]().then(meta => (imgSrc = meta.default.src));
 </script>
 
-<Environment files={envMap.src} isBackground={true} />
+{#if imgSrc}
+  <Environment files={imgSrc} isBackground={useEnvMapBackground} />
+{/if}
 
 <!-- Yes, this is cursed. Function Accepts V3 and not Array, Props accept Array and not V3. -->
 <T
@@ -31,6 +53,10 @@
 <T is={AmbientLight} intensity={2} />
 
 <RocketV2Model scale={0.2} rotation={toRadians([0, 90, -45])}>
-  <p slot="fallback">Loading...</p>
-  <p slot="error">Error Occurred!</p>
+  {#snippet fallback()}
+    <p>Loading...</p>
+  {/snippet}
+  {#snippet onError(error)}
+    <p>Error Occurred! {error}</p>
+  {/snippet}
 </RocketV2Model>

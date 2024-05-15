@@ -1,6 +1,6 @@
 <script lang="ts">
   import cn from "@utils/cn.ts";
-  import { setContext } from "svelte";
+  import { setContext, type Snippet } from "svelte";
   import { writable } from "svelte/store";
 
   const DEFAULT_REDUCER: number = 25;
@@ -9,9 +9,10 @@
     className?: string;
     containerClassName?: string;
     reducer?: number;
+    children: Snippet;
   }
 
-  let { className, containerClassName, reducer }: Props = $props();
+  let { className, containerClassName, reducer, children }: Props = $props();
   let container: HTMLDivElement;
   let mouseEntered = writable(false);
 
@@ -50,6 +51,6 @@
       className,
     )}
   >
-    <slot />
+    {@render children()}
   </div>
 </div>

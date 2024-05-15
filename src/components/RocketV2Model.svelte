@@ -1,8 +1,9 @@
 <script lang="ts">
   import { Group, Material, Mesh } from "three";
   import { T } from "@threlte/core";
-  import { GLTF, useGltf } from "@threlte/extras";
+  import { type ThrelteGltf, useGltf } from "@threlte/extras";
   import type * as THREE from "three";
+  import type { Snippet } from "svelte";
 
   export const ref = new Group();
 
@@ -25,10 +26,15 @@
     useDraco: "https://www.gstatic.com/draco/v1/decoders/",
   });
 
-  let { ...props } = $props();
+  interface Props {
+    fallback: Snippet;
+    onError: Snippet<[Error]>;
+  }
+
+  let { fallback, onError, ...props }: Props = $props();
 
   /* Remove Solar Panels from Tone Mapping so they are Not a Beacon. */
-  function getSolarPanelMaterial(gltf: GLTF & Model): Material {
+  function getSolarPanelMaterial(gltf: ThrelteGltf<Model>): Material {
     gltf.materials["Solar Panel Lo Res"].toneMapped = false;
     return gltf.materials["Solar Panel Lo Res"];
   }
@@ -36,7 +42,7 @@
 
 <T is={ref} dispose={false} {...props}>
   {#await gltf}
-    <slot name="fallback" />
+    {@render fallback()}
   {:then gltf}
     <T is={Group} position={[0, 0, 50]} scale={0.01}>
       <T
@@ -58,8 +64,8 @@
       </T>
     </T>
   {:catch error}
-    <slot name="error" {error} />
+    {@render onError(error)}
   {/await}
 
-  <slot {ref} />
+  {@html ref}
 </T>
