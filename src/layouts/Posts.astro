@@ -2,14 +2,13 @@
 import type { CollectionEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
-import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Pagination from "@components/Pagination.astro";
 import PostCards from "@layouts/PostCards.svelte";
 import { SITE } from "@config";
 import LayoutArea from "@components/LayoutArea.astro";
 import LayoutComponent from "@components/LayoutComponent.astro";
-import LinkButton from "@components/LinkButton.astro";
+import LinkButton from "@components/LinkButton.svelte";
 
 export interface Props {
   currentPage: number;
@@ -20,8 +19,7 @@ export interface Props {
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 
-<Layout title={`Development Posts | ${SITE.title}`}>
-  <Header activeNav="developments" />
+<Layout title={`Development Posts | ${SITE.title}`} activeNav="developments">
   <Main
     pageTitle="Development"
     pageDesc="Keep Up To Date with Progress at Astro Forge Technologies!"
@@ -29,13 +27,13 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
     <LayoutComponent layout={[1, 1]}>
       <LayoutArea>
         <div style="text-align: center">
-          <LinkButton href="/tags">Sort by Tags</LinkButton>
+          <LinkButton href="/tags" client:load>Sort by Tags</LinkButton>
         </div>
       </LayoutArea>
       <LayoutArea>
         <div style="text-align: center">
           <!--<LinkButton style="text-align: center" href="/authors">Sort by Authors</LinkButton> -->
-          <LinkButton href="/authors" disabled={true}
+          <LinkButton href="/authors" disabled={true} client:load
             >Sort by Authors (WIP)</LinkButton
           >
         </div>

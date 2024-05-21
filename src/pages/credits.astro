@@ -2,9 +2,9 @@
 import { type CollectionEntry, getEntry } from "astro:content";
 import { SITE } from "@config";
 import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
+import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
 
 const credits: CollectionEntry<"section"> = await getEntry(
   "section",
@@ -15,8 +15,8 @@ const { title } = credits.data;
 const { Content } = await credits.render();
 ---
 
-<Layout title={`${title} | ${SITE.title}`}>
-  <Header activeNav="credits" />
+<Layout title={`${title} | ${SITE.title}`} activeNav="credits">
+  <ScrollProgressIndicator client:only="svelte" />
   <Main>
     <article id="about" class="prose mb-16 max-w-3xl prose-img:border-0">
       <h1 class="text-2xl tracking-wider sm:text-3xl">{title}</h1>
@@ -42,45 +42,6 @@ const { Content } = await credits.render();
 <style></style>
 
 <script is:inline>
-  /** Create a progress indicator
-   *  at the top */
-  function createProgressBar() {
-    // Create the main container div
-    const progressContainer = document.createElement("div");
-    progressContainer.className =
-      "progress-container fixed top-0 z-10 h-1 w-full bg-skin-fill";
-
-    // Create the progress bar div
-    const progressBar = document.createElement("div");
-    progressBar.className = "progress-bar h-1 w-0 bg-skin-accent";
-    progressBar.id = "myBar";
-
-    // Append the progress bar to the progress container
-    progressContainer.appendChild(progressBar);
-
-    // Append the progress container to the document body or any other desired parent element
-    document.body.appendChild(progressContainer);
-  }
-  createProgressBar();
-
-  /** Update the progress bar
-   *  when user scrolls */
-  function updateScrollProgress() {
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    if (document) {
-      const myBar = document.getElementById("myBar");
-      if (myBar) {
-        myBar.style.width = scrolled + "%";
-      }
-    }
-  }
-  document.addEventListener("scroll", updateScrollProgress);
-
   /** Scrolls the document to the top when
    * the "Back to Top" button is clicked. */
   function backToTop() {

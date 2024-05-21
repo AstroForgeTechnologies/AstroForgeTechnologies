@@ -1,5 +1,5 @@
 ---
-import LinkButton from "./LinkButton.astro";
+import LinkButton from "./LinkButton.svelte";
 
 export interface Props {
   currentPage: number;
@@ -22,6 +22,7 @@ const next = currentPage < totalPages ? "" : "disabled";
         href={prevUrl}
         className={`mr-4 select-none ${prev}`}
         ariaLabel="Previous"
+        client:load
       >
         <svg xmlns="http://www.w3.org/2000/svg" class={`${prev}-svg`}>
           <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z" />
@@ -34,6 +35,7 @@ const next = currentPage < totalPages ? "" : "disabled";
         href={nextUrl}
         className={`ml-4 select-none ${next}`}
         ariaLabel="Next"
+        client:load
       >
         Next
         <svg xmlns="http://www.w3.org/2000/svg" class={`${next}-svg`}>

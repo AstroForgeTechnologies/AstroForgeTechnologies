@@ -24,7 +24,7 @@ module.exports = {
     extend: {
       textColor: {
         skin: {
-          base: withOpacity("--color-text-base"),
+          base: withOpacity("--color-text"),
           accent: withOpacity("--color-accent"),
           inverted: withOpacity("--color-fill"),
         },
@@ -33,10 +33,10 @@ module.exports = {
         skin: {
           fill: withOpacity("--color-fill"),
           accent: withOpacity("--color-accent"),
-          inverted: withOpacity("--color-text-base"),
-          card: withOpacity("--color-card"),
-          "card-muted": withOpacity("--color-card-muted"),
-          line: withOpacity("--color-border"),
+          inverted: withOpacity("--color-text"),
+          card: withOpacity("--color-primary"),
+          "card-muted": withOpacity("--color-secondary"),
+          line: withOpacity("--color-secondary"),
         },
       },
       outlineColor: {
@@ -46,20 +46,28 @@ module.exports = {
       },
       borderColor: {
         skin: {
-          line: withOpacity("--color-border"),
-          fill: withOpacity("--color-text-base"),
+          line: withOpacity("--color-primary"),
+          fill: withOpacity("--color-text"),
           accent: withOpacity("--color-accent"),
         },
       },
       fill: {
         skin: {
-          base: withOpacity("--color-text-base"),
+          base: withOpacity("--color-text"),
           accent: withOpacity("--color-accent"),
         },
         transparent: "transparent",
       },
+      colors: {
+        fill: withOpacity("--color-fill"),
+        text: withOpacity("--color-text"),
+        primary: withOpacity("--color-primary"),
+        secondary: withOpacity("--color-secondary"),
+        accent: withOpacity("--color-accent"),
+      },
       fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
+        sans: ["Orienta", "sans-serif"],
+        mono: ["Space Mono", "monospace"],
       },
 
       typography: {
@@ -76,7 +84,7 @@ module.exports = {
       },
     },
   },
-  darkMode: ['selector', '[data-theme="dark"]'],
+  darkMode: false,
   plugins: [
     require("@tailwindcss/typography"),
     addVariablesForColors,

@@ -1,5 +1,5 @@
 ---
-import LinkButton from "./LinkButton.astro";
+import LinkButton from "./LinkButton.svelte";
 import socialIcons from "@assets/socialIcons";
 
 const URL = Astro.url;
@@ -47,6 +47,7 @@ const shareLinks = [
           href={`${social.href + URL}`}
           className="link-button"
           title={social.linkTitle}
+          client:load
         >
           <Fragment set:html={socialIcons[social.name]} />
           <span class="sr-only">{social.linkTitle}</span>

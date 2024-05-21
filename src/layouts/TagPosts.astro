@@ -2,7 +2,6 @@
 import { type CollectionEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
-import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import PostCards from "@layouts/PostCards.svelte";
 import Pagination from "@components/Pagination.astro";
@@ -20,7 +19,6 @@ const { currentPage, totalPages, paginatedPosts, tag } = Astro.props;
 ---
 
 <Layout title={`Tag: ${tag.tagName} | ${SITE.title}`}>
-  <Header />
   <Main
     pageTitle={`Tag: ${tag.tagName}`}
     titleTransition={tag.tagSlug}

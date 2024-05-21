@@ -9,6 +9,7 @@
   interface Props extends DateTimeSpec {
     category?: "Published" | "Updated" | "Originally Published";
     size?: "sm" | "lg";
+    italic?: boolean;
     className?: string;
   }
 
@@ -17,6 +18,7 @@
     category = "Published",
     size = "sm",
     className,
+    italic = true,
   }: Props = $props();
 
   // Must do this, as using datetime props always errors if not accept undefined/null
@@ -54,15 +56,15 @@
 
   {#if category === "Published"}
     <span class="sr-only">
-      {category}
+      {category}:
     </span>
   {:else}
-    <span class={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
-      {category}
+    <span class={`${size === "sm" ? "text-sm" : "text-base"}`} class:italic>
+      {category}:
     </span>
   {/if}
 
-  <span class={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
+  <span class={`${size === "sm" ? "text-sm" : "text-base"}`} class:italic>
     <time dateTime={dateObj.toISOString()}>{date}</time>
     <span aria-hidden="true"> | </span>
     <span class="sr-only">&nbsp;at&nbsp;</span>

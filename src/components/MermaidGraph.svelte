@@ -12,7 +12,6 @@
 
 <script lang="ts">
   import { HTMLElement, parse } from "node-html-parser";
-  import theme from "@store/themeStore";
 
   interface Props {
     code?: string;
@@ -23,37 +22,26 @@
   let currentGraphNum = graphNum++;
 
   let svgOut = $state();
-  $effect(() => {
-    const light = $theme === "light";
-    mermaid.initialize({
-      startOnLoad: false,
-      theme: light ? "default" : "dark",
-      darkMode: !light,
+  svgOut = mermaid
+    .render(`mermaid-graph-${currentGraphNum}`, code ?? "")
+    .then(value => {
+      const svg = value.svg;
+      const root: HTMLElement = parse(svg);
+      const child: HTMLElement = root.firstChild as HTMLElement;
+      if (!child) return svg;
+
+      child.setAttribute("style", "width:100%; height:auto");
+      child.setAttribute("role", "img");
+      child.removeAttribute("width");
+
+      if (caption) {
+        const captionID = `mermaid-graph-title-${currentGraphNum}`;
+        child.setAttribute("aria-labelledby", captionID);
+        child.appendChild(parse(`<title id="${captionID}">${caption}</title>`));
+      }
+
+      return root.toString();
     });
-
-    svgOut = mermaid
-      .render(`mermaid-graph-${currentGraphNum}`, code ?? "")
-      .then(value => {
-        const svg = value.svg;
-        const root: HTMLElement = parse(svg);
-        const child: HTMLElement = root.firstChild as HTMLElement;
-        if (!child) return svg;
-
-        child.setAttribute("style", "width:100%; height:auto");
-        child.setAttribute("role", "img");
-        child.removeAttribute("width");
-
-        if (caption) {
-          const captionID = `mermaid-graph-title-${currentGraphNum}`;
-          child.setAttribute("aria-labelledby", captionID);
-          child.appendChild(
-            parse(`<title id="${captionID}">${caption}</title>`),
-          );
-        }
-
-        return root.toString();
-      });
-  });
 </script>
 
 <figure class="my-8 flex flex-col items-center justify-center rounded-xl">
