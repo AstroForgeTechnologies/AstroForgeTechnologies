@@ -35,6 +35,12 @@ export default defineMarkdocConfig({
       attributes: {
         caption: { type: String },
       }
+    },
+    sup: {
+      render: component("./src/components/Superscript.astro"),
+    },
+    sub: {
+      render: component("./src/components/Subscript.astro"),
     }
   }
 });

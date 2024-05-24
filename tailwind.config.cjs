@@ -84,7 +84,6 @@ module.exports = {
       },
     },
   },
-  darkMode: false,
   plugins: [
     require("@tailwindcss/typography"),
     addVariablesForColors,
