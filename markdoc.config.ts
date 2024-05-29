@@ -41,6 +41,9 @@ export default defineMarkdocConfig({
     },
     sub: {
       render: component("./src/components/Subscript.astro"),
+    },
+    u: {
+      render: component("./src/components/Underline.astro"),
     }
   }
 });
