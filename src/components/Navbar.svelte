@@ -43,7 +43,7 @@
             <img src="/favicon.svg" alt="Logo" class="h-20 w-20" />
           </a>
           <a href="/" class="mr-auto">
-            <h1 class="text-2xl font-bold tracking-wider">AST</h1>
+            <h1 class="text-2xl font-bold tracking-wider">AFT</h1>
           </a>
         </div>
       </li>

@@ -4,7 +4,6 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 // noinspection ES6PreferShortImport
 import { SITE } from "./src/config";
-import mdx from "@astrojs/mdx";
 import vercel from "@astrojs/vercel/serverless";
 import markdoc from "@astrojs/markdoc";
 import keystatic from "@keystatic/astro";
@@ -12,10 +11,10 @@ import icon from "astro-icon";
 import svelte from "@astrojs/svelte";
 import { threeMinifier } from "@yushijinhun/three-minifier-rollup";
 
-let envKeyStatic = process.env.INCLUDE_KEYSTATIC;
+const envKeyStatic = process.env.INCLUDE_KEYSTATIC;
 let includeKeyStatic = false;
 if (envKeyStatic) includeKeyStatic = JSON.parse(envKeyStatic);
-let envBuildStatic = process.env.BUILD_STATIC;
+const envBuildStatic = process.env.BUILD_STATIC;
 let buildStatic = false;
 if (envBuildStatic) buildStatic = JSON.parse(envBuildStatic);
 
@@ -29,7 +28,6 @@ export default defineConfig({
     react(),
     svelte(),
     sitemap(),
-    mdx(),
     markdoc({
       allowHTML: true,
     }),

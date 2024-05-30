@@ -4,6 +4,7 @@ import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
 import { ActiveNav } from "../types/ActiveNav";
 import Navbar from "@components/Navbar.svelte";
+import ScrollUpdater from "@components/ScrollUpdater.svelte";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -30,7 +31,7 @@ const {
   modDatetime,
   scrollSmooth = false,
   activeNav,
-  marginRem = 5,
+  marginRem = 7,
 } = Astro.props;
 
 const socialImageURL = new URL(
@@ -114,6 +115,7 @@ const socialImageURL = new URL(
     }
 
     <ViewTransitions />
+    <ScrollUpdater client:only="svelte" />
   </head>
   <body>
     <Navbar client:load {activeNav} />

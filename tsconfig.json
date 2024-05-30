@@ -16,7 +16,7 @@
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
       "@data/*": ["data/*"],
-      "@store/*": ["store/*"]
+      "@stores/*": ["stores/*"]
     },
     "jsxImportSource": "react"
   }
