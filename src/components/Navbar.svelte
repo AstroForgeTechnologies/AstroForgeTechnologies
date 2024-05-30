@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ActiveNav } from "../types/ActiveNav.ts";
+  import type { ActiveNav } from "../types/activeNav.ts";
   import { tweened } from "svelte/motion";
   import { cubicOut } from "svelte/easing";
   import LinkButton from "@components/LinkButton.svelte";
