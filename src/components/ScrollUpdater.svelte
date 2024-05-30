@@ -13,7 +13,6 @@
   $effect(() => {
     scroll.setHard(Math.max(window.scrollY / offsetHeight, 0));
     scrollPagedY.setHard(Math.max(window.scrollY / window.innerHeight, 0));
-    console.log($scrollPagedY);
   });
 </script>
 
