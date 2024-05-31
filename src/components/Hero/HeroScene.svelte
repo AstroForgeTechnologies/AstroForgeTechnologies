@@ -5,7 +5,7 @@
   import envMap from "@assets/images/main/starmap_2020_4k_compressed.jpg";
   import { SheetObject } from "@threlte/theatre";
   import ScrollSheet from "@components/Hero/ScrollSheet.svelte";
-  import Stem2WebsiteModel from "@components/Hero/Stem2WebsiteModel.svelte";
+  import Stem2WebsiteModel from "@components/Hero/HeroModel.svelte";
 
   const cameraLookAt = new Vector3(0, 0, 0);
 
