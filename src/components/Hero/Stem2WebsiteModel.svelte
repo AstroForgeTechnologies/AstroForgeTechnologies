@@ -11,6 +11,8 @@ Cleaned up and ported to svelte 5 afterwards.
   import { FakeGlowMaterial, type ThrelteGltf, useGltf } from "@threlte/extras";
   import type { Snippet } from "svelte";
   import { SheetObject } from "@threlte/theatre";
+  import type { ISheetObject } from "@theatre/core";
+  import type modelProps from "../../types/modelProps.ts";
 
   export const ref = new Group();
 
@@ -62,9 +64,13 @@ Cleaned up and ported to svelte 5 afterwards.
   interface Props {
     fallback: Snippet;
     onError: Snippet<[Error]>;
+    // ts-expect-error Sync is Any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    Sync: any;
+    values: ISheetObject<typeof modelProps>["value"];
   }
 
-  let { fallback, onError, ...props }: Props = $props();
+  let { fallback, onError, Sync, values, ...props }: Props = $props();
 
   /* Remove Solar Panels from Tone Mapping so they are Not a Beacon. */
   function getSolarPanelMaterial(gltf: ThrelteGltf<Model>): Material {
@@ -86,7 +92,9 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-2.01, -1.67, 28.88]}
           rotation={[-Math.PI / 2, 0, 0]}
           scale={[0.75, 0.5, 0.75]}
-        />
+        >
+          <Sync material.opacity material.transparent />
+        </T.Mesh>
       </Transform>
     </SheetObject>
     <SheetObject key="Model / Throttles / throttle-r" let:Transform>
@@ -123,14 +131,20 @@ Cleaned up and ported to svelte 5 afterwards.
           <T.Mesh
             geometry={gltf.nodes.Body20002.geometry}
             material={gltf.materials["Steel - Satin"]}
-          />
+          >
+            <Sync material.opacity material.transparent />
+          </T.Mesh>
           <!-- Use a special emissive "glass" material, + Normal Material. -->
           <T.Mesh geometry={gltf.nodes.Body20002_1.geometry}>
-            <T.MeshBasicMaterial color="lightyellow" />
+            <T.MeshBasicMaterial color="lightyellow">
+              <Sync opacity transparent />
+            </T.MeshBasicMaterial>
           </T.Mesh>
-          <T.Mesh geometry={gltf.nodes.Body20002_1.geometry}>
-            <FakeGlowMaterial glowColor="lightyellow" />
-          </T.Mesh>
+          {#if values.opacity >= 1}
+            <T.Mesh geometry={gltf.nodes.Body20002_1.geometry}>
+              <FakeGlowMaterial glowColor="lightyellow" />
+            </T.Mesh>
+          {/if}
         </T.Group>
       </Transform>
     </SheetObject>
@@ -276,11 +290,15 @@ Cleaned up and ported to svelte 5 afterwards.
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel005.geometry}
             material={gltf.materials["Titanium -  Pure"]}
-          />
+          >
+            <Sync material.opacity material.transparent />
+          </T.Mesh>
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel005_1.geometry}
             material={getSolarPanelMaterial(gltf)}
-          />
+          >
+            <Sync material.opacity material.transparent />
+          </T.Mesh>
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel005_2.geometry}
             material={gltf.materials["Dark Steel"]}
@@ -348,7 +366,11 @@ Cleaned up and ported to svelte 5 afterwards.
     </SheetObject>
     <SheetObject key="Model / SolarPanels / solar-panel-5" let:Transform>
       <Transform>
-        <T.Group position={[-0.72, -0.19, -8.2]} rotation={[0, 0, 2.71]} scale={-1}>
+        <T.Group
+          position={[-0.72, -0.19, -8.2]}
+          rotation={[0, 0, 2.71]}
+          scale={-1}
+        >
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel007.geometry}
             material={gltf.materials["Titanium -  Pure"]}
@@ -366,7 +388,11 @@ Cleaned up and ported to svelte 5 afterwards.
     </SheetObject>
     <SheetObject key="Model / SolarPanels / solar-panel-6" let:Transform>
       <Transform>
-        <T.Group position={[-0.72, -0.19, -4.6]} rotation={[0, 0, 2.71]} scale={-1}>
+        <T.Group
+          position={[-0.72, -0.19, -4.6]}
+          rotation={[0, 0, 2.71]}
+          scale={-1}
+        >
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel007.geometry}
             material={gltf.materials["Titanium -  Pure"]}

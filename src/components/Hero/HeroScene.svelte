@@ -37,9 +37,9 @@
 <T is={AmbientLight} intensity={2} />
 
 <ScrollSheet name="Objects">
-  <SheetObject key="Model" let:Transform>
+  <SheetObject key="Model" let:Transform let:Sync let:values>
     <Transform>
-      <Stem2WebsiteModel scale={0.2} position={[0, 0, -1]}>
+      <Stem2WebsiteModel {values} {Sync} scale={0.2} position={[0, 0, -1]}>
         {#snippet fallback()}
           <p>Loading...</p>
         {/snippet}
