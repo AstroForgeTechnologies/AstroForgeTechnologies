@@ -14,7 +14,7 @@
       },
       "sequence": {
         "subUnitsPerUnit": 30,
-        "length": 20,
+        "length": 28,
         "type": "PositionalSequence",
         "tracksByObject": {
           "Main Camera": {
@@ -95,7 +95,7 @@
             },
             "opacity": 0.16455696202531656
           },
-          "throttle-r": {
+          "Throttle R": {
             "rotation": {
               "x": 0
             },
@@ -103,17 +103,17 @@
               "x": 0
             }
           },
-          "throttle-main": {
+          "Throttle Main": {
             "rotation": {
               "y": 0
             }
           },
-          "SolarPanels / solar-panel-1": {
+          "SolarPanels / Solar Panel 1": {
             "position": {
               "x": 0
             }
           },
-          "Model / Throttles / throttle-l": {
+          "Model / Throttles / Throttle L": {
             "rotation": {
               "x": 0
             },
@@ -123,17 +123,17 @@
               "z": 0
             }
           },
-          "Model / Centrifuge / centrifuge-1": {
+          "Model / Centrifuge / Centrifuge 1": {
             "position": {
               "x": 0
             }
           },
-          "Model / Body / body-middle": {
+          "Model / Body / Body Middle": {
             "rotation": {
               "x": 0
             }
           },
-          "Model / Body / nose": {
+          "Model / Body / Nose": {
             "position": {
               "x": 0,
               "z": 0
@@ -143,11 +143,11 @@
             "opacity": 0,
             "transparent": true
           },
-          "Model / SolarPanels / solar-panel-1": {
+          "Model / SolarPanels / Solar Panel 1": {
             "materialOpacity": 0,
             "materialTransparent": true
           },
-          "Model / Body / body-front": {
+          "Model / Body / Body Front": {
             "rotation": {
               "x": 0
             },
@@ -155,17 +155,17 @@
               "z": 0
             }
           },
-          "Model / Body / body-back": {
+          "Model / Body / Body Back": {
             "position": {
               "z": 0
             }
           },
-          "Model / Throttles / throttle-r": {
+          "Model / Throttles / Throttle R": {
             "position": {
               "z": 0
             }
           },
-          "Model / Throttles / throttle-main": {
+          "Model / Throttles / Throttle Main": {
             "position": {
               "z": 0
             }
@@ -174,7 +174,7 @@
       },
       "sequence": {
         "subUnitsPerUnit": 30,
-        "length": 20,
+        "length": 28,
         "type": "PositionalSequence",
         "tracksByObject": {
           "Model": {
@@ -236,11 +236,11 @@
               "[\"position\",\"z\"]": "4Y7p0osLmX"
             }
           },
-          "Model / Throttles / throttle-l": {
+          "Model / Throttles / Throttle L": {
             "trackData": {
               "xMb8ZlOE7i": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-l:[\"materialOpacity\"]",
+                "__debugName": "Model / Throttles / Throttle L:[\"materialOpacity\"]",
                 "keyframes": [
                   {
                     "id": "caDl_oAgcy",
@@ -262,7 +262,7 @@
               },
               "ZRKIlduXzI": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-l:[\"materialTransparent\"]",
+                "__debugName": "Model / Throttles / Throttle L:[\"materialTransparent\"]",
                 "keyframes": [
                   {
                     "id": "pcJWYQGd3H",
@@ -284,7 +284,7 @@
               },
               "wl2o6LoCLs": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-l:[\"position\",\"x\"]",
+                "__debugName": "Model / Throttles / Throttle L:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "_8nzjsOl2-",
@@ -298,7 +298,7 @@
               },
               "LcrokOTk8N": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-l:[\"position\",\"y\"]",
+                "__debugName": "Model / Throttles / Throttle L:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "nN6M3JK8mM",
@@ -312,7 +312,7 @@
               },
               "VfB5QGqu0R": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-l:[\"position\",\"z\"]",
+                "__debugName": "Model / Throttles / Throttle L:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "4wLgiCv9gT",
@@ -341,11 +341,11 @@
               "[\"position\",\"z\"]": "VfB5QGqu0R"
             }
           },
-          "Model / Body / nose": {
+          "Model / Body / Nose": {
             "trackData": {
               "jR5MjuRvAr": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / nose:[\"materialOpacity\"]",
+                "__debugName": "Model / Body / Nose:[\"materialOpacity\"]",
                 "keyframes": [
                   {
                     "id": "17dDzWSQ34",
@@ -367,7 +367,7 @@
               },
               "DQIQzlls1v": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / nose:[\"materialTransparent\"]",
+                "__debugName": "Model / Body / Nose:[\"materialTransparent\"]",
                 "keyframes": [
                   {
                     "id": "eG9cTRdHzo",
@@ -389,7 +389,7 @@
               },
               "La9glZSLyb": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / nose:[\"opacity\"]",
+                "__debugName": "Model / Body / Nose:[\"opacity\"]",
                 "keyframes": [
                   {
                     "id": "L4wHV5MAcC",
@@ -411,7 +411,7 @@
               },
               "iiMQZkfjnW": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / nose:[\"transparent\"]",
+                "__debugName": "Model / Body / Nose:[\"transparent\"]",
                 "keyframes": [
                   {
                     "id": "_B5HFzf5W7",
@@ -433,7 +433,7 @@
               },
               "7YQobeTJEN": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / nose:[\"position\",\"x\"]",
+                "__debugName": "Model / Body / Nose:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "yrbvw5I8o1",
@@ -447,7 +447,7 @@
               },
               "YGj61Mg4jM": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / nose:[\"position\",\"y\"]",
+                "__debugName": "Model / Body / Nose:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "DbIN3bnaTJ",
@@ -461,7 +461,7 @@
               },
               "ENbhEDxhKU": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / nose:[\"position\",\"z\"]",
+                "__debugName": "Model / Body / Nose:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "g5Q0sHBA60",
@@ -492,11 +492,11 @@
               "[\"position\",\"z\"]": "ENbhEDxhKU"
             }
           },
-          "Model / SolarPanels / solar-panel-1": {
+          "Model / SolarPanels / Solar Panel 1": {
             "trackData": {
               "yEdHEfzNV6": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-1:[\"materialOpacity\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"materialOpacity\"]",
                 "keyframes": [
                   {
                     "id": "pWmTNEKQm0",
@@ -518,7 +518,7 @@
               },
               "T7FV9LWyju": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-1:[\"materialTransparent\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"materialTransparent\"]",
                 "keyframes": [
                   {
                     "id": "axG0PhPuv3",
@@ -540,7 +540,7 @@
               },
               "S9JLRaW42F": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-1:[\"position\",\"x\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "UtSjyI1QIz",
@@ -562,7 +562,7 @@
               },
               "cfxeXvd7aC": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-1:[\"position\",\"y\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "KwECQrIQsc",
@@ -584,7 +584,7 @@
               },
               "79CTgYl0-n": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-1:[\"position\",\"z\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "C0xfS2Tp4O",
@@ -592,7 +592,7 @@
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
-                    "value": 0
+                    "value": 1
                   }
                 ]
               }
@@ -605,11 +605,11 @@
               "[\"position\",\"z\"]": "79CTgYl0-n"
             }
           },
-          "Model / Throttles / throttle-r": {
+          "Model / Throttles / Throttle R": {
             "trackData": {
               "Mtgw0RuNtp": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-r:[\"position\",\"x\"]",
+                "__debugName": "Model / Throttles / Throttle R:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "LjAGO27lxA",
@@ -623,7 +623,7 @@
               },
               "jEcaoX3hZY": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-r:[\"position\",\"y\"]",
+                "__debugName": "Model / Throttles / Throttle R:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "hlsB1rsm5S",
@@ -637,7 +637,7 @@
               },
               "A2u-9qUXZR": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-r:[\"position\",\"z\"]",
+                "__debugName": "Model / Throttles / Throttle R:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "Vq61rYe9Me",
@@ -664,11 +664,11 @@
               "[\"position\",\"z\"]": "A2u-9qUXZR"
             }
           },
-          "Model / Throttles / throttle-main": {
+          "Model / Throttles / Throttle Main": {
             "trackData": {
               "VmSjwQ0bLO": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-main:[\"position\",\"x\"]",
+                "__debugName": "Model / Throttles / Throttle Main:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "CP8ZIEJZUj",
@@ -682,7 +682,7 @@
               },
               "n9bsblDwci": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-main:[\"position\",\"y\"]",
+                "__debugName": "Model / Throttles / Throttle Main:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "3suElLMkDc",
@@ -696,7 +696,7 @@
               },
               "csRMoCUnTZ": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / throttle-main:[\"position\",\"z\"]",
+                "__debugName": "Model / Throttles / Throttle Main:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "zMCCTkaF_d",
@@ -723,11 +723,11 @@
               "[\"position\",\"z\"]": "csRMoCUnTZ"
             }
           },
-          "Model / Body / body-front": {
+          "Model / Body / Body Front": {
             "trackData": {
               "OX8mZCGo_5": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / body-front:[\"position\",\"x\"]",
+                "__debugName": "Model / Body / Body Front:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "s2tJb8yJN7",
@@ -741,7 +741,7 @@
               },
               "YS2K_nHi4y": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / body-front:[\"position\",\"y\"]",
+                "__debugName": "Model / Body / Body Front:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "CJckXR0m7g",
@@ -755,7 +755,7 @@
               },
               "-6hXSni9oP": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / body-front:[\"position\",\"z\"]",
+                "__debugName": "Model / Body / Body Front:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "_HCD3iDHcd",
@@ -782,11 +782,11 @@
               "[\"position\",\"z\"]": "-6hXSni9oP"
             }
           },
-          "Model / Body / body-middle": {
+          "Model / Body / Body Middle": {
             "trackData": {
               "a_-JoTC1HC": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / body-middle:[\"position\",\"x\"]",
+                "__debugName": "Model / Body / Body Middle:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "SejCuij0Zx",
@@ -800,7 +800,7 @@
               },
               "1gm0UACjUB": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / body-middle:[\"position\",\"y\"]",
+                "__debugName": "Model / Body / Body Middle:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "yWkhu5PL4O",
@@ -814,7 +814,7 @@
               },
               "dG_xQ7FDFS": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / body-middle:[\"position\",\"z\"]",
+                "__debugName": "Model / Body / Body Middle:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "IYaFRF3Pz7",
@@ -833,11 +833,11 @@
               "[\"position\",\"z\"]": "dG_xQ7FDFS"
             }
           },
-          "Model / Body / body-back": {
+          "Model / Body / Body Back": {
             "trackData": {
               "GH-UUh22ZC": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / body-back:[\"position\",\"x\"]",
+                "__debugName": "Model / Body / Body Back:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "qZO4uej9u3",
@@ -851,7 +851,7 @@
               },
               "fxInCeJSPR": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / body-back:[\"position\",\"y\"]",
+                "__debugName": "Model / Body / Body Back:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "TLyDrBobq2",
@@ -865,7 +865,7 @@
               },
               "M657I-ijgb": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / body-back:[\"position\",\"z\"]",
+                "__debugName": "Model / Body / Body Back:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "pPVjhN2Bp3",
@@ -892,11 +892,11 @@
               "[\"position\",\"z\"]": "M657I-ijgb"
             }
           },
-          "Model / Centrifuge / centrifuge-1": {
+          "Model / Centrifuge / Centrifuge 1": {
             "trackData": {
               "9nnMZgB0YW": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-1:[\"position\",\"x\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 1:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "0upQDy3hZZ",
@@ -918,7 +918,7 @@
               },
               "hJ9qw_NDzK": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-1:[\"position\",\"y\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 1:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "MsvW77y0DQ",
@@ -940,7 +940,7 @@
               },
               "_4EF_6PhM5": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-1:[\"position\",\"z\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 1:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "LFtM0cxFr1",
@@ -967,11 +967,11 @@
               "[\"position\",\"z\"]": "_4EF_6PhM5"
             }
           },
-          "Model / Centrifuge / centrifuge-2": {
+          "Model / Centrifuge / Centrifuge 2": {
             "trackData": {
               "JbpGY9Q7SD": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-2:[\"position\",\"x\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 2:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "guX6kh3AtR",
@@ -985,7 +985,7 @@
               },
               "hTB-9mjK0v": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-2:[\"position\",\"y\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 2:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "_ZT_59-HlG",
@@ -1007,7 +1007,7 @@
               },
               "KHDzJ5Mv_6": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-2:[\"position\",\"z\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 2:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "rts0oCV4jG",
@@ -1026,11 +1026,11 @@
               "[\"position\",\"z\"]": "KHDzJ5Mv_6"
             }
           },
-          "Model / Centrifuge / centrifuge-3": {
+          "Model / Centrifuge / Centrifuge 3": {
             "trackData": {
               "HhIcVCfgTy": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-3:[\"position\",\"x\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 3:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "gPi6TWwyiP",
@@ -1052,7 +1052,7 @@
               },
               "QNwyKyFvTL": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-3:[\"position\",\"y\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 3:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "MssB7Q_ifl",
@@ -1074,7 +1074,7 @@
               },
               "n7WpG18no1": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-3:[\"position\",\"z\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 3:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "2Ui7jHfZjM",
@@ -1093,11 +1093,11 @@
               "[\"position\",\"z\"]": "n7WpG18no1"
             }
           },
-          "Model / Centrifuge / centrifuge-4": {
+          "Model / Centrifuge / Centrifuge 4": {
             "trackData": {
               "WFOz4cNizx": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-4:[\"position\",\"x\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 4:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "ZqO2JvX8b2",
@@ -1119,7 +1119,7 @@
               },
               "7SQWcB-OnE": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-4:[\"position\",\"y\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 4:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "aNYp37bX5P",
@@ -1141,7 +1141,7 @@
               },
               "kDxo_RT5_z": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-4:[\"position\",\"z\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 4:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "fZsgGu_YjF",
@@ -1160,11 +1160,11 @@
               "[\"position\",\"z\"]": "kDxo_RT5_z"
             }
           },
-          "Model / Centrifuge / centrifuge-5": {
+          "Model / Centrifuge / Centrifuge 5": {
             "trackData": {
               "jLCS5sxIgU": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-5:[\"position\",\"x\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 5:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "VgkkyfsrLe",
@@ -1178,7 +1178,7 @@
               },
               "vzDuE_GaGR": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-5:[\"position\",\"y\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 5:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "Ah3QHzdVJ7",
@@ -1200,7 +1200,7 @@
               },
               "YMX7qk4Znv": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-5:[\"position\",\"z\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 5:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "aM7t6ku0m6",
@@ -1219,11 +1219,11 @@
               "[\"position\",\"z\"]": "YMX7qk4Znv"
             }
           },
-          "Model / Centrifuge / centrifuge-6": {
+          "Model / Centrifuge / Centrifuge 6": {
             "trackData": {
               "7xv1z9I6Fn": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-6:[\"position\",\"x\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 6:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "xKrrF6zpKh",
@@ -1245,7 +1245,7 @@
               },
               "J5MFDa_HiU": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-6:[\"position\",\"y\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 6:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "k_KzzVoLZD",
@@ -1267,7 +1267,7 @@
               },
               "n4YROzjQm9": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / centrifuge-6:[\"position\",\"z\"]",
+                "__debugName": "Model / Centrifuge / Centrifuge 6:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "KnBkupHeOZ",
@@ -1286,11 +1286,11 @@
               "[\"position\",\"z\"]": "n4YROzjQm9"
             }
           },
-          "Model / Centrifuge / Poles / pole-1": {
+          "Model / Centrifuge / Poles / Pole 1": {
             "trackData": {
               "YiThfUEvAA": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / pole-1:[\"position\",\"x\"]",
+                "__debugName": "Model / Centrifuge / Poles / Pole 1:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "Y1SZl4Sism",
@@ -1312,7 +1312,7 @@
               },
               "YOFl0LtgPP": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / pole-1:[\"position\",\"y\"]",
+                "__debugName": "Model / Centrifuge / Poles / Pole 1:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "qBKWUY1YQq",
@@ -1326,7 +1326,7 @@
               },
               "CQTHqHjSxv": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / pole-1:[\"position\",\"z\"]",
+                "__debugName": "Model / Centrifuge / Poles / Pole 1:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "OA91LYz-4R",
@@ -1345,11 +1345,11 @@
               "[\"position\",\"z\"]": "CQTHqHjSxv"
             }
           },
-          "Model / Centrifuge / Poles / pole-2": {
+          "Model / Centrifuge / Poles / Pole 2": {
             "trackData": {
               "Us_ZQU4Trj": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / pole-2:[\"position\",\"x\"]",
+                "__debugName": "Model / Centrifuge / Poles / Pole 2:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "YvaB0UTIJo",
@@ -1371,7 +1371,7 @@
               },
               "4dtAQLiJBD": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / pole-2:[\"position\",\"y\"]",
+                "__debugName": "Model / Centrifuge / Poles / Pole 2:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "7u0aQCMxhj",
@@ -1393,7 +1393,7 @@
               },
               "HDUlsLU5rQ": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / pole-2:[\"position\",\"z\"]",
+                "__debugName": "Model / Centrifuge / Poles / Pole 2:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "nuG0ZF9Lus",
@@ -1412,11 +1412,11 @@
               "[\"position\",\"z\"]": "HDUlsLU5rQ"
             }
           },
-          "Model / Centrifuge / Poles / pole-3": {
+          "Model / Centrifuge / Poles / Pole 3": {
             "trackData": {
               "GC8CjnFsV3": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / pole-3:[\"position\",\"x\"]",
+                "__debugName": "Model / Centrifuge / Poles / Pole 3:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "wHhn5x14wh",
@@ -1438,7 +1438,7 @@
               },
               "m8aGocMvO3": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / pole-3:[\"position\",\"y\"]",
+                "__debugName": "Model / Centrifuge / Poles / Pole 3:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "6DPLbNWagO",
@@ -1460,7 +1460,7 @@
               },
               "L9wRfguKQ2": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / pole-3:[\"position\",\"z\"]",
+                "__debugName": "Model / Centrifuge / Poles / Pole 3:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "4stYgILMVW",
@@ -1479,11 +1479,11 @@
               "[\"position\",\"z\"]": "L9wRfguKQ2"
             }
           },
-          "Model / SolarPanels / solar-panel-2": {
+          "Model / SolarPanels / Solar Panel 2": {
             "trackData": {
               "IaFv1JZJEJ": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-2:[\"position\",\"x\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 2:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "RQE-ZtQlNz",
@@ -1505,7 +1505,7 @@
               },
               "A-FO3X_cAw": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-2:[\"position\",\"y\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 2:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "ir8ex7XToa",
@@ -1527,7 +1527,7 @@
               },
               "TL3ECWopuT": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-2:[\"position\",\"z\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 2:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "1raG2o55gn",
@@ -1535,7 +1535,7 @@
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
-                    "value": 0
+                    "value": 1
                   },
                   {
                     "id": "wVVOAdbi8b",
@@ -1554,11 +1554,11 @@
               "[\"position\",\"z\"]": "TL3ECWopuT"
             }
           },
-          "Model / SolarPanels / solar-panel-3": {
+          "Model / SolarPanels / Solar Panel 3": {
             "trackData": {
               "dr6oM3a9EL": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-3:[\"position\",\"x\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 3:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "eM5BQNHYuF",
@@ -1580,7 +1580,7 @@
               },
               "SkVgtt9Kb2": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-3:[\"position\",\"y\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 3:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "4SAXlWoNyI",
@@ -1602,7 +1602,7 @@
               },
               "NRaaJpErAq": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-3:[\"position\",\"z\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 3:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "e1auAtXkm-",
@@ -1621,11 +1621,11 @@
               "[\"position\",\"z\"]": "NRaaJpErAq"
             }
           },
-          "Model / SolarPanels / solar-panel-4": {
+          "Model / SolarPanels / Solar Panel 4": {
             "trackData": {
               "daBzEd3S8K": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-4:[\"position\",\"x\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 4:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "2Abc_6AO64",
@@ -1647,7 +1647,7 @@
               },
               "Q7hIwF6nyx": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-4:[\"position\",\"y\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 4:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "LqLWjOa6Eu",
@@ -1669,7 +1669,7 @@
               },
               "Jsod7MUq1E": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-4:[\"position\",\"z\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 4:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "1UVsA_lhdZ",
@@ -1688,11 +1688,11 @@
               "[\"position\",\"z\"]": "Jsod7MUq1E"
             }
           },
-          "Model / SolarPanels / solar-panel-5": {
+          "Model / SolarPanels / Solar Panel 5": {
             "trackData": {
               "iYqObfXLZf": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-5:[\"position\",\"x\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 5:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "ucw5dvkJzo",
@@ -1714,7 +1714,7 @@
               },
               "mwjlVMuyXn": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-5:[\"position\",\"y\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 5:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "Ev49CGGyKe",
@@ -1736,17 +1736,8 @@
               },
               "N9zvv7_0pZ": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-5:[\"position\",\"z\"]",
-                "keyframes": [
-                  {
-                    "id": "zWIwMm0F6H",
-                    "position": 4.5,
-                    "connectedRight": true,
-                    "handles": [0.5, 1, 0.5, 0],
-                    "type": "bezier",
-                    "value": 0
-                  }
-                ]
+                "__debugName": "Model / SolarPanels / Solar Panel 5:[\"position\",\"z\"]",
+                "keyframes": []
               }
             },
             "trackIdByPropPath": {
@@ -1755,11 +1746,11 @@
               "[\"position\",\"z\"]": "N9zvv7_0pZ"
             }
           },
-          "Model / SolarPanels / solar-panel-6": {
+          "Model / SolarPanels / Solar Panel 6": {
             "trackData": {
               "RkVcw-Dm-V": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-6:[\"position\",\"x\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 6:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "n0HP7U27Ji",
@@ -1781,7 +1772,7 @@
               },
               "J5pVdEETvI": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-6:[\"position\",\"y\"]",
+                "__debugName": "Model / SolarPanels / Solar Panel 6:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "7HdOIlWGh7",
@@ -1803,17 +1794,8 @@
               },
               "5TfdzGyNA8": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / solar-panel-6:[\"position\",\"z\"]",
-                "keyframes": [
-                  {
-                    "id": "mGmcP4KqKJ",
-                    "position": 4.5,
-                    "connectedRight": true,
-                    "handles": [0.5, 1, 0.5, 0],
-                    "type": "bezier",
-                    "value": 0
-                  }
-                ]
+                "__debugName": "Model / SolarPanels / Solar Panel 6:[\"position\",\"z\"]",
+                "keyframes": []
               }
             },
             "trackIdByPropPath": {
@@ -2071,6 +2053,8 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "Fap4l72GRyGGM2dS",
+    "BLklfyLqudESccVL",
     "Sc1WOl79i0jhtvIc",
     "joNIG3ph35WZhpMO",
     "SZoWjV-dayWjL-Qp",

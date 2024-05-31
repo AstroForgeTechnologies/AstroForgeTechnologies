@@ -1,2 +1,2 @@
-export const pageAmount = 5;
-export const totalSeconds = 20;
+export const pageAmount = 7;
+export const totalSeconds = 28;

@@ -64,15 +64,13 @@ Cleaned up and ported to svelte 5 afterwards.
   });
 
   interface Props {
-    fallback: Snippet;
-    onError: Snippet<[Error]>;
     // ts-expect-error Sync is Any
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     Sync: any;
     values: ISheetObject<typeof modelProps>["value"];
   }
 
-  let { fallback, onError, Sync, values, ...props }: Props = $props();
+  let { Sync, values, ...props }: Props = $props();
 
   /* Remove Solar Panels from Tone Mapping so they are Not a Beacon. */
   function getSolarPanelMaterial(gltf: ThrelteGltf<Model>): Material {
@@ -82,11 +80,9 @@ Cleaned up and ported to svelte 5 afterwards.
 </script>
 
 <T is={ref} dispose={false} {...props}>
-  {#await gltf}
-    {@render fallback()}
-  {:then gltf}
+  {#await gltf then gltf}
     <!-- Throttles -->
-    <SheetObject key="Model / Throttles / throttle-l" let:Transform>
+    <SheetObject key="Model / Throttles / Throttle L" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Throttle_L.geometry}
@@ -99,7 +95,7 @@ Cleaned up and ported to svelte 5 afterwards.
         </T.Mesh>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Throttles / throttle-r" let:Transform>
+    <SheetObject key="Model / Throttles / Throttle R" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Throttle_R.geometry}
@@ -110,7 +106,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Throttles / throttle-main" let:Transform>
+    <SheetObject key="Model / Throttles / Throttle Main" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Throttle_Main.geometry}
@@ -123,7 +119,7 @@ Cleaned up and ported to svelte 5 afterwards.
     </SheetObject>
 
     <!-- Main Body -->
-    <SheetObject key="Model / Body / nose" let:Transform>
+    <SheetObject key="Model / Body / Nose" let:Transform>
       <Transform>
         <T.Group
           position={[-0.87, -0.29, -21.41]}
@@ -150,7 +146,7 @@ Cleaned up and ported to svelte 5 afterwards.
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Body / body-front" let:Transform>
+    <SheetObject key="Model / Body / Body Front" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Body_Front.geometry}
@@ -161,7 +157,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Body / body-middle" let:Transform>
+    <SheetObject key="Model / Body / Body Middle" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Body_Middle.geometry}
@@ -172,7 +168,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Body / body-back" let:Transform>
+    <SheetObject key="Model / Body / Body Back" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Body_Back.geometry}
@@ -185,7 +181,7 @@ Cleaned up and ported to svelte 5 afterwards.
     </SheetObject>
 
     <!-- Centrifuge + Centrifuge Poles -->
-    <SheetObject key="Model / Centrifuge / centrifuge-1" let:Transform>
+    <SheetObject key="Model / Centrifuge / Centrifuge 1" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
@@ -196,7 +192,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / centrifuge-2" let:Transform>
+    <SheetObject key="Model / Centrifuge / Centrifuge 2" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
@@ -207,7 +203,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / centrifuge-3" let:Transform>
+    <SheetObject key="Model / Centrifuge / Centrifuge 3" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
@@ -218,7 +214,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / centrifuge-4" let:Transform>
+    <SheetObject key="Model / Centrifuge / Centrifuge 4" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
@@ -229,7 +225,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / centrifuge-5" let:Transform>
+    <SheetObject key="Model / Centrifuge / Centrifuge 5" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
@@ -240,7 +236,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / centrifuge-6" let:Transform>
+    <SheetObject key="Model / Centrifuge / Centrifuge 6" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
@@ -251,7 +247,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Poles / pole-1" let:Transform>
+    <SheetObject key="Model / Centrifuge / Poles / Pole 1" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Pole_1.geometry}
@@ -262,7 +258,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Poles / pole-2" let:Transform>
+    <SheetObject key="Model / Centrifuge / Poles / Pole 2" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Pole_2.geometry}
@@ -273,7 +269,7 @@ Cleaned up and ported to svelte 5 afterwards.
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Poles / pole-3" let:Transform>
+    <SheetObject key="Model / Centrifuge / Poles / Pole 3" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Pole_3.geometry}
@@ -286,7 +282,7 @@ Cleaned up and ported to svelte 5 afterwards.
     </SheetObject>
 
     <!-- Solar Panels -->
-    <SheetObject key="Model / SolarPanels / solar-panel-1" let:Transform>
+    <SheetObject key="Model / SolarPanels / Solar Panel 1" let:Transform>
       <Transform>
         <T.Group position={[-0.72, -0.19, 5.63]} rotation={[Math.PI, 0, -2.71]}>
           <T.Mesh
@@ -308,7 +304,7 @@ Cleaned up and ported to svelte 5 afterwards.
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / solar-panel-2" let:Transform>
+    <SheetObject key="Model / SolarPanels / Solar Panel 2" let:Transform>
       <Transform>
         <T.Group
           position={[-0.72, -0.19, 5.63]}
@@ -330,7 +326,7 @@ Cleaned up and ported to svelte 5 afterwards.
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / solar-panel-3" let:Transform>
+    <SheetObject key="Model / SolarPanels / Solar Panel 3" let:Transform>
       <Transform>
         <T.Group position={[-0.72, -0.19, -8.2]} rotation={[Math.PI, 0, -2.71]}>
           <T.Mesh
@@ -348,7 +344,7 @@ Cleaned up and ported to svelte 5 afterwards.
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / solar-panel-4" let:Transform>
+    <SheetObject key="Model / SolarPanels / Solar Panel 4" let:Transform>
       <Transform>
         <T.Group position={[-0.72, -0.19, -4.6]} rotation={[Math.PI, 0, -2.71]}>
           <T.Mesh
@@ -366,7 +362,7 @@ Cleaned up and ported to svelte 5 afterwards.
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / solar-panel-5" let:Transform>
+    <SheetObject key="Model / SolarPanels / Solar Panel 5" let:Transform>
       <Transform>
         <T.Group
           position={[-0.72, -0.19, -8.2]}
@@ -388,7 +384,7 @@ Cleaned up and ported to svelte 5 afterwards.
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / solar-panel-6" let:Transform>
+    <SheetObject key="Model / SolarPanels / Solar Panel 6" let:Transform>
       <Transform>
         <T.Group
           position={[-0.72, -0.19, -4.6]}
@@ -410,8 +406,6 @@ Cleaned up and ported to svelte 5 afterwards.
         </T.Group>
       </Transform>
     </SheetObject>
-  {:catch error}
-    {@render onError(error)}
   {/await}
 
   {@html ref}

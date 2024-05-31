@@ -23,7 +23,7 @@
 <svelte:window bind:scrollY />
 
 <header>
-  <div class="fixed z-[500] h-28 w-full" id="header">
+  <div class="fixed z-50 h-28 w-full" id="header">
     <!-- Background -->
     <div class="absolute -z-10 h-full w-full bg-skin-fill"></div>
     <!-- Gradient -->

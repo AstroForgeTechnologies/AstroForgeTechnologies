@@ -22,7 +22,7 @@
   </svg>
 {/snippet}
 
-<FadeOut progress={$springPagedY} from={0} to={0.2}>
+<FadeOut progress={$springPagedY} from={0.2} to={0.6}>
   <div
     class="flex flex-col gap-2 will-change-auto"
     use:sheetObject={{

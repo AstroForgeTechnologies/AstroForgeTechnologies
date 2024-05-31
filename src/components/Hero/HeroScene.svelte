@@ -39,14 +39,7 @@
 <ScrollSheet name="Objects">
   <SheetObject key="Model" let:Transform let:Sync let:values>
     <Transform>
-      <Stem2WebsiteModel {values} {Sync} scale={0.2} position={[0, 0, -1]}>
-        {#snippet fallback()}
-          <p>Loading...</p>
-        {/snippet}
-        {#snippet onError(error)}
-          <p>Error Occurred! {error}</p>
-        {/snippet}
-      </Stem2WebsiteModel>
+      <Stem2WebsiteModel {values} {Sync} scale={0.2} position={[0, 0, -1]} />
     </Transform>
   </SheetObject>
 </ScrollSheet>
