@@ -52,7 +52,7 @@ export default defineConfig({
       exclude: ["@resvg/resvg-js", "keystatic"],
     },
     ssr: {
-      noExternal: ["three"],
+      noExternal: ["three", "postprocessing"],
     },
   },
   scopedStyleStrategy: "where",

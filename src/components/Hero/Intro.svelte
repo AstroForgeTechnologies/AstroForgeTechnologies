@@ -36,10 +36,15 @@
 
 <Sequence bind:play />
 
-<FadeOut progress={$springPagedY} from={0.2} to={0.6}>
+<FadeOut
+  progress={$springPagedY}
+  from={0.2}
+  to={0.6}
+  className="pointer-events-none"
+>
   <div
-    class="md:mt-[30vh] fixed left-0 top-0 mt-[18vh] flex w-screen flex-col items-center justify-center gap-12 px-8 pb-5 sm:mt-[25vh]"
-    style="transform: translateY({$springPagedY * -100}px)"
+    class="md:mt-[30vh] pointer-events-auto fixed left-0 top-0 z-[125] mt-[18vh] flex w-screen flex-col items-center justify-center gap-12 px-8 pb-5"
+    style="transform: translateY({$springPagedY * -150}px)"
   >
     <TheatreTextBox key="title">
       <h1

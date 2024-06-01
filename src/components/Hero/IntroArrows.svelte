@@ -1,6 +1,4 @@
 <script>
-  import { springPagedY } from "@stores/scroll";
-  import FadeOut from "@components/Hero/FadeOut.svelte";
   import { createSheetObjectAction } from "@threlte/theatre";
   import { types } from "@utils/theatre";
 
@@ -22,30 +20,28 @@
   </svg>
 {/snippet}
 
-<FadeOut progress={$springPagedY} from={0.2} to={0.6}>
-  <div
-    class="flex flex-col gap-2 will-change-auto"
-    use:sheetObject={{
-      key: "scroll",
-      callback(node, props) {
-        node.style.transform = `translateY(${props.translateY}%)`;
-        node.style.opacity = props.opacity;
-      },
-      props: {
-        opacity: types.number(0, {
-          range: [0, 1],
-        }),
-        translateY: types.number(0, {
-          range: [-500, 500],
-        }),
-      },
-    }}
-  >
-    {@render arrow("pulse-1")}
-    {@render arrow("pulse-2")}
-    {@render arrow("pulse-3")}
-  </div>
-</FadeOut>
+<div
+  class="flex flex-col gap-2 will-change-auto"
+  use:sheetObject={{
+    key: "scroll",
+    callback(node, props) {
+      node.style.transform = `translateY(${props.translateY}%)`;
+      node.style.opacity = props.opacity;
+    },
+    props: {
+      opacity: types.number(0, {
+        range: [0, 1],
+      }),
+      translateY: types.number(0, {
+        range: [-500, 500],
+      }),
+    },
+  }}
+>
+  {@render arrow("pulse-1")}
+  {@render arrow("pulse-2")}
+  {@render arrow("pulse-3")}
+</div>
 
 <style>
   @keyframes custom-pulse {

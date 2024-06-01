@@ -8,13 +8,16 @@
               "x": 1,
               "y": 1,
               "z": 1
+            },
+            "position": {
+              "y": -3
             }
           }
         }
       },
       "sequence": {
         "subUnitsPerUnit": 30,
-        "length": 28,
+        "length": 24,
         "type": "PositionalSequence",
         "tracksByObject": {
           "Main Camera": {
@@ -30,7 +33,7 @@
                 "keyframes": [
                   {
                     "id": "EsjTSxaS0A",
-                    "position": 7,
+                    "position": 8,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.42, 0],
                     "type": "bezier",
@@ -50,36 +53,18 @@
                 "type": "BasicKeyframedTrack",
                 "__debugName": "Main Camera:[\"rotation\",\"z\"]",
                 "keyframes": []
-              },
-              "6biomDNeof": {
-                "type": "BasicKeyframedTrack",
-                "__debugName": "Main Camera:[\"position\",\"x\"]",
-                "keyframes": []
-              },
-              "9xfzLPyrSR": {
-                "type": "BasicKeyframedTrack",
-                "__debugName": "Main Camera:[\"position\",\"y\"]",
-                "keyframes": []
-              },
-              "Ba4HwHvM2e": {
-                "type": "BasicKeyframedTrack",
-                "__debugName": "Main Camera:[\"position\",\"z\"]",
-                "keyframes": []
               }
             },
             "trackIdByPropPath": {
               "[\"rotation\",\"x\"]": "BqMuM1wLzN",
               "[\"rotation\",\"y\"]": "WR0HWrv5Fo",
-              "[\"rotation\",\"z\"]": "YdH0vM2XmU",
-              "[\"position\",\"x\"]": "6biomDNeof",
-              "[\"position\",\"y\"]": "9xfzLPyrSR",
-              "[\"position\",\"z\"]": "Ba4HwHvM2e"
+              "[\"rotation\",\"z\"]": "YdH0vM2XmU"
             }
           }
         }
       }
     },
-    "Objects": {
+    "Main Model": {
       "staticOverrides": {
         "byObject": {
           "Model": {
@@ -93,7 +78,7 @@
               "y": 2.5,
               "z": 2.5
             },
-            "opacity": 0.16455696202531656
+            "opacity": 0
           },
           "Throttle R": {
             "rotation": {
@@ -113,7 +98,7 @@
               "x": 0
             }
           },
-          "Model / Throttles / Throttle L": {
+          "Parts / Throttles / Throttle L": {
             "rotation": {
               "x": 0
             },
@@ -123,17 +108,17 @@
               "z": 0
             }
           },
-          "Model / Centrifuge / Centrifuge 1": {
+          "Parts / Centrifuge / Centrifuge 1": {
             "position": {
               "x": 0
             }
           },
-          "Model / Body / Body Middle": {
+          "Parts / Body / Body Middle": {
             "rotation": {
               "x": 0
             }
           },
-          "Model / Body / Nose": {
+          "Parts / Body / Nose": {
             "position": {
               "x": 0,
               "z": 0
@@ -143,11 +128,11 @@
             "opacity": 0,
             "transparent": true
           },
-          "Model / SolarPanels / Solar Panel 1": {
+          "Parts / SolarPanels / Solar Panel 1": {
             "materialOpacity": 0,
             "materialTransparent": true
           },
-          "Model / Body / Body Front": {
+          "Parts / Body / Body Front": {
             "rotation": {
               "x": 0
             },
@@ -155,17 +140,17 @@
               "z": 0
             }
           },
-          "Model / Body / Body Back": {
+          "Parts / Body / Body Back": {
             "position": {
               "z": 0
             }
           },
-          "Model / Throttles / Throttle R": {
+          "Parts / Throttles / Throttle R": {
             "position": {
               "z": 0
             }
           },
-          "Model / Throttles / Throttle Main": {
+          "Parts / Throttles / Throttle Main": {
             "position": {
               "z": 0
             }
@@ -174,7 +159,7 @@
       },
       "sequence": {
         "subUnitsPerUnit": 30,
-        "length": 28,
+        "length": 24,
         "type": "PositionalSequence",
         "tracksByObject": {
           "Model": {
@@ -190,6 +175,14 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 0
+                  },
+                  {
+                    "id": "HHtoVUDs02",
+                    "position": 19.967,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
@@ -200,6 +193,14 @@
                   {
                     "id": "JaWU8G4ATq",
                     "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "AyXas1v1dw",
+                    "position": 19.967,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -221,11 +222,49 @@
                   },
                   {
                     "id": "8wDMTuSXPe",
-                    "position": 5,
+                    "position": 4.667,
                     "connectedRight": true,
                     "handles": [0.45, 0.94, 0.5, 0],
                     "type": "bezier",
                     "value": 0
+                  },
+                  {
+                    "id": "Xl4_1by6xM",
+                    "position": 19.967,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.55, 0.085],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "iKZ8lTa3s0",
+                    "position": 24,
+                    "connectedRight": true,
+                    "handles": [0.68, 0.53, 0.5, 0],
+                    "type": "bezier",
+                    "value": 90
+                  }
+                ]
+              },
+              "TD_NXEAO8y": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Model:[\"opacity\"]",
+                "keyframes": [
+                  {
+                    "id": "u0vLAtQ_28",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "Q_H5W6pcOO",
+                    "position": 2,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
                   }
                 ]
               }
@@ -233,14 +272,15 @@
             "trackIdByPropPath": {
               "[\"position\",\"x\"]": "LJ8RzqrqZw",
               "[\"position\",\"y\"]": "H9tTe8z8WY",
-              "[\"position\",\"z\"]": "4Y7p0osLmX"
+              "[\"position\",\"z\"]": "4Y7p0osLmX",
+              "[\"opacity\"]": "TD_NXEAO8y"
             }
           },
-          "Model / Throttles / Throttle L": {
+          "Parts / Throttles / Throttle L": {
             "trackData": {
               "xMb8ZlOE7i": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle L:[\"materialOpacity\"]",
+                "__debugName": "Parts / Throttles / Throttle L:[\"materialOpacity\"]",
                 "keyframes": [
                   {
                     "id": "caDl_oAgcy",
@@ -262,7 +302,7 @@
               },
               "ZRKIlduXzI": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle L:[\"materialTransparent\"]",
+                "__debugName": "Parts / Throttles / Throttle L:[\"materialTransparent\"]",
                 "keyframes": [
                   {
                     "id": "pcJWYQGd3H",
@@ -284,11 +324,19 @@
               },
               "wl2o6LoCLs": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle L:[\"position\",\"x\"]",
+                "__debugName": "Parts / Throttles / Throttle L:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "_8nzjsOl2-",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "5DJk0W-ZB4",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -298,11 +346,19 @@
               },
               "LcrokOTk8N": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle L:[\"position\",\"y\"]",
+                "__debugName": "Parts / Throttles / Throttle L:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "nN6M3JK8mM",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "Q62aVasAM2",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -312,11 +368,11 @@
               },
               "VfB5QGqu0R": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle L:[\"position\",\"z\"]",
+                "__debugName": "Parts / Throttles / Throttle L:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "4wLgiCv9gT",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -329,6 +385,22 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 6
+                  },
+                  {
+                    "id": "VWAsUnzCt7",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 6
+                  },
+                  {
+                    "id": "MwVAynPXKE",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               }
@@ -341,11 +413,11 @@
               "[\"position\",\"z\"]": "VfB5QGqu0R"
             }
           },
-          "Model / Body / Nose": {
+          "Parts / Body / Nose": {
             "trackData": {
               "jR5MjuRvAr": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Nose:[\"materialOpacity\"]",
+                "__debugName": "Parts / Body / Nose:[\"materialOpacity\"]",
                 "keyframes": [
                   {
                     "id": "17dDzWSQ34",
@@ -367,7 +439,7 @@
               },
               "DQIQzlls1v": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Nose:[\"materialTransparent\"]",
+                "__debugName": "Parts / Body / Nose:[\"materialTransparent\"]",
                 "keyframes": [
                   {
                     "id": "eG9cTRdHzo",
@@ -389,7 +461,7 @@
               },
               "La9glZSLyb": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Nose:[\"opacity\"]",
+                "__debugName": "Parts / Body / Nose:[\"opacity\"]",
                 "keyframes": [
                   {
                     "id": "L4wHV5MAcC",
@@ -411,7 +483,7 @@
               },
               "iiMQZkfjnW": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Nose:[\"transparent\"]",
+                "__debugName": "Parts / Body / Nose:[\"transparent\"]",
                 "keyframes": [
                   {
                     "id": "_B5HFzf5W7",
@@ -433,11 +505,19 @@
               },
               "7YQobeTJEN": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Nose:[\"position\",\"x\"]",
+                "__debugName": "Parts / Body / Nose:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "yrbvw5I8o1",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "7XKaGTeQ25",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -447,11 +527,19 @@
               },
               "YGj61Mg4jM": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Nose:[\"position\",\"y\"]",
+                "__debugName": "Parts / Body / Nose:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "DbIN3bnaTJ",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "tL2bVlbtQ0",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -461,11 +549,11 @@
               },
               "ENbhEDxhKU": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Nose:[\"position\",\"z\"]",
+                "__debugName": "Parts / Body / Nose:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "g5Q0sHBA60",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -473,11 +561,27 @@
                   },
                   {
                     "id": "Jjg5CH5zoV",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -6
+                  },
+                  {
+                    "id": "Sxy5zyvPzg",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -6
+                  },
+                  {
+                    "id": "ciEbzA27QC",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               }
@@ -492,11 +596,11 @@
               "[\"position\",\"z\"]": "ENbhEDxhKU"
             }
           },
-          "Model / SolarPanels / Solar Panel 1": {
+          "Parts / SolarPanels / Solar Panel 1": {
             "trackData": {
               "yEdHEfzNV6": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"materialOpacity\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 1:[\"materialOpacity\"]",
                 "keyframes": [
                   {
                     "id": "pWmTNEKQm0",
@@ -518,7 +622,7 @@
               },
               "T7FV9LWyju": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"materialTransparent\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 1:[\"materialTransparent\"]",
                 "keyframes": [
                   {
                     "id": "axG0PhPuv3",
@@ -540,11 +644,11 @@
               },
               "S9JLRaW42F": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"position\",\"x\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 1:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "UtSjyI1QIz",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -557,16 +661,32 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -3
+                  },
+                  {
+                    "id": "9UskFL7lhx",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -3
+                  },
+                  {
+                    "id": "Lm72_4eKaR",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "cfxeXvd7aC": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"position\",\"y\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 1:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "KwECQrIQsc",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -579,20 +699,36 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 1.39892297446
+                  },
+                  {
+                    "id": "2cxV_-nYM6",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1.39892297446
+                  },
+                  {
+                    "id": "nGbmXUvmZ5",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "79CTgYl0-n": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 1:[\"position\",\"z\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 1:[\"position\",\"z\"]",
                 "keyframes": [
                   {
-                    "id": "C0xfS2Tp4O",
-                    "position": 4.5,
+                    "id": "YVbAi6lf2U",
+                    "position": 11.233,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
-                    "value": 1
+                    "value": 0
                   }
                 ]
               }
@@ -605,15 +741,23 @@
               "[\"position\",\"z\"]": "79CTgYl0-n"
             }
           },
-          "Model / Throttles / Throttle R": {
+          "Parts / Throttles / Throttle R": {
             "trackData": {
               "Mtgw0RuNtp": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle R:[\"position\",\"x\"]",
+                "__debugName": "Parts / Throttles / Throttle R:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "LjAGO27lxA",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "XxM0F6aWdH",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -623,11 +767,19 @@
               },
               "jEcaoX3hZY": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle R:[\"position\",\"y\"]",
+                "__debugName": "Parts / Throttles / Throttle R:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "hlsB1rsm5S",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "Yh1ngddO0p",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -637,11 +789,11 @@
               },
               "A2u-9qUXZR": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle R:[\"position\",\"z\"]",
+                "__debugName": "Parts / Throttles / Throttle R:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "Vq61rYe9Me",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -649,11 +801,27 @@
                   },
                   {
                     "id": "7NAB_vsZh1",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 6
+                  },
+                  {
+                    "id": "sgXBZOk8Cm",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 6
+                  },
+                  {
+                    "id": "XHUBRPeHkH",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               }
@@ -664,15 +832,23 @@
               "[\"position\",\"z\"]": "A2u-9qUXZR"
             }
           },
-          "Model / Throttles / Throttle Main": {
+          "Parts / Throttles / Throttle Main": {
             "trackData": {
               "VmSjwQ0bLO": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle Main:[\"position\",\"x\"]",
+                "__debugName": "Parts / Throttles / Throttle Main:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "CP8ZIEJZUj",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "D1iGujyLpa",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -682,11 +858,19 @@
               },
               "n9bsblDwci": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle Main:[\"position\",\"y\"]",
+                "__debugName": "Parts / Throttles / Throttle Main:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "3suElLMkDc",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "FjU8WehSCx",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -696,11 +880,11 @@
               },
               "csRMoCUnTZ": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Throttles / Throttle Main:[\"position\",\"z\"]",
+                "__debugName": "Parts / Throttles / Throttle Main:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "zMCCTkaF_d",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -708,11 +892,27 @@
                   },
                   {
                     "id": "Yy8CuT9RYd",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 6
+                  },
+                  {
+                    "id": "HZR6YuGwTy",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 6
+                  },
+                  {
+                    "id": "0wMH7XXUwM",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               }
@@ -723,15 +923,23 @@
               "[\"position\",\"z\"]": "csRMoCUnTZ"
             }
           },
-          "Model / Body / Body Front": {
+          "Parts / Body / Body Front": {
             "trackData": {
               "OX8mZCGo_5": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Body Front:[\"position\",\"x\"]",
+                "__debugName": "Parts / Body / Body Front:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "s2tJb8yJN7",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "ldhpUkXcSP",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -741,11 +949,19 @@
               },
               "YS2K_nHi4y": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Body Front:[\"position\",\"y\"]",
+                "__debugName": "Parts / Body / Body Front:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "CJckXR0m7g",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "chXQtS0nzf",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -755,11 +971,11 @@
               },
               "-6hXSni9oP": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Body Front:[\"position\",\"z\"]",
+                "__debugName": "Parts / Body / Body Front:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "_HCD3iDHcd",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -767,11 +983,27 @@
                   },
                   {
                     "id": "_MSyWndVik",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -3
+                  },
+                  {
+                    "id": "j8sSRAL1W_",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -3
+                  },
+                  {
+                    "id": "4ZAtcII8YY",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               }
@@ -782,15 +1014,23 @@
               "[\"position\",\"z\"]": "-6hXSni9oP"
             }
           },
-          "Model / Body / Body Middle": {
+          "Parts / Body / Body Middle": {
             "trackData": {
               "a_-JoTC1HC": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Body Middle:[\"position\",\"x\"]",
+                "__debugName": "Parts / Body / Body Middle:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "SejCuij0Zx",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "GD3rkubBPz",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -800,11 +1040,19 @@
               },
               "1gm0UACjUB": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Body Middle:[\"position\",\"y\"]",
+                "__debugName": "Parts / Body / Body Middle:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "yWkhu5PL4O",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "oBKcdMhgva",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -814,11 +1062,19 @@
               },
               "dG_xQ7FDFS": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Body Middle:[\"position\",\"z\"]",
+                "__debugName": "Parts / Body / Body Middle:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "IYaFRF3Pz7",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "rfBO_-2lpo",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -833,15 +1089,23 @@
               "[\"position\",\"z\"]": "dG_xQ7FDFS"
             }
           },
-          "Model / Body / Body Back": {
+          "Parts / Body / Body Back": {
             "trackData": {
               "GH-UUh22ZC": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Body Back:[\"position\",\"x\"]",
+                "__debugName": "Parts / Body / Body Back:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "qZO4uej9u3",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "f69wyMA64y",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -851,11 +1115,19 @@
               },
               "fxInCeJSPR": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Body Back:[\"position\",\"y\"]",
+                "__debugName": "Parts / Body / Body Back:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "TLyDrBobq2",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "YM84aonZbr",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -865,11 +1137,11 @@
               },
               "M657I-ijgb": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Body / Body Back:[\"position\",\"z\"]",
+                "__debugName": "Parts / Body / Body Back:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "pPVjhN2Bp3",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -877,11 +1149,27 @@
                   },
                   {
                     "id": "VNfwfdsHi0",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 3
+                  },
+                  {
+                    "id": "nyZCpZHrB5",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 3
+                  },
+                  {
+                    "id": "tDPHL6-gPT",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               }
@@ -892,15 +1180,15 @@
               "[\"position\",\"z\"]": "M657I-ijgb"
             }
           },
-          "Model / Centrifuge / Centrifuge 1": {
+          "Parts / Centrifuge / Centrifuge 1": {
             "trackData": {
               "9nnMZgB0YW": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 1:[\"position\",\"x\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 1:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "0upQDy3hZZ",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -908,21 +1196,37 @@
                   },
                   {
                     "id": "EolzFVfiDG",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -5.196152423
+                  },
+                  {
+                    "id": "QnahT2wtp_",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -5.196152423
+                  },
+                  {
+                    "id": "WTw3FSdu54",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "hJ9qw_NDzK": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 1:[\"position\",\"y\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 1:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "MsvW77y0DQ",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -930,21 +1234,37 @@
                   },
                   {
                     "id": "NUKjm0BQfM",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 3
+                  },
+                  {
+                    "id": "aWM-WfSP3s",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 3
+                  },
+                  {
+                    "id": "lDHNxGnJQh",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "_4EF_6PhM5": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 1:[\"position\",\"z\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 1:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "LFtM0cxFr1",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -952,7 +1272,15 @@
                   },
                   {
                     "id": "H5L-0O2X3w",
-                    "position": 7.5,
+                    "position": 8.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "TbQ6kG7ZH4",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -967,15 +1295,23 @@
               "[\"position\",\"z\"]": "_4EF_6PhM5"
             }
           },
-          "Model / Centrifuge / Centrifuge 2": {
+          "Parts / Centrifuge / Centrifuge 2": {
             "trackData": {
               "JbpGY9Q7SD": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 2:[\"position\",\"x\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 2:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "guX6kh3AtR",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "grb-gu4rtO",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -985,11 +1321,11 @@
               },
               "hTB-9mjK0v": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 2:[\"position\",\"y\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 2:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "_ZT_59-HlG",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -997,21 +1333,45 @@
                   },
                   {
                     "id": "URA5r4GMZR",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 6
+                  },
+                  {
+                    "id": "qJgz9W9sld",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 6
+                  },
+                  {
+                    "id": "QkNjVH0q1E",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "KHDzJ5Mv_6": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 2:[\"position\",\"z\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 2:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "rts0oCV4jG",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "ondouTGxkM",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1026,15 +1386,15 @@
               "[\"position\",\"z\"]": "KHDzJ5Mv_6"
             }
           },
-          "Model / Centrifuge / Centrifuge 3": {
+          "Parts / Centrifuge / Centrifuge 3": {
             "trackData": {
               "HhIcVCfgTy": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 3:[\"position\",\"x\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 3:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "gPi6TWwyiP",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1042,21 +1402,37 @@
                   },
                   {
                     "id": "19wLixjxgi",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 5.196152423
+                  },
+                  {
+                    "id": "104zSv96xj",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 5.196152423
+                  },
+                  {
+                    "id": "JiinflavRv",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "QNwyKyFvTL": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 3:[\"position\",\"y\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 3:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "MssB7Q_ifl",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1064,21 +1440,45 @@
                   },
                   {
                     "id": "8Z1FVcmxl6",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 3
+                  },
+                  {
+                    "id": "SKn25WrokZ",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 3
+                  },
+                  {
+                    "id": "IVTbl5CYFx",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "n7WpG18no1": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 3:[\"position\",\"z\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 3:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "2Ui7jHfZjM",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "wPuWhLLmX7",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1093,15 +1493,15 @@
               "[\"position\",\"z\"]": "n7WpG18no1"
             }
           },
-          "Model / Centrifuge / Centrifuge 4": {
+          "Parts / Centrifuge / Centrifuge 4": {
             "trackData": {
               "WFOz4cNizx": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 4:[\"position\",\"x\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 4:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "ZqO2JvX8b2",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1109,21 +1509,37 @@
                   },
                   {
                     "id": "LLFRkjXN_G",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 5.196152423
+                  },
+                  {
+                    "id": "NB8orXP2MW",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 5.196152423
+                  },
+                  {
+                    "id": "ijCmC00XSf",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "7SQWcB-OnE": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 4:[\"position\",\"y\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 4:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "aNYp37bX5P",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1131,21 +1547,45 @@
                   },
                   {
                     "id": "-uI7JqRHl7",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -3
+                  },
+                  {
+                    "id": "US2u9ls64k",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -3
+                  },
+                  {
+                    "id": "yGCAZlCEr6",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "kDxo_RT5_z": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 4:[\"position\",\"z\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 4:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "fZsgGu_YjF",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "fUzwbeczjX",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1160,15 +1600,23 @@
               "[\"position\",\"z\"]": "kDxo_RT5_z"
             }
           },
-          "Model / Centrifuge / Centrifuge 5": {
+          "Parts / Centrifuge / Centrifuge 5": {
             "trackData": {
               "jLCS5sxIgU": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 5:[\"position\",\"x\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 5:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "VgkkyfsrLe",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "6CImkaDpTw",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1178,11 +1626,11 @@
               },
               "vzDuE_GaGR": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 5:[\"position\",\"y\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 5:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "Ah3QHzdVJ7",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1190,21 +1638,45 @@
                   },
                   {
                     "id": "KZHi2fm7LR",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -6
+                  },
+                  {
+                    "id": "neNKvhYjSj",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -6
+                  },
+                  {
+                    "id": "AzrAU1CWgO",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "YMX7qk4Znv": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 5:[\"position\",\"z\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 5:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "aM7t6ku0m6",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "SHLHugtxl5",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1219,15 +1691,15 @@
               "[\"position\",\"z\"]": "YMX7qk4Znv"
             }
           },
-          "Model / Centrifuge / Centrifuge 6": {
+          "Parts / Centrifuge / Centrifuge 6": {
             "trackData": {
               "7xv1z9I6Fn": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 6:[\"position\",\"x\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 6:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "xKrrF6zpKh",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1235,21 +1707,37 @@
                   },
                   {
                     "id": "uW44AUNY6J",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -5.196152423
+                  },
+                  {
+                    "id": "xTmodAclIo",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -5.196152423
+                  },
+                  {
+                    "id": "aCAOGvHQfC",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "J5MFDa_HiU": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 6:[\"position\",\"y\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 6:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "k_KzzVoLZD",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1257,21 +1745,45 @@
                   },
                   {
                     "id": "cQAvXLcZT7",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -3
+                  },
+                  {
+                    "id": "jjazsr3Lc2",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -3
+                  },
+                  {
+                    "id": "uWWVflq4Z2",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "n4YROzjQm9": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Centrifuge 6:[\"position\",\"z\"]",
+                "__debugName": "Parts / Centrifuge / Centrifuge 6:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "KnBkupHeOZ",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "ybuw4kj-t-",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1286,15 +1798,15 @@
               "[\"position\",\"z\"]": "n4YROzjQm9"
             }
           },
-          "Model / Centrifuge / Poles / Pole 1": {
+          "Parts / Centrifuge / Poles / Pole 1": {
             "trackData": {
               "YiThfUEvAA": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / Pole 1:[\"position\",\"x\"]",
+                "__debugName": "Parts / Centrifuge / Poles / Pole 1:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "Y1SZl4Sism",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1307,16 +1819,40 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 4
+                  },
+                  {
+                    "id": "-q4B21djCV",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 4
+                  },
+                  {
+                    "id": "78u9SGdWNL",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "YOFl0LtgPP": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / Pole 1:[\"position\",\"y\"]",
+                "__debugName": "Parts / Centrifuge / Poles / Pole 1:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "qBKWUY1YQq",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "1tpbTBuZF_",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1326,11 +1862,19 @@
               },
               "CQTHqHjSxv": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / Pole 1:[\"position\",\"z\"]",
+                "__debugName": "Parts / Centrifuge / Poles / Pole 1:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "OA91LYz-4R",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "XdQzyirnpz",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1345,15 +1889,15 @@
               "[\"position\",\"z\"]": "CQTHqHjSxv"
             }
           },
-          "Model / Centrifuge / Poles / Pole 2": {
+          "Parts / Centrifuge / Poles / Pole 2": {
             "trackData": {
               "Us_ZQU4Trj": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / Pole 2:[\"position\",\"x\"]",
+                "__debugName": "Parts / Centrifuge / Poles / Pole 2:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "YvaB0UTIJo",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1366,16 +1910,32 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -2
+                  },
+                  {
+                    "id": "u60DfSnJ-J",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -2
+                  },
+                  {
+                    "id": "-hu1I0WvOR",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "4dtAQLiJBD": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / Pole 2:[\"position\",\"y\"]",
+                "__debugName": "Parts / Centrifuge / Poles / Pole 2:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "7u0aQCMxhj",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1388,16 +1948,40 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -3.464101615
+                  },
+                  {
+                    "id": "9p0M2otG8d",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -3.464101615
+                  },
+                  {
+                    "id": "EBQHt57OIu",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "HDUlsLU5rQ": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / Pole 2:[\"position\",\"z\"]",
+                "__debugName": "Parts / Centrifuge / Poles / Pole 2:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "nuG0ZF9Lus",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "MnZIj3PY_x",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1412,15 +1996,15 @@
               "[\"position\",\"z\"]": "HDUlsLU5rQ"
             }
           },
-          "Model / Centrifuge / Poles / Pole 3": {
+          "Parts / Centrifuge / Poles / Pole 3": {
             "trackData": {
               "GC8CjnFsV3": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / Pole 3:[\"position\",\"x\"]",
+                "__debugName": "Parts / Centrifuge / Poles / Pole 3:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "wHhn5x14wh",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1433,16 +2017,32 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -2
+                  },
+                  {
+                    "id": "UOxdIZSe8P",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -2
+                  },
+                  {
+                    "id": "UQQ5Vu6szS",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "m8aGocMvO3": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / Pole 3:[\"position\",\"y\"]",
+                "__debugName": "Parts / Centrifuge / Poles / Pole 3:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "6DPLbNWagO",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1455,16 +2055,40 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 3.464101615
+                  },
+                  {
+                    "id": "5HE6VgXF3K",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 3.464101615
+                  },
+                  {
+                    "id": "wBW18TmttD",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "L9wRfguKQ2": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / Centrifuge / Poles / Pole 3:[\"position\",\"z\"]",
+                "__debugName": "Parts / Centrifuge / Poles / Pole 3:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "4stYgILMVW",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "8JIpF6sCzQ",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1479,15 +2103,15 @@
               "[\"position\",\"z\"]": "L9wRfguKQ2"
             }
           },
-          "Model / SolarPanels / Solar Panel 2": {
+          "Parts / SolarPanels / Solar Panel 2": {
             "trackData": {
               "IaFv1JZJEJ": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 2:[\"position\",\"x\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 2:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "RQE-ZtQlNz",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1500,16 +2124,32 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 3
+                  },
+                  {
+                    "id": "Rpawyi7yhB",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 3
+                  },
+                  {
+                    "id": "vHiq2LgKeR",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "A-FO3X_cAw": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 2:[\"position\",\"y\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 2:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "ir8ex7XToa",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1522,30 +2162,29 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -1.39892297446
-                  }
-                ]
-              },
-              "TL3ECWopuT": {
-                "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 2:[\"position\",\"z\"]",
-                "keyframes": [
+                  },
                   {
-                    "id": "1raG2o55gn",
-                    "position": 4.5,
+                    "id": "HzMzMVNJwk",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
-                    "value": 1
+                    "value": -1.39892297446
                   },
                   {
-                    "id": "wVVOAdbi8b",
-                    "position": 7.5,
+                    "id": "4ew2zCmpgz",
+                    "position": 18.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 0
                   }
                 ]
+              },
+              "TL3ECWopuT": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / SolarPanels / Solar Panel 2:[\"position\",\"z\"]",
+                "keyframes": []
               }
             },
             "trackIdByPropPath": {
@@ -1554,15 +2193,15 @@
               "[\"position\",\"z\"]": "TL3ECWopuT"
             }
           },
-          "Model / SolarPanels / Solar Panel 3": {
+          "Parts / SolarPanels / Solar Panel 3": {
             "trackData": {
               "dr6oM3a9EL": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 3:[\"position\",\"x\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 3:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "eM5BQNHYuF",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1575,16 +2214,32 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -3
+                  },
+                  {
+                    "id": "FQ3WUYEmTQ",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -3
+                  },
+                  {
+                    "id": "mXIERQwhlJ",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "SkVgtt9Kb2": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 3:[\"position\",\"y\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 3:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "4SAXlWoNyI",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1597,16 +2252,40 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 1.39892297446
+                  },
+                  {
+                    "id": "dU39UKtFBq",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1.39892297446
+                  },
+                  {
+                    "id": "cfJrwiYAQR",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "NRaaJpErAq": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 3:[\"position\",\"z\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 3:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "e1auAtXkm-",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "EDQjJh9Gb6",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1621,15 +2300,15 @@
               "[\"position\",\"z\"]": "NRaaJpErAq"
             }
           },
-          "Model / SolarPanels / Solar Panel 4": {
+          "Parts / SolarPanels / Solar Panel 4": {
             "trackData": {
               "daBzEd3S8K": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 4:[\"position\",\"x\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 4:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "2Abc_6AO64",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1642,16 +2321,32 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -3
+                  },
+                  {
+                    "id": "oqxVMYRIUU",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -3
+                  },
+                  {
+                    "id": "N9pPPDrnrr",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "Q7hIwF6nyx": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 4:[\"position\",\"y\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 4:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "LqLWjOa6Eu",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1664,16 +2359,40 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 1.39892297446
+                  },
+                  {
+                    "id": "RQcfmkxEK0",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1.39892297446
+                  },
+                  {
+                    "id": "9t_7MTTZ0X",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "Jsod7MUq1E": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 4:[\"position\",\"z\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 4:[\"position\",\"z\"]",
                 "keyframes": [
                   {
                     "id": "1UVsA_lhdZ",
-                    "position": 4.5,
+                    "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "opiduo4D0a",
+                    "position": 15.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1688,15 +2407,15 @@
               "[\"position\",\"z\"]": "Jsod7MUq1E"
             }
           },
-          "Model / SolarPanels / Solar Panel 5": {
+          "Parts / SolarPanels / Solar Panel 5": {
             "trackData": {
               "iYqObfXLZf": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 5:[\"position\",\"x\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 5:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "ucw5dvkJzo",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1709,16 +2428,32 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 3
+                  },
+                  {
+                    "id": "Hn2qAXPYnX",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 3
+                  },
+                  {
+                    "id": "kXwqBU3XTK",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "mwjlVMuyXn": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 5:[\"position\",\"y\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 5:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "Ev49CGGyKe",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1731,13 +2466,38 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -1.39892297446
+                  },
+                  {
+                    "id": "hep1ffHRRY",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -1.39892297446
+                  },
+                  {
+                    "id": "RBELSJVpu5",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "N9zvv7_0pZ": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 5:[\"position\",\"z\"]",
-                "keyframes": []
+                "__debugName": "Parts / SolarPanels / Solar Panel 5:[\"position\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "X9rDGECHT8",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  }
+                ]
               }
             },
             "trackIdByPropPath": {
@@ -1746,15 +2506,15 @@
               "[\"position\",\"z\"]": "N9zvv7_0pZ"
             }
           },
-          "Model / SolarPanels / Solar Panel 6": {
+          "Parts / SolarPanels / Solar Panel 6": {
             "trackData": {
               "RkVcw-Dm-V": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 6:[\"position\",\"x\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 6:[\"position\",\"x\"]",
                 "keyframes": [
                   {
                     "id": "n0HP7U27Ji",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1762,21 +2522,37 @@
                   },
                   {
                     "id": "IDDIq2zjwZ",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 3
+                  },
+                  {
+                    "id": "nCIfh_2LIr",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 3
+                  },
+                  {
+                    "id": "bYlQDrO569",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "J5pVdEETvI": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 6:[\"position\",\"y\"]",
+                "__debugName": "Parts / SolarPanels / Solar Panel 6:[\"position\",\"y\"]",
                 "keyframes": [
                   {
                     "id": "7HdOIlWGh7",
-                    "position": 4.5,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1784,18 +2560,43 @@
                   },
                   {
                     "id": "jg1fOkEED8",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -1.39892297446
+                  },
+                  {
+                    "id": "YtBZP754Kr",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -1.39892297446
+                  },
+                  {
+                    "id": "-QM2aHtzl-",
+                    "position": 18.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
                   }
                 ]
               },
               "5TfdzGyNA8": {
                 "type": "BasicKeyframedTrack",
-                "__debugName": "Model / SolarPanels / Solar Panel 6:[\"position\",\"z\"]",
-                "keyframes": []
+                "__debugName": "Parts / SolarPanels / Solar Panel 6:[\"position\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "wTTNq9iTec",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  }
+                ]
               }
             },
             "trackIdByPropPath": {
@@ -2049,10 +2850,1264 @@
           }
         }
       }
+    },
+    "Secondary Model 1": {
+      "staticOverrides": {
+        "byObject": {
+          "Model": {
+            "scale": {
+              "x": 2.5,
+              "y": 2.5,
+              "z": 2.5
+            },
+            "rotation": {
+              "y": 180
+            },
+            "position": {
+              "z": -35
+            }
+          },
+          "Parts / SolarPanels / Solar Panel 1": {
+            "materialOpacity": 1
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 24,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Model": {
+            "trackData": {
+              "ZcM3SjSFga": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Model:[\"position\",\"x\"]",
+                "keyframes": [
+                  {
+                    "id": "U-bj2Zx2iX",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "-oxdZ2hiL9",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 15
+                  }
+                ]
+              },
+              "odW3CnBhod": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Model:[\"position\",\"y\"]",
+                "keyframes": [
+                  {
+                    "id": "71p9aBFie9",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "7xWY3ns88_",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 10
+                  }
+                ]
+              },
+              "g7XBHuJjSY": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Model:[\"position\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "mD8lFKMSu2",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -35
+                  },
+                  {
+                    "id": "VA-1i4tGs5",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.55, 0.085],
+                    "type": "bezier",
+                    "value": -35
+                  },
+                  {
+                    "id": "t-baQRdED6",
+                    "position": 24,
+                    "connectedRight": true,
+                    "handles": [0.68, 0.53, 0.5, 0],
+                    "type": "bezier",
+                    "value": 125
+                  }
+                ]
+              },
+              "BClxgmGLEK": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Model:[\"opacity\"]",
+                "keyframes": [
+                  {
+                    "id": "jWuuhSrMhC",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "gUDS_wUtf_",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "FZIyDgY6JU",
+                    "position": 17.033,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"position\",\"x\"]": "ZcM3SjSFga",
+              "[\"position\",\"y\"]": "odW3CnBhod",
+              "[\"position\",\"z\"]": "g7XBHuJjSY",
+              "[\"opacity\"]": "BClxgmGLEK"
+            }
+          },
+          "Parts / Throttles / Throttle L": {
+            "trackData": {
+              "Fs_ITGPdp2": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Throttles / Throttle L:[\"materialTransparent\"]",
+                "keyframes": [
+                  {
+                    "id": "il88IoUbNN",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": true
+                  },
+                  {
+                    "id": "KyX5rGRDuv",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "hold",
+                    "value": true
+                  },
+                  {
+                    "id": "gGLNvFSLFe",
+                    "position": 17.033,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": false
+                  }
+                ]
+              },
+              "SDlDJWY_nq": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Throttles / Throttle L:[\"materialOpacity\"]",
+                "keyframes": [
+                  {
+                    "id": "Njg0zAXbYF",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "8JTKIOf2jn",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "8ksHqYW1PB",
+                    "position": 17.033,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"materialTransparent\"]": "Fs_ITGPdp2",
+              "[\"materialOpacity\"]": "SDlDJWY_nq"
+            }
+          },
+          "Parts / Body / Nose": {
+            "trackData": {
+              "X10JpvKqvV": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Body / Nose:[\"materialOpacity\"]",
+                "keyframes": [
+                  {
+                    "id": "Ym-ugRWSa7",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "ZPOYrSwaRP",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "2qI6s6uwat",
+                    "position": 17.033,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "EVP4S0lbO5": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Body / Nose:[\"materialTransparent\"]",
+                "keyframes": [
+                  {
+                    "id": "P8N3v42WdR",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": true
+                  },
+                  {
+                    "id": "82fpcHBLyq",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "hold",
+                    "value": true
+                  },
+                  {
+                    "id": "uhQA6ZKhs2",
+                    "position": 17.033,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": false
+                  }
+                ]
+              },
+              "UT1lGvIxxI": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Body / Nose:[\"opacity\"]",
+                "keyframes": [
+                  {
+                    "id": "EzRor4AsDu",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "WjH_gwdV-S",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "ypAS9IO8ta",
+                    "position": 17.033,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "E3Gtna_c-r": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Body / Nose:[\"transparent\"]",
+                "keyframes": [
+                  {
+                    "id": "SWwR2Kh0c-",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": true
+                  },
+                  {
+                    "id": "Mr42s-ImuP",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "hold",
+                    "value": true
+                  },
+                  {
+                    "id": "BcWzVlDVMK",
+                    "position": 17.033,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": false
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"materialOpacity\"]": "X10JpvKqvV",
+              "[\"materialTransparent\"]": "EVP4S0lbO5",
+              "[\"opacity\"]": "UT1lGvIxxI",
+              "[\"transparent\"]": "E3Gtna_c-r"
+            }
+          },
+          "Parts / SolarPanels / Solar Panel 1": {
+            "trackData": {
+              "PQPrVbkluE": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / SolarPanels / Solar Panel 1:[\"materialOpacity\"]",
+                "keyframes": [
+                  {
+                    "id": "Mnf-lmxKIs",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "i1-DBTLtRE",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "YtMInrGoxN",
+                    "position": 17.033,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "lb3up9SXOp": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / SolarPanels / Solar Panel 1:[\"materialTransparent\"]",
+                "keyframes": [
+                  {
+                    "id": "-ONLmjzEr0",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": true
+                  },
+                  {
+                    "id": "EjdGZXL5dT",
+                    "position": 16.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "hold",
+                    "value": true
+                  },
+                  {
+                    "id": "k0rjRhRUPP",
+                    "position": 17.033,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": false
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"materialOpacity\"]": "PQPrVbkluE",
+              "[\"materialTransparent\"]": "lb3up9SXOp"
+            }
+          }
+        }
+      }
+    },
+    "Secondary Model 2": {
+      "staticOverrides": {
+        "byObject": {
+          "Model": {
+            "scale": {
+              "y": 2.5,
+              "x": 2.5,
+              "z": 2.5
+            },
+            "rotation": {
+              "y": 180
+            },
+            "position": {
+              "z": -35
+            }
+          },
+          "Parts / Body / Nose": {
+            "materialOpacity": 0
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 24,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Model": {
+            "trackData": {
+              "-D8jMTc2R5": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Model:[\"position\",\"x\"]",
+                "keyframes": [
+                  {
+                    "id": "NOURvj50Ar",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "NM36nzEDH9",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -15
+                  }
+                ]
+              },
+              "1XkBWZyFwZ": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Model:[\"position\",\"y\"]",
+                "keyframes": [
+                  {
+                    "id": "Xzueley9MM",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "mnjfnsLk-M",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -10
+                  }
+                ]
+              },
+              "ww7TcHEvrZ": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Model:[\"position\",\"z\"]",
+                "keyframes": [
+                  {
+                    "id": "78Ml0M-WoB",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -35
+                  },
+                  {
+                    "id": "C643FthZ9D",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.55, 0.085],
+                    "type": "bezier",
+                    "value": -40
+                  },
+                  {
+                    "id": "EgnS3jgeRc",
+                    "position": 24,
+                    "connectedRight": true,
+                    "handles": [0.68, 0.53, 0.5, 0],
+                    "type": "bezier",
+                    "value": 60
+                  }
+                ]
+              },
+              "btWX8n16T8": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Model:[\"opacity\"]",
+                "keyframes": [
+                  {
+                    "id": "BpaLO4xQdf",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "GaqxdfD6cN",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "KcNIOeWaP_",
+                    "position": 17,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"position\",\"x\"]": "-D8jMTc2R5",
+              "[\"position\",\"y\"]": "1XkBWZyFwZ",
+              "[\"position\",\"z\"]": "ww7TcHEvrZ",
+              "[\"opacity\"]": "btWX8n16T8"
+            }
+          },
+          "Parts / Throttles / Throttle L": {
+            "trackData": {
+              "5ECxsyPzld": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Throttles / Throttle L:[\"materialOpacity\"]",
+                "keyframes": [
+                  {
+                    "id": "OLmdszXrHZ",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "9fus0fyjMR",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "ce0Xe0y2fE",
+                    "position": 17,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "DbMTQ8RaSs": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Throttles / Throttle L:[\"materialTransparent\"]",
+                "keyframes": [
+                  {
+                    "id": "E9gZdzjP8v",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": true
+                  },
+                  {
+                    "id": "1pfFecDOTu",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "hold",
+                    "value": true
+                  },
+                  {
+                    "id": "Z27o8Dtr10",
+                    "position": 17,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": false
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"materialOpacity\"]": "5ECxsyPzld",
+              "[\"materialTransparent\"]": "DbMTQ8RaSs"
+            }
+          },
+          "Parts / Body / Nose": {
+            "trackData": {
+              "Wxti8_jL9H": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Body / Nose:[\"materialOpacity\"]",
+                "keyframes": [
+                  {
+                    "id": "_poi5l8a59",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "5NtAjBTKda",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "hOHaOPWuym",
+                    "position": 17,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "hq4Hq-0ILM": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Body / Nose:[\"materialTransparent\"]",
+                "keyframes": [
+                  {
+                    "id": "3OWU79Drlu",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": true
+                  },
+                  {
+                    "id": "HtvMpoXOQs",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "hold",
+                    "value": true
+                  },
+                  {
+                    "id": "5HMq3IjYry",
+                    "position": 17,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": false
+                  }
+                ]
+              },
+              "vUSDIF2wtf": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Body / Nose:[\"opacity\"]",
+                "keyframes": [
+                  {
+                    "id": "H4YKkb3804",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "sXMUHX11l6",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "11-oJGGsa8",
+                    "position": 17,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "CeW_awcsgI": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / Body / Nose:[\"transparent\"]",
+                "keyframes": [
+                  {
+                    "id": "tGChrjF5AM",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": true
+                  },
+                  {
+                    "id": "QCqMszvja_",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "hold",
+                    "value": true
+                  },
+                  {
+                    "id": "WATnHVC2of",
+                    "position": 17,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": false
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"materialOpacity\"]": "Wxti8_jL9H",
+              "[\"materialTransparent\"]": "hq4Hq-0ILM",
+              "[\"opacity\"]": "vUSDIF2wtf",
+              "[\"transparent\"]": "CeW_awcsgI"
+            }
+          },
+          "Parts / SolarPanels / Solar Panel 1": {
+            "trackData": {
+              "p82RRN-UOO": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / SolarPanels / Solar Panel 1:[\"materialOpacity\"]",
+                "keyframes": [
+                  {
+                    "id": "kaRAsLOK_D",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "zHrueybnDT",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "WHZ1ZEdg70",
+                    "position": 17,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "wH0FwxNeTj": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Parts / SolarPanels / Solar Panel 1:[\"materialTransparent\"]",
+                "keyframes": [
+                  {
+                    "id": "HZxLWlB9A8",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": true
+                  },
+                  {
+                    "id": "cPW7Oe8Cl_",
+                    "position": 16.467,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "hold",
+                    "value": true
+                  },
+                  {
+                    "id": "GwMjzACtqh",
+                    "position": 17,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": false
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"materialOpacity\"]": "p82RRN-UOO",
+              "[\"materialTransparent\"]": "wH0FwxNeTj"
+            }
+          }
+        }
+      }
+    },
+    "Sun": {
+      "staticOverrides": {
+        "byObject": {
+          "Sun": {
+            "position": {
+              "z": 0,
+              "y": 0,
+              "x": -100
+            }
+          }
+        }
+      }
+    },
+    "Middle Text": {
+      "staticOverrides": {
+        "byObject": {
+          "hi": {
+            "opacity": 1,
+            "translateX": -2.2648549702353193e-14,
+            "reveal": 1,
+            "translateY": 2.1582735598713043e-13
+          },
+          "Modular": {
+            "reveal": 0,
+            "translateX": 1.376676550535194e-13
+          },
+          "Resilient": {
+            "reveal": 0
+          },
+          "Fast": {
+            "reveal": 0
+          },
+          "Middle Text": {
+            "reveal": 0
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 24,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Middle Text": {
+            "trackData": {
+              "NaB6nVuMY7": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Middle Text:[\"reveal\"]",
+                "keyframes": [
+                  {
+                    "id": "a_-kGd1ES2",
+                    "position": 8,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "4aFFGsfXON",
+                    "position": 13,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"reveal\"]": "NaB6nVuMY7"
+            }
+          },
+          "Modular": {
+            "trackData": {
+              "d7HTXDsZSf": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Modular:[\"reveal\"]",
+                "keyframes": [
+                  {
+                    "id": "dYFVmR4PsU",
+                    "position": 8,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "KK6yDtp_tl",
+                    "position": 12,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"reveal\"]": "d7HTXDsZSf"
+            }
+          },
+          "Resilient": {
+            "trackData": {
+              "3A2DayIXjA": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Resilient:[\"reveal\"]",
+                "keyframes": [
+                  {
+                    "id": "3O33vqPIni",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "YSlEM1j9bC",
+                    "position": 14,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"reveal\"]": "3A2DayIXjA"
+            }
+          },
+          "Fast": {
+            "trackData": {
+              "cnSBgvbO1u": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Fast:[\"reveal\"]",
+                "keyframes": [
+                  {
+                    "id": "cKV8ts3B_Z",
+                    "position": 11.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "uP8NXLsrGe",
+                    "position": 15.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"reveal\"]": "cnSBgvbO1u"
+            }
+          },
+          "Underline Upgradability": {
+            "trackData": {
+              "ak8YCm5qQc": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Underline Upgradability:[\"scaleX\"]",
+                "keyframes": [
+                  {
+                    "id": "slEDuAF9oN",
+                    "position": 10,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "gkmYT_OgAV",
+                    "position": 10.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scaleX\"]": "ak8YCm5qQc"
+            }
+          },
+          "Underline Repairability": {
+            "trackData": {
+              "0NyTEQ_K7r": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Underline Repairability:[\"scaleX\"]",
+                "keyframes": [
+                  {
+                    "id": "rOH-FEiVvg",
+                    "position": 10.333,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "O2kE4qJ0Va",
+                    "position": 10.833,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scaleX\"]": "0NyTEQ_K7r"
+            }
+          },
+          "Underline Segmentation": {
+            "trackData": {
+              "Pm-T6L7jg3": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Underline Segmentation:[\"scaleX\"]",
+                "keyframes": [
+                  {
+                    "id": "SsuQGYDZ_z",
+                    "position": 12,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "30zxxh2IgD",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 2
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scaleX\"]": "Pm-T6L7jg3"
+            }
+          },
+          "Underline Redundancy": {
+            "trackData": {
+              "U03sOsh50k": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Underline Redundancy:[\"scaleX\"]",
+                "keyframes": [
+                  {
+                    "id": "-gWNyZowa1",
+                    "position": 12.333,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "bHI2mweqrm",
+                    "position": 12.833,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scaleX\"]": "U03sOsh50k"
+            }
+          },
+          "Underline Time": {
+            "trackData": {
+              "g3Br-QoqnO": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Underline Time:[\"scaleX\"]",
+                "keyframes": [
+                  {
+                    "id": "4Y-EWXiCel",
+                    "position": 14,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "q4A1atE3_G",
+                    "position": 14.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scaleX\"]": "g3Br-QoqnO"
+            }
+          },
+          "Underline Safety": {
+            "trackData": {
+              "kfLFiIM0_b": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Underline Safety:[\"scaleX\"]",
+                "keyframes": [
+                  {
+                    "id": "QxfIxPN0w2",
+                    "position": 14.333,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "KMvApIk-SG",
+                    "position": 14.833,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"scaleX\"]": "kfLFiIM0_b"
+            }
+          }
+        }
+      }
+    },
+    "Meet": {
+      "staticOverrides": {
+        "byObject": {
+          "Meet": {
+            "reveal": 1,
+            "translateX": 1.1546319456101628e-14,
+            "translateY": -150
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 10,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Meet": {
+            "trackData": {
+              "-OipJiu-9G": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Meet:[\"reveal\"]",
+                "keyframes": [
+                  {
+                    "id": "vRh7IsVndE",
+                    "position": 4.333,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "NxS30Rr0NE",
+                    "position": 6,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"reveal\"]": "-OipJiu-9G"
+            }
+          }
+        }
+      }
+    },
+    "End Text": {
+      "staticOverrides": {
+        "byObject": {
+          "End Text": {
+            "reveal": 0.3101265822784814
+          },
+          "Underline Future": {
+            "scaleX": 1
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 24,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "End Text": {
+            "trackData": {
+              "I6oqtozISO": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "End Text:[\"reveal\"]",
+                "keyframes": [
+                  {
+                    "id": "w6fsikog_u",
+                    "position": 20,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "MmizcQQ-Nu",
+                    "position": 22,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"reveal\"]": "I6oqtozISO"
+            }
+          }
+        }
+      }
     }
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "GUOTtEufMPt5pR4s",
+    "EMqfM9t1NTqPl95P",
+    "j7sV0MHl5yexTRXZ",
+    "VCDhWH5D46smS9ZR",
+    "rFJrP1Tk9PDoBbkM",
+    "RATKwOuPcMmmlkyN",
     "Fap4l72GRyGGM2dS",
     "BLklfyLqudESccVL",
     "Sc1WOl79i0jhtvIc",

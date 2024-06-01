@@ -7,11 +7,18 @@
 
   interface Props {
     progress: number;
+    className?: string;
     from?: number;
     to?: number;
     children: Snippet;
   }
-  let { progress = $bindable(), from = 0, to = 1, children }: Props = $props();
+  let {
+    className,
+    progress = $bindable(),
+    from = 0,
+    to = 1,
+    children,
+  }: Props = $props();
 
   let actualProgress = $state(0);
   $effect(() => {
@@ -19,7 +26,7 @@
   });
 </script>
 
-<div style="opacity: {actualProgress};">
+<div class={className} style="opacity: {actualProgress};">
   {#if actualProgress > 0}
     {@render children()}
   {/if}

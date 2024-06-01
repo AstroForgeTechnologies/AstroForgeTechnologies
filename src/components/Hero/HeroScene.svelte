@@ -5,7 +5,7 @@
   import envMap from "@assets/images/main/starmap_2020_4k_compressed.jpg";
   import { SheetObject } from "@threlte/theatre";
   import ScrollSheet from "@components/Hero/ScrollSheet.svelte";
-  import Stem2WebsiteModel from "@components/Hero/HeroModel.svelte";
+  import HeroModel from "@components/Hero/HeroModel.svelte";
 
   const cameraLookAt = new Vector3(0, 0, 0);
 
@@ -26,6 +26,7 @@
         is={PerspectiveCamera}
         makeDefault
         position={[-21, 3.5, -18]}
+        fov={50}
         on:create={({ ref }) => ref.lookAt(cameraLookAt)}
       >
         <!--<OrbitControls target={cameraLookAt.toArray()} enableDamping />-->
@@ -36,10 +37,26 @@
 
 <T is={AmbientLight} intensity={2} />
 
-<ScrollSheet name="Objects">
-  <SheetObject key="Model" let:Transform let:Sync let:values>
+<ScrollSheet name="Main Model">
+  <SheetObject key="Model" let:Transform let:Sync>
     <Transform>
-      <Stem2WebsiteModel {values} {Sync} scale={0.2} position={[0, 0, -1]} />
+      <HeroModel {Sync} scale={0.2} position={[0, 0, -1]} />
+    </Transform>
+  </SheetObject>
+</ScrollSheet>
+
+<ScrollSheet name="Secondary Model 1">
+  <SheetObject key="Model" let:Transform let:Sync>
+    <Transform>
+      <HeroModel {Sync} scale={0.2} position={[0, 0, -1]} />
+    </Transform>
+  </SheetObject>
+</ScrollSheet>
+
+<ScrollSheet name="Secondary Model 2">
+  <SheetObject key="Model" let:Transform let:Sync>
+    <Transform>
+      <HeroModel {Sync} scale={0.2} position={[0, 0, -1]} />
     </Transform>
   </SheetObject>
 </ScrollSheet>

@@ -2,9 +2,16 @@
 import Layout from "@layouts/Layout.astro";
 import HeroViewer from "../components/Hero/HeroViewer.svelte";
 import Footer from "../components/Footer.astro";
+import Hr from "../components/Hr.astro";
 ---
 
 <Layout marginRem={0}>
   <HeroViewer client:load />
+  <div class="flex items-center justify-center flex-col pb-10">
+    <h2 class="text-3xl font-extrabold pb-2">Astro Forge Technologies</h2>
+    <p class="text-accent italic">Forging Tomorrow's Spacecraft Today!</p>
+  </div>
+  <Hr />
+
   <Footer />
 </Layout>

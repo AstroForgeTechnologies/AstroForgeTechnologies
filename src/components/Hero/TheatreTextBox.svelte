@@ -29,10 +29,10 @@
         range: [0, 1],
       }),
       translateX: types.number(0, {
-        range: [-100, 100],
+        range: [-250, 250],
       }),
       translateY: types.number(0, {
-        range: [-100, 100],
+        range: [-250, 250],
       }),
       reveal: types.number(0, {
         range: [0, 1],

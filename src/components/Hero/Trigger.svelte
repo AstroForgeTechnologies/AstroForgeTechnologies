@@ -9,7 +9,7 @@
     inY: number;
     outY: number;
     children: Snippet;
-    fallback: Snippet;
+    fallback?: Snippet;
   }
   let { inY, outY, children, fallback }: Props = $props();
 </script>

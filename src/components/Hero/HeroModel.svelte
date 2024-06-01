@@ -6,13 +6,10 @@ Cleaned up and ported to svelte 5 afterwards.
 
 <script lang="ts">
   import type * as THREE from "three";
-  import { Group, Material } from "three";
+  import { Group, Material, MeshBasicMaterial } from "three";
   import { T } from "@threlte/core";
-  import { FakeGlowMaterial, type ThrelteGltf, useGltf } from "@threlte/extras";
-  import type { Snippet } from "svelte";
+  import { type ThrelteGltf, useGltf } from "@threlte/extras";
   import { SheetObject } from "@threlte/theatre";
-  import type { ISheetObject } from "@theatre/core";
-  import type modelProps from "../../types/modelProps.ts";
 
   export const ref = new Group();
 
@@ -67,26 +64,56 @@ Cleaned up and ported to svelte 5 afterwards.
     // ts-expect-error Sync is Any
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     Sync: any;
-    values: ISheetObject<typeof modelProps>["value"];
   }
 
-  let { Sync, values, ...props }: Props = $props();
+  let { Sync, ...props }: Props = $props();
+  let clonedSteel: Material;
+  let clonedDarkSteel: Material;
+  let clonedTitanium: Material;
+  let clonedSolarPanel: Material;
 
-  /* Remove Solar Panels from Tone Mapping so they are Not a Beacon. */
+  /* Copy Steel Material */
+  function getSteelMaterial(gltf: ThrelteGltf<Model>): Material {
+    if (!clonedSteel) clonedSteel = gltf.materials["Steel - Satin"].clone();
+    return clonedSteel;
+  }
+
+  /* Copy Dark Steel Material */
+  function getDarkSteelMaterial(gltf: ThrelteGltf<Model>): Material {
+    if (!clonedDarkSteel)
+      clonedDarkSteel = gltf.materials["Dark Steel"].clone();
+    return clonedDarkSteel;
+  }
+
+  /* Copy Titanium Material */
+  function getTitaniumMaterial(gltf: ThrelteGltf<Model>): Material {
+    if (!clonedTitanium)
+      clonedTitanium = gltf.materials["Titanium -  Pure"].clone();
+    return clonedTitanium;
+  }
+
+  function getGlassMaterial() {
+    return new MeshBasicMaterial({ color: "yellow" });
+  }
+
+  /* Copy & Remove Solar Panels from Tone Mapping so they are Not a Beacon. */
   function getSolarPanelMaterial(gltf: ThrelteGltf<Model>): Material {
-    gltf.materials["Solar Panel"].toneMapped = false;
-    return gltf.materials["Solar Panel"];
+    if (!clonedSolarPanel) {
+      clonedSolarPanel = gltf.materials["Solar Panel"].clone();
+      clonedSolarPanel.toneMapped = false;
+    }
+    return clonedSolarPanel;
   }
 </script>
 
 <T is={ref} dispose={false} {...props}>
   {#await gltf then gltf}
     <!-- Throttles -->
-    <SheetObject key="Model / Throttles / Throttle L" let:Transform>
+    <SheetObject key="Parts / Throttles / Throttle L" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Throttle_L.geometry}
-          material={gltf.materials["Dark Steel"]}
+          material={getDarkSteelMaterial(gltf)}
           position={[-2.01, -1.67, 28.88]}
           rotation={[-Math.PI / 2, 0, 0]}
           scale={[0.75, 0.5, 0.75]}
@@ -95,22 +122,22 @@ Cleaned up and ported to svelte 5 afterwards.
         </T.Mesh>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Throttles / Throttle R" let:Transform>
+    <SheetObject key="Parts / Throttles / Throttle R" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Throttle_R.geometry}
-          material={gltf.materials["Dark Steel"]}
+          material={getDarkSteelMaterial(gltf)}
           position={[0.62, -1.67, 28.88]}
           rotation={[-Math.PI / 2, 0, 0]}
           scale={[0.75, 0.5, 0.75]}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Throttles / Throttle Main" let:Transform>
+    <SheetObject key="Parts / Throttles / Throttle Main" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Throttle_Main.geometry}
-          material={gltf.materials["Dark Steel"]}
+          material={getDarkSteelMaterial(gltf)}
           position={[-0.81, 0.76, 28.73]}
           rotation={[-Math.PI / 2, 0, 0]}
           scale={[1.31, 0.5, 1.31]}
@@ -119,7 +146,7 @@ Cleaned up and ported to svelte 5 afterwards.
     </SheetObject>
 
     <!-- Main Body -->
-    <SheetObject key="Model / Body / Nose" let:Transform>
+    <SheetObject key="Parts / Body / Nose" let:Transform>
       <Transform>
         <T.Group
           position={[-0.87, -0.29, -21.41]}
@@ -128,51 +155,47 @@ Cleaned up and ported to svelte 5 afterwards.
         >
           <T.Mesh
             geometry={gltf.nodes.Nose_1.geometry}
-            material={gltf.materials["Steel - Satin"]}
+            material={getSteelMaterial(gltf)}
           >
             <Sync material.opacity material.transparent />
           </T.Mesh>
           <!-- Use a special emissive "glass" material, + Normal Material. -->
-          <T.Mesh geometry={gltf.nodes.Nose_2.geometry}>
-            <T.MeshBasicMaterial color="lightyellow">
-              <Sync opacity transparent />
-            </T.MeshBasicMaterial>
+          <T.Mesh
+            geometry={gltf.nodes.Nose_2.geometry}
+            material={getGlassMaterial()}
+          >
+            <Sync material.opacity material.transparent />
           </T.Mesh>
-          {#if values.opacity >= 1}
-            <T.Mesh geometry={gltf.nodes.Nose_2.geometry}>
-              <FakeGlowMaterial glowColor="lightyellow" />
-            </T.Mesh>
-          {/if}
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Body / Body Front" let:Transform>
+    <SheetObject key="Parts / Body / Body Front" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Body_Front.geometry}
-          material={gltf.materials["Steel - Satin"]}
+          material={getSteelMaterial(gltf)}
           position={[-0.87, -0.29, -21.27]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Body / Body Middle" let:Transform>
+    <SheetObject key="Parts / Body / Body Middle" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Body_Middle.geometry}
-          material={gltf.materials["Steel - Satin"]}
+          material={getSteelMaterial(gltf)}
           position={[-0.72, -0.32, 11.59]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Body / Body Back" let:Transform>
+    <SheetObject key="Parts / Body / Body Back" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Body_Back.geometry}
-          material={gltf.materials["Steel - Satin"]}
+          material={getSteelMaterial(gltf)}
           position={[-0.72, -0.32, 11.59]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
@@ -181,99 +204,99 @@ Cleaned up and ported to svelte 5 afterwards.
     </SheetObject>
 
     <!-- Centrifuge + Centrifuge Poles -->
-    <SheetObject key="Model / Centrifuge / Centrifuge 1" let:Transform>
+    <SheetObject key="Parts / Centrifuge / Centrifuge 1" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
-          material={gltf.materials["Steel - Satin"]}
+          material={getSteelMaterial(gltf)}
           position={[-0.72, -0.32, 0.8]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Centrifuge 2" let:Transform>
+    <SheetObject key="Parts / Centrifuge / Centrifuge 2" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
-          material={gltf.materials["Steel - Satin"]}
+          material={getSteelMaterial(gltf)}
           position={[-0.72, -0.32, 0.8]}
           rotation={[Math.PI / 2, -Math.PI / 3, 0]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Centrifuge 3" let:Transform>
+    <SheetObject key="Parts / Centrifuge / Centrifuge 3" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
-          material={gltf.materials["Steel - Satin"]}
+          material={getSteelMaterial(gltf)}
           position={[-0.72, -0.32, 0.8]}
           rotation={[-Math.PI / 2, -Math.PI / 3, Math.PI]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Centrifuge 4" let:Transform>
+    <SheetObject key="Parts / Centrifuge / Centrifuge 4" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
-          material={gltf.materials["Steel - Satin"]}
+          material={getSteelMaterial(gltf)}
           position={[-0.72, -0.32, 0.8]}
           rotation={[-Math.PI / 2, 0, Math.PI]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Centrifuge 5" let:Transform>
+    <SheetObject key="Parts / Centrifuge / Centrifuge 5" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
-          material={gltf.materials["Steel - Satin"]}
+          material={getSteelMaterial(gltf)}
           position={[-0.72, -0.32, 0.8]}
           rotation={[-Math.PI / 2, Math.PI / 3, -Math.PI]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Centrifuge 6" let:Transform>
+    <SheetObject key="Parts / Centrifuge / Centrifuge 6" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Centrifuge001.geometry}
-          material={gltf.materials["Steel - Satin"]}
+          material={getSteelMaterial(gltf)}
           position={[-0.72, -0.32, 0.8]}
           rotation={[Math.PI / 2, Math.PI / 3, 0]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Poles / Pole 1" let:Transform>
+    <SheetObject key="Parts / Centrifuge / Poles / Pole 1" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Pole_1.geometry}
-          material={gltf.materials["Dark Steel"]}
+          material={getDarkSteelMaterial(gltf)}
           position={[3.02, -0.57, 0.8]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Poles / Pole 2" let:Transform>
+    <SheetObject key="Parts / Centrifuge / Poles / Pole 2" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Pole_2.geometry}
-          material={gltf.materials["Dark Steel"]}
+          material={getDarkSteelMaterial(gltf)}
           position={[-2.8, -3.91, 0.8]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
         />
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / Centrifuge / Poles / Pole 3" let:Transform>
+    <SheetObject key="Parts / Centrifuge / Poles / Pole 3" let:Transform>
       <Transform>
         <T.Mesh
           geometry={gltf.nodes.Pole_3.geometry}
-          material={gltf.materials["Dark Steel"]}
+          material={getDarkSteelMaterial(gltf)}
           position={[-2.8, 3.27, 0.8]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
@@ -282,12 +305,12 @@ Cleaned up and ported to svelte 5 afterwards.
     </SheetObject>
 
     <!-- Solar Panels -->
-    <SheetObject key="Model / SolarPanels / Solar Panel 1" let:Transform>
+    <SheetObject key="Parts / SolarPanels / Solar Panel 1" let:Transform>
       <Transform>
-        <T.Group position={[-0.72, -0.19, 5.63]} rotation={[Math.PI, 0, -2.71]}>
+        <T.Group position={[-0.72, -0.19, 6.63]} rotation={[Math.PI, 0, -2.71]}>
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front003_1.geometry}
-            material={gltf.materials["Titanium -  Pure"]}
+            material={getTitaniumMaterial(gltf)}
           >
             <Sync material.opacity material.transparent />
           </T.Mesh>
@@ -299,21 +322,21 @@ Cleaned up and ported to svelte 5 afterwards.
           </T.Mesh>
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front003_3.geometry}
-            material={gltf.materials["Dark Steel"]}
+            material={getDarkSteelMaterial(gltf)}
           />
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / Solar Panel 2" let:Transform>
+    <SheetObject key="Parts / SolarPanels / Solar Panel 2" let:Transform>
       <Transform>
         <T.Group
-          position={[-0.72, -0.19, 5.63]}
+          position={[-0.72, -0.19, 6.63]}
           rotation={[0, 0, 2.71]}
           scale={-1}
         >
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front003_1.geometry}
-            material={gltf.materials["Titanium -  Pure"]}
+            material={getTitaniumMaterial(gltf)}
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front003_2.geometry}
@@ -321,17 +344,17 @@ Cleaned up and ported to svelte 5 afterwards.
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front003_3.geometry}
-            material={gltf.materials["Dark Steel"]}
+            material={getDarkSteelMaterial(gltf)}
           />
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / Solar Panel 3" let:Transform>
+    <SheetObject key="Parts / SolarPanels / Solar Panel 3" let:Transform>
       <Transform>
         <T.Group position={[-0.72, -0.19, -8.2]} rotation={[Math.PI, 0, -2.71]}>
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front003_1.geometry}
-            material={gltf.materials["Titanium -  Pure"]}
+            material={getTitaniumMaterial(gltf)}
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front003_2.geometry}
@@ -339,17 +362,17 @@ Cleaned up and ported to svelte 5 afterwards.
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front003_3.geometry}
-            material={gltf.materials["Dark Steel"]}
+            material={getDarkSteelMaterial(gltf)}
           />
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / Solar Panel 4" let:Transform>
+    <SheetObject key="Parts / SolarPanels / Solar Panel 4" let:Transform>
       <Transform>
         <T.Group position={[-0.72, -0.19, -4.6]} rotation={[Math.PI, 0, -2.71]}>
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front002_1.geometry}
-            material={gltf.materials["Titanium -  Pure"]}
+            material={getTitaniumMaterial(gltf)}
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front002_2.geometry}
@@ -357,12 +380,12 @@ Cleaned up and ported to svelte 5 afterwards.
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front002_3.geometry}
-            material={gltf.materials["Dark Steel"]}
+            material={getDarkSteelMaterial(gltf)}
           />
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / Solar Panel 5" let:Transform>
+    <SheetObject key="Parts / SolarPanels / Solar Panel 5" let:Transform>
       <Transform>
         <T.Group
           position={[-0.72, -0.19, -8.2]}
@@ -371,7 +394,7 @@ Cleaned up and ported to svelte 5 afterwards.
         >
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front002_1.geometry}
-            material={gltf.materials["Titanium -  Pure"]}
+            material={getTitaniumMaterial(gltf)}
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front002_2.geometry}
@@ -379,12 +402,12 @@ Cleaned up and ported to svelte 5 afterwards.
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front002_3.geometry}
-            material={gltf.materials["Dark Steel"]}
+            material={getDarkSteelMaterial(gltf)}
           />
         </T.Group>
       </Transform>
     </SheetObject>
-    <SheetObject key="Model / SolarPanels / Solar Panel 6" let:Transform>
+    <SheetObject key="Parts / SolarPanels / Solar Panel 6" let:Transform>
       <Transform>
         <T.Group
           position={[-0.72, -0.19, -4.6]}
@@ -393,7 +416,7 @@ Cleaned up and ported to svelte 5 afterwards.
         >
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front002_1.geometry}
-            material={gltf.materials["Titanium -  Pure"]}
+            material={getTitaniumMaterial(gltf)}
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front002_2.geometry}
@@ -401,7 +424,7 @@ Cleaned up and ported to svelte 5 afterwards.
           />
           <T.Mesh
             geometry={gltf.nodes.Solar_Panel_Front002_3.geometry}
-            material={gltf.materials["Dark Steel"]}
+            material={getDarkSteelMaterial(gltf)}
           />
         </T.Group>
       </Transform>
