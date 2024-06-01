@@ -1,0 +1,27 @@
+---
+import { type CollectionEntry, getEntry } from "astro:content";
+import { SITE } from "@config";
+import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
+
+const credits: CollectionEntry<"singleton"> = await getEntry(
+  "singleton",
+  "about-us",
+);
+
+const { title } = credits.data;
+const { Content } = await credits.render();
+---
+
+<Layout title={`${title} | ${SITE.title}`} activeNav="about-us">
+  <ScrollProgressIndicator client:only="svelte" />
+  <Main>
+    <article id="about" class="prose mb-16 max-w-3xl prose-img:border-0">
+      <h1 class="text-2xl tracking-wider sm:text-3xl">{title}</h1>
+      <Content />
+    </article>
+  </Main>
+  <Footer />
+</Layout>

@@ -37,4 +37,12 @@ const section = defineCollection({
     }),
 });
 
+const singleton = defineCollection({
+  type: "content",
+  schema: () =>
+    z.object({
+      title: z.string(),
+    }),
+});
+
 export const collections = { development, section };

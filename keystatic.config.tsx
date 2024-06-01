@@ -223,4 +223,32 @@ export default config({
       },
     })
   },
+  singletons: {
+    credits: {
+      label: "Credits",
+      format: { contentField: "content" },
+      entryLayout: "content",
+      path: "src/content/singleton/credits",
+      schema: {
+        title: fields.text({
+          label: "Title",
+          validation: { isRequired: true },
+        }),
+        content: sharedDocument,
+      },
+    },
+    aboutUs: {
+      label: "About Us",
+      format: { contentField: "content" },
+      entryLayout: "content",
+      path: "src/content/singleton/about-us",
+      schema: {
+        title: fields.text({
+          label: "Title",
+          validation: { isRequired: true },
+        }),
+        content: sharedDocument,
+      },
+    },
+  }
 });

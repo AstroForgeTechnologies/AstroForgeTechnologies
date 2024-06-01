@@ -6,8 +6,8 @@ import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
 
-const credits: CollectionEntry<"section"> = await getEntry(
-  "section",
+const credits: CollectionEntry<"singleton"> = await getEntry(
+  "singleton",
   "credits",
 );
 
@@ -38,8 +38,6 @@ const { Content } = await credits.render();
   </Main>
   <Footer />
 </Layout>
-
-<style></style>
 
 <script is:inline>
   /** Scrolls the document to the top when
