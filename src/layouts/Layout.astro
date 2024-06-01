@@ -5,7 +5,7 @@ import { ViewTransitions } from "astro:transitions";
 import { ActiveNav } from "../types/activeNav";
 import ScrollUpdater from "@components/ScrollUpdater.svelte";
 import Navbar from "@components/Navbar.svelte";
-import ogImage from "@assets/images/main/og-image.jpg";
+import mainOgImage from "@assets/images/main/og-image.jpg";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -35,7 +35,8 @@ const {
   marginRem = 7,
 } = Astro.props;
 
-const socialImageURL = new URL(ogImage ?? ogImage.src, Astro.url.origin).href;
+const socialImageURL = new URL(ogImage ?? mainOgImage.src, Astro.url.origin)
+  .href;
 ---
 
 <!doctype html>
