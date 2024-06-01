@@ -21,7 +21,6 @@ const { post } = Astro.props;
 const {
   title,
   description,
-  ogImage,
   canonicalURL,
   pubDatetime,
   modDatetime,
@@ -30,12 +29,6 @@ const {
 } = post.data;
 
 const { Content } = await post.render();
-
-const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
-const ogUrl = new URL(
-  ogImageUrl ?? `/development/${post.slug}.png`,
-  Astro.url.origin,
-).href;
 
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
@@ -47,7 +40,6 @@ const layoutProps = {
   pubDatetime,
   modDatetime,
   canonicalURL,
-  ogImage: ogUrl,
   scrollSmooth: true,
 };
 
