@@ -55,7 +55,7 @@
   <Studio enabled={false}>
     <Project name="AFT" config={{ state }}>
       <FadeOut
-        className="element fixed z-[75] h-[100vh] w-full"
+        className="element fixed z-40 h-[100vh] w-full"
         progress={$springPagedY}
         from={5.25}
         to={6.0}
@@ -76,7 +76,7 @@
             to={1.9}
           >
             <div
-              class="pointer-events-auto fixed bottom-0 left-0 z-[125] mb-8 flex min-h-10 w-screen flex-col items-center justify-center gap-12 px-8"
+              class="pointer-events-auto fixed bottom-0 left-0 z-50 mb-8 flex min-h-10 w-screen flex-col items-center justify-center gap-12 px-8"
             >
               <TheatreTextBox key="Meet">
                 <div class="flex flex-col gap-12">
@@ -95,14 +95,14 @@
         </Trigger>
       </ScrollSheet>
       <ScrollSheet name="Middle Text">
-        <Trigger inY={2} outY={4.25}>
+        <Trigger inY={2} outY={4.5}>
           <FadeOut
             className="pointer-events-none"
             progress={$springPagedY}
-            from={3.75}
-            to={4.25}
+            from={4}
+            to={4.5}
           >
-            <div class="fixed bottom-0 left-0 z-[125] w-full">
+            <div class="fixed bottom-0 left-0 z-50 w-full">
               <div
                 class="pointer-events-auto mx-auto mb-16 grid max-w-6xl grid-cols-3 gap-12 px-12"
               >
@@ -173,7 +173,7 @@
             to={6.25}
           >
             <div
-              class="fixed bottom-0 left-0 z-[125] flex h-full w-full items-center justify-center"
+              class="fixed bottom-0 left-0 z-50 flex h-full w-full items-center justify-center"
             >
               <TheatreTextBox key="End Text" class="pointer-events-auto">
                 <h2 class="text-4xl font-extrabold">

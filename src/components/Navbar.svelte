@@ -23,12 +23,12 @@
 <svelte:window bind:scrollY />
 
 <header>
-  <div class="fixed z-50 h-28 w-full" id="header">
+  <div class="fixed z-[75] h-28 w-full" id="header">
     <!-- Background -->
     <div class="absolute -z-10 h-full w-full bg-skin-fill"></div>
     <!-- Gradient -->
     <div
-      class="from-fill pointer-events-none absolute top-full -z-20 h-7 w-full bg-gradient-to-b"
+      class="pointer-events-none absolute top-full -z-20 h-7 w-full bg-gradient-to-b from-fill"
       style:opacity={$opacity}
     ></div>
 
