@@ -6,7 +6,7 @@ Cleaned up and ported to svelte 5 afterwards.
 
 <script lang="ts">
   import type * as THREE from "three";
-  import { Group, Material, MeshBasicMaterial } from "three";
+  import { Group, Material, MeshBasicMaterial, MeshStandardMaterial } from "three";
   import { T } from "@threlte/core";
   import { type ThrelteGltf, useGltf } from "@threlte/extras";
   import { SheetObject } from "@threlte/theatre";
@@ -93,7 +93,7 @@ Cleaned up and ported to svelte 5 afterwards.
   }
 
   function getGlassMaterial() {
-    return new MeshBasicMaterial({ color: "yellow" });
+    return new MeshStandardMaterial({ color: "lightyellow" });
   }
 
   /* Copy & Remove Solar Panels from Tone Mapping so they are Not a Beacon. */
@@ -159,7 +159,6 @@ Cleaned up and ported to svelte 5 afterwards.
           >
             <Sync material.opacity material.transparent />
           </T.Mesh>
-          <!-- Use a special emissive "glass" material, + Normal Material. -->
           <T.Mesh
             geometry={gltf.nodes.Nose_2.geometry}
             material={getGlassMaterial()}
@@ -177,6 +176,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-0.87, -0.29, -21.27]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
+          recieveShadow
         />
       </Transform>
     </SheetObject>
@@ -188,6 +188,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-0.72, -0.32, 11.59]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
+          recieveShadow
         />
       </Transform>
     </SheetObject>
@@ -199,6 +200,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-0.72, -0.32, 11.59]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
+          recieveShadow
         />
       </Transform>
     </SheetObject>
@@ -212,6 +214,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-0.72, -0.32, 0.8]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
+          castShadow
         />
       </Transform>
     </SheetObject>
@@ -223,6 +226,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-0.72, -0.32, 0.8]}
           rotation={[Math.PI / 2, -Math.PI / 3, 0]}
           scale={10}
+          castShadow
         />
       </Transform>
     </SheetObject>
@@ -234,6 +238,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-0.72, -0.32, 0.8]}
           rotation={[-Math.PI / 2, -Math.PI / 3, Math.PI]}
           scale={10}
+          castShadow
         />
       </Transform>
     </SheetObject>
@@ -245,6 +250,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-0.72, -0.32, 0.8]}
           rotation={[-Math.PI / 2, 0, Math.PI]}
           scale={10}
+          castShadow
         />
       </Transform>
     </SheetObject>
@@ -256,6 +262,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-0.72, -0.32, 0.8]}
           rotation={[-Math.PI / 2, Math.PI / 3, -Math.PI]}
           scale={10}
+          castShadow
         />
       </Transform>
     </SheetObject>
@@ -267,6 +274,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-0.72, -0.32, 0.8]}
           rotation={[Math.PI / 2, Math.PI / 3, 0]}
           scale={10}
+          castShadow
         />
       </Transform>
     </SheetObject>
@@ -278,6 +286,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[3.02, -0.57, 0.8]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
+          castShadow
         />
       </Transform>
     </SheetObject>
@@ -289,6 +298,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-2.8, -3.91, 0.8]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
+          castShadow
         />
       </Transform>
     </SheetObject>
@@ -300,6 +310,7 @@ Cleaned up and ported to svelte 5 afterwards.
           position={[-2.8, 3.27, 0.8]}
           rotation={[Math.PI / 2, 0, 0]}
           scale={10}
+          castShadow
         />
       </Transform>
     </SheetObject>

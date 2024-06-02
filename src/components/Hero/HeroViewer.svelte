@@ -52,7 +52,7 @@
     </div>
   {/if}
 
-  <Studio enabled={false}>
+  <Studio enabled={true}>
     <Project name="AFT" config={{ state }}>
       <FadeOut
         className="element fixed z-40 h-[100vh] w-full pointer-events-none"

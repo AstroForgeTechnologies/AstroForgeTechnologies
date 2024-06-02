@@ -1,9 +1,9 @@
 <script lang="ts">
   import { T, useThrelte } from "@threlte/core";
   import { Environment } from "@threlte/extras";
-  import { AmbientLight, PerspectiveCamera, Vector3 } from "three";
+  import { AmbientLight, DirectionalLight, DirectionalLightHelper, PerspectiveCamera, Vector3 } from "three";
   import envMap from "@assets/images/main/starmap_2020_4k_compressed.jpg";
-  import { SheetObject } from "@threlte/theatre";
+  import { Sheet, SheetObject } from "@threlte/theatre";
   import ScrollSheet from "@components/Hero/ScrollSheet.svelte";
   import HeroModel from "@components/Hero/HeroModel.svelte";
 
@@ -18,6 +18,15 @@
 </script>
 
 <Environment files={envMap.src} isBackground={false} />
+<Sheet name="Lights">
+  <SheetObject key="Directional Light" let:Transform let:Sync>
+    <Transform>
+      <T is={DirectionalLight} castShadow>
+        <Sync intensity color />
+      </T>
+    </Transform>
+  </SheetObject>
+</Sheet>
 
 <ScrollSheet name="Cameras">
   <SheetObject key="Main Camera" let:Transform>

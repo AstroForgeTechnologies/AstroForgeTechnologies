@@ -71,7 +71,7 @@
             "rotation": {
               "x": 0,
               "y": 180,
-              "z": 0
+              "z": -10
             },
             "scale": {
               "x": 2.5,
@@ -178,7 +178,7 @@
                   },
                   {
                     "id": "HHtoVUDs02",
-                    "position": 19.967,
+                    "position": 19.333,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -200,7 +200,7 @@
                   },
                   {
                     "id": "AyXas1v1dw",
-                    "position": 19.967,
+                    "position": 19.333,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -230,7 +230,7 @@
                   },
                   {
                     "id": "Xl4_1by6xM",
-                    "position": 19.967,
+                    "position": 19.333,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.55, 0.085],
                     "type": "bezier",
@@ -336,7 +336,7 @@
                   },
                   {
                     "id": "5DJk0W-ZB4",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -358,7 +358,7 @@
                   },
                   {
                     "id": "Q62aVasAM2",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -380,7 +380,7 @@
                   },
                   {
                     "id": "SEoTqCMz0B",
-                    "position": 7.5,
+                    "position": 8.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -388,7 +388,7 @@
                   },
                   {
                     "id": "VWAsUnzCt7",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -517,7 +517,7 @@
                   },
                   {
                     "id": "7XKaGTeQ25",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -539,7 +539,7 @@
                   },
                   {
                     "id": "tL2bVlbtQ0",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -569,7 +569,7 @@
                   },
                   {
                     "id": "Sxy5zyvPzg",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -757,7 +757,7 @@
                   },
                   {
                     "id": "XxM0F6aWdH",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -779,7 +779,7 @@
                   },
                   {
                     "id": "Yh1ngddO0p",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -809,7 +809,7 @@
                   },
                   {
                     "id": "sgXBZOk8Cm",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -848,7 +848,7 @@
                   },
                   {
                     "id": "D1iGujyLpa",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -870,7 +870,7 @@
                   },
                   {
                     "id": "FjU8WehSCx",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -900,7 +900,7 @@
                   },
                   {
                     "id": "HZR6YuGwTy",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -939,7 +939,7 @@
                   },
                   {
                     "id": "ldhpUkXcSP",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -961,7 +961,7 @@
                   },
                   {
                     "id": "chXQtS0nzf",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -991,7 +991,7 @@
                   },
                   {
                     "id": "j8sSRAL1W_",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1105,7 +1105,7 @@
                   },
                   {
                     "id": "f69wyMA64y",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1127,7 +1127,7 @@
                   },
                   {
                     "id": "YM84aonZbr",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1157,7 +1157,7 @@
                   },
                   {
                     "id": "nyZCpZHrB5",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1204,7 +1204,7 @@
                   },
                   {
                     "id": "QnahT2wtp_",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1242,7 +1242,7 @@
                   },
                   {
                     "id": "aWM-WfSP3s",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1280,7 +1280,7 @@
                   },
                   {
                     "id": "TbQ6kG7ZH4",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1311,7 +1311,7 @@
                   },
                   {
                     "id": "grb-gu4rtO",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1341,7 +1341,7 @@
                   },
                   {
                     "id": "qJgz9W9sld",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1371,7 +1371,7 @@
                   },
                   {
                     "id": "ondouTGxkM",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1410,7 +1410,7 @@
                   },
                   {
                     "id": "104zSv96xj",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1448,7 +1448,7 @@
                   },
                   {
                     "id": "SKn25WrokZ",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1478,7 +1478,7 @@
                   },
                   {
                     "id": "wPuWhLLmX7",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1517,7 +1517,7 @@
                   },
                   {
                     "id": "NB8orXP2MW",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1555,7 +1555,7 @@
                   },
                   {
                     "id": "US2u9ls64k",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1585,7 +1585,7 @@
                   },
                   {
                     "id": "fUzwbeczjX",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1616,7 +1616,7 @@
                   },
                   {
                     "id": "6CImkaDpTw",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1646,7 +1646,7 @@
                   },
                   {
                     "id": "neNKvhYjSj",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1676,7 +1676,7 @@
                   },
                   {
                     "id": "SHLHugtxl5",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1715,7 +1715,7 @@
                   },
                   {
                     "id": "xTmodAclIo",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1753,7 +1753,7 @@
                   },
                   {
                     "id": "jjazsr3Lc2",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -1783,7 +1783,7 @@
                   },
                   {
                     "id": "ybuw4kj-t-",
-                    "position": 15.5,
+                    "position": 14.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -2522,7 +2522,7 @@
                   },
                   {
                     "id": "IDDIq2zjwZ",
-                    "position": 8.5,
+                    "position": 7.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -2560,7 +2560,7 @@
                   },
                   {
                     "id": "jg1fOkEED8",
-                    "position": 8.5,
+                    "position": 7.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -2900,7 +2900,8 @@
               "z": 2.5
             },
             "rotation": {
-              "y": 180
+              "y": 180,
+              "z": -10
             },
             "position": {
               "z": -35
@@ -2959,6 +2960,14 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": 10
+                  },
+                  {
+                    "id": "quCxUDAa3-",
+                    "position": 19.133,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 12
                   }
                 ]
               },
@@ -3309,7 +3318,8 @@
               "z": 2.5
             },
             "rotation": {
-              "y": 180
+              "y": 180,
+              "z": -10
             },
             "position": {
               "z": -35
@@ -3368,6 +3378,14 @@
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
                     "value": -10
+                  },
+                  {
+                    "id": "UQxvuaYSle",
+                    "position": 21.333,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": -12
                   }
                 ]
               },
@@ -4125,7 +4143,7 @@
                   },
                   {
                     "id": "MmizcQQ-Nu",
-                    "position": 23.5,
+                    "position": 23.267,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -4154,7 +4172,7 @@
                   },
                   {
                     "id": "pi5vh8HCtE",
-                    "position": 23.5,
+                    "position": 23.267,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -4169,10 +4187,30 @@
           }
         }
       }
+    },
+    "Lights": {
+      "staticOverrides": {
+        "byObject": {
+          "Directional Light": {
+            "position": {
+              "x": -25
+            },
+            "intensity": 0.35,
+            "color": {
+              "r": 1,
+              "g": 0.9725490196078431,
+              "b": 0.9254901960784314,
+              "a": 1
+            }
+          }
+        }
+      }
     }
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "F2w4-nNUAX2MmjE5",
+    "nCZrWlbbek6b7bfb",
     "odds3kIi5R5dfLcl",
     "qIAUt75JhmuZXIZE",
     "GUOTtEufMPt5pR4s",
