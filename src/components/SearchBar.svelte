@@ -4,7 +4,7 @@
   import { slugifyStr } from "@utils/slugify.ts";
   import Fuse from "fuse.js";
 
-  export type SearchItem = {
+  type SearchItem = {
     title: string;
     description: string;
     data: CollectionEntry<"development">["data"];
@@ -23,7 +23,7 @@
   let { searchList }: Props = $props();
 
   let inputValue = $state("");
-  let searchResults: SearchResult[] = $state.frozen([]);
+  let searchResults: readonly SearchResult[] = $state.frozen([]);
   let searchBar: HTMLInputElement;
 
   let fuse = $derived.by(
@@ -106,7 +106,6 @@
         frontmatter={result.item.data}
         key={`${result.refIndex}-${result.item.slug}`}
       />
-      ))}
     {/each}
   {/if}
 </ul>

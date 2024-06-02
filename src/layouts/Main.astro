@@ -1,6 +1,7 @@
 ---
 import Breadcrumbs from "@components/Breadcrumbs.astro";
 import BackButton from "@components/BackButton.astro";
+import cn from "../utils/cn";
 
 interface StringTitleProp {
   pageTitle?: string;
@@ -28,11 +29,18 @@ const { props } = Astro;
   {
     props.pageTitle &&
       (props.titleTransition ? (
-        <h1 class={props.headingClass} transition:name={props.titleTransition}>
+        <h1
+          class={cn("text-2xl font-semibold sm:text-3xl", props.headingClass)}
+          transition:name={props.titleTransition}
+        >
           {props.pageTitle}
         </h1>
       ) : (
-        <h1 class={props.headingClass}>{props.pageTitle}</h1>
+        <h1
+          class={cn("text-2xl font-semibold sm:text-3xl", props.headingClass)}
+        >
+          {props.pageTitle}
+        </h1>
       ))
   }
   {props.pageDesc && <p>{props.pageDesc}</p>}
@@ -40,9 +48,6 @@ const { props } = Astro;
 </main>
 
 <style>
-  #main-content h1 {
-    @apply text-2xl font-semibold sm:text-3xl;
-  }
   #main-content p {
     @apply mb-6 mt-2 italic;
   }

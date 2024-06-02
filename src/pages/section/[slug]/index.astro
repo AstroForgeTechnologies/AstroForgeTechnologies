@@ -1,0 +1,65 @@
+---
+import { slugifyStr } from "../../../utils/slugify";
+import { getCollection } from "astro:content";
+import { slugifyStr } from "../../../utils/slugify";
+import { getEntry } from "astro:content";
+import { SITE } from "@config";
+import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
+
+export async function getStaticPaths() {
+  const sections = await getCollection("section");
+
+  return sections.map(section => ({
+    params: { slug: slugifyStr(section.slug) },
+    props: { post: section },
+  }));
+}
+
+const { slug } = Astro.params;
+
+const post = await getEntry("section", slug);
+const { title } = post.data;
+const { Content } = await post.render();
+---
+
+<Layout title={`${title} | ${SITE.title}`}>
+  <ScrollProgressIndicator client:only="svelte" />
+  <Main
+    pageTitle={title}
+    titleTransition={slugifyStr(title)}
+    headingClass="text-3xl sm:text-4xl font-extrabold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent inline-block"
+    topType="back"
+  >
+    <article id="about" class="prose mt-12 mb-16 max-w-3xl prose-img:border-0">
+      <Content />
+    </article>
+    <div class="flex justify-end pb-12">
+      <button
+        id="back-to-top"
+        class="focus-outline whitespace-nowrap py-1 hover:opacity-75"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
+          <path
+            d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+          ></path>
+        </svg>
+        <span>Back to Top</span>
+      </button>
+    </div>
+  </Main>
+  <Footer />
+</Layout>
+
+<script is:inline>
+  /** Scrolls the document to the top when
+   * the "Back to Top" button is clicked. */
+  function backToTop() {
+    document.querySelector("#back-to-top")?.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+  backToTop();
+</script>

@@ -9,6 +9,7 @@ import getSortedPosts from "@utils/getSortedPosts";
 
 // Retrieve all published articles
 const posts = await getCollection("development", ({ data }) => !data.draft);
+const sections = await getCollection("section");
 const sortedPosts = getSortedPosts(posts);
 
 // List of items to search in

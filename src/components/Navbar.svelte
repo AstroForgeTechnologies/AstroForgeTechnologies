@@ -49,6 +49,16 @@
       </li>
       <li class="navbar-element">
         <a
+          href="/section/"
+          class={activeNav === "the-mission"
+            ? "active font-extrabold"
+            : "font-extrabold"}
+        >
+          The Mission
+        </a>
+      </li>
+      <li class="navbar-element">
+        <a
           href="/development/"
           class={activeNav === "developments" ? "active" : ""}
         >
