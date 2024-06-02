@@ -55,7 +55,7 @@
   <Studio enabled={false}>
     <Project name="AFT" config={{ state }}>
       <FadeOut
-        className="element fixed z-40 h-[100vh] w-full"
+        className="element fixed z-40 h-[100vh] w-full pointer-events-none"
         progress={$springPagedY}
         from={5.25}
         to={6.0}
@@ -169,27 +169,30 @@
       </ScrollSheet>
       <ScrollSheet name="End Text">
         <Trigger inY={5} outY={6.25}>
-          <FadeOut
-            className="pointer-events-none"
-            progress={$springPagedY}
-            from={6}
-            to={6.25}
+          <div
+            class="fixed bottom-0 left-0 z-50 flex h-full w-full flex-col items-center justify-center"
           >
-            <div
-              class="fixed bottom-0 left-0 z-50 flex h-full w-full items-center justify-center"
-            >
-              <TheatreTextBox key="End Text" class="pointer-events-auto">
-                <h2 class="text-4xl font-extrabold">
-                  Join us in Colonizing a
-                  <span
-                    class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
-                  >
-                    Better Future!
-                  </span>
-                </h2>
-              </TheatreTextBox>
-            </div>
-          </FadeOut>
+            <TheatreTextBox key="End Text" class="pointer-events-auto">
+              <h2 class="text-4xl font-extrabold">
+                Join us in Colonizing a
+                <span
+                  class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+                >
+                  Better Future!
+                </span>
+              </h2>
+            </TheatreTextBox>
+            <TheatreTextBox key="End Button" class="pointer-events-auto">
+              <div class="mt-12 flex flex-row gap-8 px-16 pb-32 pt-1">
+                <a
+                  href="/section/"
+                  class="popButton bg-primary hover:shadow-2xl hover:shadow-primary"
+                >
+                  The Mission →
+                </a>
+              </div>
+            </TheatreTextBox>
+          </div>
         </Trigger>
       </ScrollSheet>
     </Project>
@@ -211,5 +214,8 @@
   }
   .info-title {
     @apply text-4xl font-bold text-accent;
+  }
+  .popButton {
+    @apply inline-block translate-y-0 transform rounded-lg px-8 py-3 transition-all duration-200 hover:-translate-y-1;
   }
 </style>

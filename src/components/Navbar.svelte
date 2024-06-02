@@ -48,11 +48,6 @@
         </div>
       </li>
       <li class="navbar-element">
-        <a href="/about-us/" class={activeNav === "about-us" ? "active" : ""}>
-          About Us
-        </a>
-      </li>
-      <li class="navbar-element">
         <a
           href="/development/"
           class={activeNav === "developments" ? "active" : ""}

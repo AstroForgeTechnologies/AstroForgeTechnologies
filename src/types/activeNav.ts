@@ -1,1 +1,1 @@
-export type ActiveNav = "developments" | "credits" | "search" | "about-us";
+export type ActiveNav = "developments" | "credits" | "search";

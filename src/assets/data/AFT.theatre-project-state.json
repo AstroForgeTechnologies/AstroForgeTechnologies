@@ -4098,6 +4098,9 @@
           },
           "Underline Future": {
             "scaleX": 1
+          },
+          "End Button": {
+            "reveal": 0
           }
         }
       },
@@ -4122,7 +4125,7 @@
                   },
                   {
                     "id": "MmizcQQ-Nu",
-                    "position": 22,
+                    "position": 23.5,
                     "connectedRight": true,
                     "handles": [0.5, 1, 0.5, 0],
                     "type": "bezier",
@@ -4134,6 +4137,35 @@
             "trackIdByPropPath": {
               "[\"reveal\"]": "I6oqtozISO"
             }
+          },
+          "End Button": {
+            "trackData": {
+              "YvMLDmj7DJ": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "End Button:[\"reveal\"]",
+                "keyframes": [
+                  {
+                    "id": "Q18RR_h_Or",
+                    "position": 22,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "pi5vh8HCtE",
+                    "position": 23.5,
+                    "connectedRight": true,
+                    "handles": [0.5, 1, 0.5, 0],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"reveal\"]": "YvMLDmj7DJ"
+            }
           }
         }
       }
@@ -4141,6 +4173,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "odds3kIi5R5dfLcl",
     "qIAUt75JhmuZXIZE",
     "GUOTtEufMPt5pR4s",
     "EMqfM9t1NTqPl95P",

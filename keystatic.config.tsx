@@ -237,18 +237,5 @@ export default config({
         content: sharedDocument,
       },
     },
-    aboutUs: {
-      label: "About Us",
-      format: { contentField: "content" },
-      entryLayout: "content",
-      path: "src/content/singleton/about-us",
-      schema: {
-        title: fields.text({
-          label: "Title",
-          validation: { isRequired: true },
-        }),
-        content: sharedDocument,
-      },
-    },
   }
 });
