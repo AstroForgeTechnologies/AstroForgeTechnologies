@@ -9,6 +9,7 @@
     --color-primary: 178, 168, 209;
     --color-secondary: 65, 47, 120;
     --color-accent: 110, 79, 206;
+    --color-code: 40, 44, 52;
   }
   body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base
@@ -47,7 +48,7 @@
     prose-strong:!text-skin-base
 
     
-    prose-code:rounded prose-code:bg-skin-card 
+    prose-code:rounded prose-code:bg-skin-code
     prose-code:bg-opacity-75 prose-code:p-1 
     prose-code:before:!content-none prose-code:after:!content-none
     prose-ol:!text-skin-base 

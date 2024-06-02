@@ -24,5 +24,5 @@
       node.style.transform = `scaleX(${props.scaleX})`;
     },
   }}
-  class="absolute -bottom-0.5 left-0 -z-10 h-2 w-full origin-left bg-accent will-change-transform"
+  class="absolute -bottom-0.5 left-0 -z-10 h-2 w-full origin-left rounded-lg bg-accent will-change-transform"
 ></div>

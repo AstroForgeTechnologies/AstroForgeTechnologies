@@ -21,7 +21,7 @@
 {/snippet}
 
 <div
-  class="flex flex-col gap-2 will-change-auto"
+  class="flex flex-col gap-2 will-change-auto -mt-24"
   use:sheetObject={{
     key: "scroll",
     callback(node, props) {

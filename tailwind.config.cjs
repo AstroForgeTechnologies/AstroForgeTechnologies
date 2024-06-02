@@ -37,6 +37,7 @@ module.exports = {
           card: withOpacity("--color-primary"),
           "card-muted": withOpacity("--color-secondary"),
           line: withOpacity("--color-secondary"),
+          code: withOpacity("--color-code"),
         },
       },
       outlineColor: {
