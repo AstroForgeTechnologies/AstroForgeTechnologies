@@ -1,7 +1,7 @@
 <script lang="ts">
   import { T, useThrelte } from "@threlte/core";
   import { Environment } from "@threlte/extras";
-  import { AmbientLight, DirectionalLight, DirectionalLightHelper, PerspectiveCamera, Vector3 } from "three";
+  import { AmbientLight, DirectionalLight, PerspectiveCamera, Vector3 } from "three";
   import envMap from "@assets/images/main/starmap_2020_4k_compressed.jpg";
   import { Sheet, SheetObject } from "@threlte/theatre";
   import ScrollSheet from "@components/Hero/ScrollSheet.svelte";
