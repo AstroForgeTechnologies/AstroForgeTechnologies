@@ -51,6 +51,15 @@ export function getUniqueTagsOfTags(tags: InputTag[]): Tag[] {
     .sort((tagA, tagB) => tagA.tagSlug.localeCompare(tagB.tagSlug));
 }
 
+export function getUniqueTagsOfTagStrings(tags: string[]): Tag[] {
+  return tags
+    .map(tag => {
+      return getTagString(tag);
+    })
+    .filter(uniqueSlug)
+    .sort((tagA, tagB) => tagA.tagSlug.localeCompare(tagB.tagSlug));
+}
+
 export interface InputTag {
   discriminant: string;
   value?: string;

@@ -36,6 +36,7 @@ const section = defineCollection({
       title: z.string(),
       image: z.string(),
       description: z.string(),
+      tags: z.array(z.string()),
     }),
 });
 

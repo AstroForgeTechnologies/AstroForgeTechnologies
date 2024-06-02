@@ -230,6 +230,22 @@ export default config({
           multiline: true,
           validation: { isRequired: true },
         }),
+        tags: fields.array(
+          fields.select({
+            label: "Tags",
+            options: tags.map((tag) => {
+                return { label: tag.tagName, value: tag.tagName };
+              }),
+            defaultValue: tags[0].tagName,
+          }),
+          {
+            label: "Related Tags",
+            itemLabel: (props) => {
+              return props.value;
+            },
+            validation: { length: { min: 1 }},
+          }
+        ),
         content: sharedDocument,
       },
     })

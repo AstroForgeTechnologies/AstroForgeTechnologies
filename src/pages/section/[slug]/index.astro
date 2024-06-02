@@ -2,27 +2,34 @@
 import { slugifyStr } from "../../../utils/slugify";
 import { getCollection } from "astro:content";
 import { slugifyStr } from "../../../utils/slugify";
-import { getEntry } from "astro:content";
 import { SITE } from "@config";
 import Footer from "@components/Footer.astro";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
+import Tag from "../../../components/Tag.astro";
+import Hr from "../../../components/Hr.astro";
+import { getUniqueTagsOfTagStrings } from "../../../utils/tagHelper";
 
 export async function getStaticPaths() {
   const sections = await getCollection("section");
 
-  return sections.map(section => ({
+  return sections.map((section, i) => ({
     params: { slug: slugifyStr(section.slug) },
-    props: { post: section },
+    props: {
+      section,
+      before: i > 0 ? sections[i - 1] : undefined,
+      after: i < sections.length - 1 ? sections[i + 1] : undefined,
+    },
   }));
 }
 
 const { slug } = Astro.params;
 
-const post = await getEntry("section", slug);
-const { title } = post.data;
-const { Content } = await post.render();
+const { section, before, after } = Astro.props;
+const { title, tags } = section.data;
+const foundTags = tags ? getUniqueTagsOfTagStrings(tags) : [];
+const { Content } = await section.render();
 ---
 
 <Layout title={`${title} | ${SITE.title}`}>
@@ -36,30 +43,32 @@ const { Content } = await post.render();
     <article id="about" class="prose mt-12 mb-16 max-w-4xl prose-img:border-0">
       <Content />
     </article>
-    <div class="flex justify-end pb-12">
-      <button
-        id="back-to-top"
-        class="focus-outline whitespace-nowrap py-1 hover:opacity-75"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
-          <path
-            d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-          ></path>
-        </svg>
-        <span>Back to Top</span>
-      </button>
+    <Hr noPadding />
+    <div class="flex flex-row items-center justify-between mt-8">
+      {
+        before && (
+          <a
+            href={`/section/${slugifyStr(before.slug)}`}
+            class="mr-auto hover:text-accent transition-colors duration-200"
+          >
+            ← {before.data.title}
+          </a>
+        )
+      }
+      {
+        after && (
+          <a
+            href={`/section/${slugifyStr(after.slug)}`}
+            class="ml-auto hover:text-accent transition-colors duration-200"
+          >
+            {after.data.title} →
+          </a>
+        )
+      }
     </div>
+    <ul class="mt-5 mb-8">
+      Related Tags: {foundTags.map(tag => <Tag tag={tag} />)}
+    </ul>
   </Main>
   <Footer />
 </Layout>
-
-<script is:inline>
-  /** Scrolls the document to the top when
-   * the "Back to Top" button is clicked. */
-  function backToTop() {
-    document.querySelector("#back-to-top")?.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-  backToTop();
-</script>

@@ -6,17 +6,19 @@ import Datetime from "@components/Datetime.svelte";
 import useModDateTime from "@utils/useModDateTime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
-import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
 import { getUniqueTagsOfTags, type InputTag } from "../utils/tagHelper";
 import Main from "./Main.astro";
 import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
+import Hr from "../components/Hr.astro";
 
 export interface Props {
   post: CollectionEntry<"development">;
+  before: CollectionEntry<"development"> | undefined;
+  after: CollectionEntry<"development"> | undefined;
 }
 
-const { post } = Astro.props;
+const { post, before, after } = Astro.props;
 
 const {
   title,
@@ -84,31 +86,41 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
       )
     }
 
-    <article id="article" role="article" class="prose mx-auto mt-5 max-w-4xl">
+    <article
+      id="article"
+      role="article"
+      class="prose mx-auto mt-5 mb-5 max-w-4xl"
+    >
       <Content />
     </article>
 
-    <ul class="my-8">
+    <Hr noPadding />
+    <div class="flex flex-row items-center justify-between mt-8">
+      {
+        before && (
+          <a
+            href={`/development/${slugifyStr(before.slug)}`}
+            class="mr-auto hover:text-accent transition-colors duration-200"
+          >
+            ← {before.data.title}
+          </a>
+        )
+      }
+      {
+        after && (
+          <a
+            href={`/development/${slugifyStr(after.slug)}`}
+            class="ml-auto hover:text-accent transition-colors duration-200"
+          >
+            {after.data.title} →
+          </a>
+        )
+      }
+    </div>
+
+    <ul class="mt-5 mb-8">
       {uniqueTags.map(tag => <Tag tag={tag} />)}
     </ul>
-
-    <div
-      class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4 mb-4"
-    >
-      <button
-        id="back-to-top"
-        class="focus-outline whitespace-nowrap py-1 hover:opacity-75"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
-          <path
-            d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-          ></path>
-        </svg>
-        <span>Back to Top</span>
-      </button>
-
-      <ShareLinks />
-    </div>
   </Main>
   <Footer />
 </Layout>
@@ -192,13 +204,4 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
     }
   }
   attachCopyButtons();
-
-  /** Scrolls the document to the top when
-   * the "Back to Top" button is clicked. */
-  function backToTop() {
-    document.querySelector("#back-to-top")?.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-  backToTop();
 </script>

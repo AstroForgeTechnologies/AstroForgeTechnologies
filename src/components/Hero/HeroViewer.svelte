@@ -38,7 +38,7 @@
       transition:fade|local={{
         duration: 200,
       }}
-      class="element fixed z-[150] flex h-full w-full flex-col items-center justify-center gap-1 bg-skin-fill text-2xl font-bold"
+      class="element fixed z-[85] flex h-full w-full flex-col items-center justify-center gap-1 bg-skin-fill text-2xl font-bold"
     >
       <h1>Loading...</h1>
       <div
