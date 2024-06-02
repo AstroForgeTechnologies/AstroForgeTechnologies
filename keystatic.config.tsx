@@ -219,6 +219,17 @@ export default config({
             validation: { isRequired: true }
           },
         }),
+        image: fields.image({
+          label: "Image",
+          directory: "src/assets/images",
+          publicPath: "/src/assets/images",
+          validation: { isRequired: true }
+        }),
+        description: fields.text({
+          label: "Description",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
         content: sharedDocument,
       },
     })

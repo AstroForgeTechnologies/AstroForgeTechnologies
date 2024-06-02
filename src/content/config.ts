@@ -34,6 +34,8 @@ const section = defineCollection({
   schema: () =>
     z.object({
       title: z.string(),
+      image: z.string(),
+      description: z.string(),
     }),
 });
 

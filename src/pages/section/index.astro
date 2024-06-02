@@ -1,5 +1,24 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import SectionCard from "../../components/SectionCard.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Footer from "../../components/Footer.astro";
+
+const sections = await getCollection("section");
 ---
 
-<Layout title={`The Mission`} activeNav="the-mission" />
+<Layout title={`The Mission`} activeNav="the-mission">
+  <Breadcrumbs breadcrumbClass="max-w-4xl" />
+  <main class="max-w-4xl">
+    <h1 class="text-4xl font-extrabold mt-2">The Mission</h1>
+    <p class="italic mt-2">
+      Discover the Fine Details about the Main Parts of the Mission to Mars!
+    </p>
+    <hr class="border-skin-line border-2 rounded my-8" />
+    <div class="mt-2">
+      {sections.map(section => <SectionCard collectionEntry={section} />)}
+    </div>
+  </main>
+  <Footer />
+</Layout>

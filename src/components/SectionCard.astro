@@ -1,0 +1,57 @@
+---
+import { slugifyStr } from "../utils/slugify";
+import type { CollectionEntry } from "astro:content";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  collectionEntry: CollectionEntry<"section">;
+}
+const { collectionEntry }: Props = Astro.props;
+
+const { image, title, description } = collectionEntry.data;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/**/*.{jpeg,jpg,png,gif,webp}",
+);
+if (!images[image])
+  throw new Error(
+    `"${image}" does not exist in glob: "/src/assets/*.{jpeg,jpg,png,gif,webp}"`,
+  );
+const descriptionParts: string[] = description.split("\n");
+const uri = `/section/${collectionEntry.slug}`;
+---
+
+<div class="relative pb-12 pt-4">
+  <div
+    class="group hover:shadow-2xl hover:shadow-accent overflow-hidden rounded-3xl transition-shadow duration-500"
+  >
+    <a href={uri}>
+      <div class="absolute z-10 top-4 left-0 right-0 mx-auto">
+        <h1
+          class="w-max py-2 m-auto text-center text-5xl font-extrabold mt-6"
+          style={`view-transition-name: ${slugifyStr(title)}`}
+        >
+          {title}
+        </h1>
+        <p
+          class="text-base max-w-96 text-wrap text-center left-0 right-0 m-auto mt-6"
+        >
+          {
+            descriptionParts.map(part => (
+              <>
+                {part}
+                <br />
+                <br />
+              </>
+            ))
+          }
+        </p>
+      </div>
+      <div
+        class="opacity-20 group-hover:opacity-75 transition-opacity duration-500"
+      >
+        <Image src={images[image]()} alt={`${title} Image`} />
+      </div>
+    </a>
+  </div>
+</div>
