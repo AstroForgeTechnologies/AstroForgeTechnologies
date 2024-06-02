@@ -107,8 +107,8 @@
                 class="pointer-events-auto mx-auto mb-16 grid max-w-6xl grid-cols-3 gap-12 px-12"
               >
                 <TheatreTextBox key="Modular">
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-4xl font-bold text-accent">Modular</h3>
+                  <div class="info-div">
+                    <h3 class="info-title">Modular</h3>
                     <p>
                       With RUBBER I, the entire rocket is designed with
                       modularity in mind, increasing
@@ -122,11 +122,12 @@
                         repairability
                       </span>.
                     </p>
+                    <a class="more-info" href="/">Find Out More -> (WIP)</a>
                   </div>
                 </TheatreTextBox>
                 <TheatreTextBox key="Resilient">
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-4xl font-bold text-accent">Resilient</h3>
+                  <div class="info-div">
+                    <h3 class="info-title">Resilient</h3>
                     <p>
                       The RUBBER I is designed to be incredibly resilient to
                       failures and accidents, achieved through
@@ -140,11 +141,12 @@
                         redundancy
                       </span>.
                     </p>
+                    <a class="more-info" href="/">Find Out More -> (WIP)</a>
                   </div>
                 </TheatreTextBox>
                 <TheatreTextBox key="Fast">
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-4xl font-bold text-accent">Fast</h3>
+                  <div class="info-div">
+                    <h3 class="info-title">Fast</h3>
                     <p>
                       With the RUBBER I, a trip to Mars takes only
                       <span class="underlined-span">
@@ -157,6 +159,7 @@
                         safety
                       </span>.
                     </p>
+                    <a href="/" class="more-info">Find Out More -> (WIP)</a>
                   </div>
                 </TheatreTextBox>
               </div>
@@ -199,5 +202,14 @@
   }
   .underlined-span {
     @apply relative inline-block;
+  }
+  .more-info {
+    @apply text-text underline decoration-dashed underline-offset-8 hover:text-accent;
+  }
+  .info-div {
+    @apply flex flex-col gap-4 pb-0.5;
+  }
+  .info-title {
+    @apply text-4xl font-bold text-accent;
   }
 </style>
