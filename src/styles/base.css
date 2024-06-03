@@ -16,7 +16,7 @@
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
   footer {
-    @apply mx-auto max-w-4xl px-4;
+    @apply mx-auto max-w-5xl px-4;
   }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill
@@ -76,11 +76,8 @@
   .prose summary {
     @apply focus-outline;
   }
-  .prose h2#table-of-contents + p {
-    @apply hidden;
-  }
   main {
-    @apply mx-auto w-full max-w-4xl px-4;
+    @apply mx-auto w-full max-w-5xl px-4;
   }
 
   /* ===== scrollbar ===== */
@@ -115,6 +112,10 @@
 
   pre > code {
     white-space: pre;
+  }
+
+  .heading-anchor {
+    @apply absolute -top-[150px];
   }
 }
 

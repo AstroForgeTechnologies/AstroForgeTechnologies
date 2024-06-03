@@ -10,6 +10,7 @@ import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte"
 import Tag from "../../../components/Tag.astro";
 import Hr from "../../../components/Hr.astro";
 import { getUniqueTagsOfTagStrings } from "../../../utils/tagHelper";
+import TableOfContents from "../../../components/TableOfContents.svelte";
 
 export async function getStaticPaths() {
   const sections = await getCollection("section");
@@ -29,10 +30,10 @@ const { slug } = Astro.params;
 const { section, before, after } = Astro.props;
 const { title, tags } = section.data;
 const foundTags = tags ? getUniqueTagsOfTagStrings(tags) : [];
-const { Content } = await section.render();
+const { Content, headings } = await section.render();
 ---
 
-<Layout title={`${title} | ${SITE.title}`}>
+<Layout title={`${title} | ${SITE.title}`} scrollSmooth>
   <ScrollProgressIndicator client:only="svelte" />
   <Main
     pageTitle={title}
@@ -40,9 +41,18 @@ const { Content } = await section.render();
     headingClass="text-3xl sm:text-4xl font-extrabold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent inline-block"
     topType="back"
   >
-    <article id="about" class="prose mt-12 mb-16 max-w-4xl prose-img:border-0">
-      <Content />
-    </article>
+    <div
+      class="flex flex-row rtl:flex-row-reverse mx-auto max-w-5xl items-stretch mt-12 mb-16"
+    >
+      <article id="article" class="prose max-w-5xl min-w-0">
+        <Content />
+      </article>
+      {
+        headings.length > 0 && (
+          <TableOfContents {headings} client:only="svelte" />
+        )
+      }
+    </div>
     <Hr noPadding />
     <div class="flex flex-row items-center justify-between mt-8">
       {

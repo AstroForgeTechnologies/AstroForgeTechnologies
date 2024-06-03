@@ -5,6 +5,7 @@ import Footer from "@components/Footer.astro";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
+import TableOfContents from "../components/TableOfContents.svelte";
 
 const credits: CollectionEntry<"singleton"> = await getEntry(
   "singleton",
@@ -12,16 +13,25 @@ const credits: CollectionEntry<"singleton"> = await getEntry(
 );
 
 const { title } = credits.data;
-const { Content } = await credits.render();
+const { Content, headings } = await credits.render();
 ---
 
-<Layout title={`${title} | ${SITE.title}`} activeNav="credits">
+<Layout title={`${title} | ${SITE.title}`} activeNav="credits" scrollSmooth>
   <ScrollProgressIndicator client:only="svelte" />
   <Main>
-    <article id="about" class="prose mb-16 max-w-4xl prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-3xl">{title}</h1>
-      <Content />
-    </article>
+    <div
+      class="flex flex-row rtl:flex-row-reverse mx-auto max-w-5xl items-stretch mt-12 mb-16"
+    >
+      <article id="article" class="prose max-w-5xl min-w-0">
+        <h1 class="text-2xl tracking-wider sm:text-3xl">{title}</h1>
+        <Content />
+      </article>
+      {
+        headings.length > 0 && (
+          <TableOfContents {headings} client:only="svelte" />
+        )
+      }
+    </div>
   </Main>
   <Footer />
 </Layout>

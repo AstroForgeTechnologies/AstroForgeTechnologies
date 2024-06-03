@@ -34,7 +34,7 @@
 
     <!-- Navbar -->
     <ul
-      class="relative mx-auto box-content flex h-20 max-w-4xl items-center justify-end gap-3 p-2 py-4 sm:gap-6"
+      class="relative mx-auto box-content flex h-20 max-w-5xl items-center justify-end gap-3 p-4 sm:gap-6"
     >
       <!-- Icon -->
       <li class="navbar-element mr-auto">

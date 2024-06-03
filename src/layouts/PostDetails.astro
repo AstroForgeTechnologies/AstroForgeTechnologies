@@ -11,6 +11,7 @@ import { getUniqueTagsOfTags, type InputTag } from "../utils/tagHelper";
 import Main from "./Main.astro";
 import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
 import Hr from "../components/Hr.astro";
+import TableOfContents from "../components/TableOfContents.svelte";
 
 export interface Props {
   post: CollectionEntry<"development">;
@@ -30,7 +31,7 @@ const {
   authors,
 } = post.data;
 
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
 
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
@@ -87,11 +88,16 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
     }
 
     <div
-      class="flex flex-row rtl:flex-row-reverse mx-auto mt-5 mb-5 max-w-4xl items-stretch"
+      class="flex flex-row rtl:flex-row-reverse mx-auto mt-5 mb-5 max-w-5xl items-stretch"
     >
-      <article id="article" role="article" class="prose max-w-4xl">
+      <article id="article" role="article" class="prose max-w-5xl min-w-0">
         <Content />
       </article>
+      {
+        headings.length > 0 && (
+          <TableOfContents {headings} client:only="svelte" />
+        )
+      }
     </div>
 
     <Hr noPadding />
@@ -135,20 +141,6 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
 </style>
 
 <script is:inline>
-  /** Workaround: Fix Hash Anchor Links in Chromium Browsers */
-  function fixHash() {
-    const isChrome =
-      /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    if (window.location.hash && isChrome) {
-      setTimeout(function () {
-        const hash = window.location.hash;
-        window.location.hash = "";
-        window.location.hash = hash;
-      }, 300);
-    }
-  }
-  fixHash();
-
   /** Attaches copy buttons to code blocks in the document,
    * allowing users to copy code easily. */
   function attachCopyButtons() {

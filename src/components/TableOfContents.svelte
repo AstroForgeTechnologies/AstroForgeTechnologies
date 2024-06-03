@@ -1,36 +1,70 @@
 <script lang="ts">
-  const headings = Array.from(document.querySelectorAll("h2, h3, h4, h5, h6"));
-  for (const heading of headings) {
-    // Attach Links to Headings in the Document allowing sharing of sections easily
-    heading.classList.add("group");
-    const link = document.createElement("a");
-    link.innerText = "#";
-    link.className =
-      "heading-link opacity-0 group-hover:opacity-100 ml-2 transition-[opacity] ease-in-out duration-200";
-    link.href = "#" + heading.id;
-    link.ariaHidden = "true";
-    heading.appendChild(link);
+  import type { MarkdownHeading } from "astro";
 
-    // Create Relative Parent Wrapper Element
-    const wrapper = document.createElement("div");
-    wrapper.style.position = "relative";
-    wrapper.className = "group";
-
-    // Create Anchor Element
-    const anchor = document.createElement("div");
-    anchor.className = "absolute -top-[150px]";
-
-    // Wrap Header with Relative Parent Element
-    heading.parentNode?.insertBefore(wrapper, heading);
-    wrapper.appendChild(heading);
-    wrapper.appendChild(anchor);
+  interface Props {
+    headings: MarkdownHeading[];
   }
+
+  const { headings }: Props = $props();
+  let elements: Record<string, Element | undefined> = $state({});
+
+  // Remove Null Values
+  $effect(() => {
+    Object.getOwnPropertyNames(elements).forEach(key => {
+      if (!elements[key]) {
+        delete elements[key];
+      }
+    });
+  });
+
+  // Get All Heading Anchors & Apply Actions
+  const headingAnchors = Array.from(
+    document.getElementsByClassName("heading-anchor"),
+  );
+
+  let closest: string = $state("");
+  let ticking: boolean = $state(false);
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => find());
+      ticking = true;
+    }
+  }
+
+  /* Find the Best Fit Element */
+  function find() {
+    let currentClosest: number = headingAnchors.findIndex(
+      element => element.getBoundingClientRect().y > 75,
+    );
+
+    let element: string;
+    if (currentClosest === -1) element = headingAnchors.at(-1)?.id || "";
+    else if (currentClosest > 0)
+      element = headingAnchors[currentClosest - 1]?.id || "";
+    else element = "";
+
+    if (closest !== element) closest = element;
+    ticking = false;
+  }
+  find();
 </script>
 
-<div class="flex max-w-32 items-start">
-  <div class="sticky top-[150px]">
-    <ul>
-      <li></li>
-    </ul>
+<svelte:window onscroll={onScroll} />
+
+<div class="flex w-72 items-start">
+  <div
+    class="sticky top-[150px] ml-16 flex w-72 min-w-0 flex-col gap-3 border-l-2 border-primary/50 py-4 pl-4"
+  >
+    {#each headings as heading}
+      <a
+        href={`#${heading.slug}`}
+        class={`w-72 min-w-0 transition-colors duration-200 ${closest === heading.slug ? "text-primary hover:text-accent" : "text-skin-base/50 hover:text-skin-base"}`}
+        style={`margin-left: calc(${heading.depth - 2} * 1rem)`}
+        bind:this={elements[heading.slug]}
+      >
+        {heading.text}
+      </a>
+    {/each}
   </div>
 </div>

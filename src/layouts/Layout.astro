@@ -120,5 +120,20 @@ const socialImageURL = new URL(ogImage ?? mainOgImage.src, Astro.url.origin)
     <Navbar client:load {activeNav} />
     {marginRem > 0 && <div style={`height: ${marginRem}rem`} />}
     <slot />
-  </body>
+  </body><script>
+    /** Workaround: Fix Hash Anchor Links in Chromium Browsers */
+    function fixHash() {
+      const isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor);
+      if (window.location.hash && isChrome) {
+        setTimeout(function () {
+          const hash = window.location.hash;
+          window.location.hash = "";
+          window.location.hash = hash;
+        }, 300);
+      }
+    }
+    fixHash();
+  </script>
 </html>

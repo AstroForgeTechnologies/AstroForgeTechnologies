@@ -9,14 +9,15 @@ const Heading = `h${level}`;
 ---
 
 <div class="relative">
-  <div aria-hidden="true" class="absolute -top-[150px]" id={id}></div>
+  <div aria-hidden="true" class="heading-anchor" id={id}></div>
   <Heading class="group">
     <slot />
     <a
       href={`#${id}`}
       aria-hidden="true"
-      class="heading-link opacity-0 group-hover:opacity-100 ml-2 transition-[opacity] ease-in-out duration-200"
-      >#</a
+      class="heading-link opacity-0 group-hover:opacity-100 transition-[opacity] ease-in-out duration-200"
     >
+      #
+    </a>
   </Heading>
 </div>
