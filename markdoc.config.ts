@@ -7,6 +7,10 @@ export default defineMarkdocConfig({
     wrap: true,
   })],
   nodes: {
+    heading: {
+      ...nodes.heading,
+      render: component("./src/components/Headings.astro"),
+    },
     document: {
       ...nodes.document,
       render: undefined,
