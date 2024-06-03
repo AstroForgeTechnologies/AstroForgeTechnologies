@@ -1,9 +1,7 @@
 <script lang="ts">
-  import scroll, { scrollPagedY } from "@stores/scroll.ts";
+  import scroll, { getScrollableHeight, scrollPagedY } from "@stores/scroll.ts";
 
-  const offsetHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+  const offsetHeight = getScrollableHeight(document);
 
   const onScroll = () => {
     scroll.set(Math.max(window.scrollY / offsetHeight, 0));

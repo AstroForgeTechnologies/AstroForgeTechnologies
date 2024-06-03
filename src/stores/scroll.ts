@@ -63,6 +63,13 @@ function createScrollStores(
   };
 }
 
+export function getScrollableHeight(documentIn: Document) {
+  return (
+    documentIn.documentElement.scrollHeight -
+    documentIn.documentElement.clientHeight
+  );
+}
+
 // No spring needed for normal scroll yet
 const scrollStores = createScrollStores(false, true);
 

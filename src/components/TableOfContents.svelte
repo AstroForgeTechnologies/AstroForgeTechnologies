@@ -1,5 +1,7 @@
 <script lang="ts">
   import type { MarkdownHeading } from "astro";
+  import { mapLinear } from "three/src/math/MathUtils";
+  import scroll from "@stores/scroll.ts";
 
   interface Props {
     headings: MarkdownHeading[];
@@ -24,6 +26,41 @@
 
   let closest: string = $state("");
   let ticking: boolean = $state(false);
+  const yPositionCorrelations: Map<number, Element> = $state(new Map());
+  let yPositionLocations: number[] = $state([]);
+
+  // Carefully Generate Heading Anchor Locations
+  function generateYPositions() {
+    const absoluteYPositions: { y: number; element: Element }[] =
+      headingAnchors.map(anchor => {
+        return {
+          y: anchor.getBoundingClientRect().y + window.scrollY,
+          element: anchor,
+        };
+      });
+
+    // Map Linear to 0 & 1, 1 being at the end of the page
+    const mapped: { y: number; element: Element }[] = absoluteYPositions.map(
+      ({ y, element }) => {
+        // noinspection JSSuspiciousNameCombination
+        return {
+          y: mapLinear(
+            y,
+            0,
+            document.documentElement.getBoundingClientRect().bottom +
+              window.scrollY,
+            0,
+            1,
+          ),
+          element: element,
+        };
+      },
+    );
+    yPositionLocations = mapped.map(element => element.y);
+    yPositionCorrelations.clear();
+    mapped.forEach(e => yPositionCorrelations.set(e.y, e.element));
+  }
+  generateYPositions();
 
   function onScroll() {
     if (!ticking) {
@@ -34,17 +71,17 @@
 
   /* Find the Best Fit Element */
   function find() {
-    let currentClosest: number = headingAnchors.findIndex(
-      element => element.getBoundingClientRect().y > 75,
-    );
+    let currentClosest = 0;
+    yPositionLocations.some(i => {
+      if (i >= $scroll) {
+        return true;
+      }
+      currentClosest = i;
+    });
 
-    let element: string;
-    if (currentClosest === -1) element = headingAnchors.at(-1)?.id || "";
-    else if (currentClosest > 0)
-      element = headingAnchors[currentClosest - 1]?.id || "";
-    else element = "";
+    const foundId = yPositionCorrelations.get(currentClosest)?.id ?? "";
 
-    if (closest !== element) closest = element;
+    if (closest !== foundId) closest = foundId;
     ticking = false;
   }
   find();
