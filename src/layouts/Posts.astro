@@ -3,7 +3,6 @@ import type { CollectionEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Footer from "@components/Footer.astro";
-import Pagination from "@components/Pagination.astro";
 import PostCards from "@layouts/PostCards.svelte";
 import { SITE } from "@config";
 import LayoutArea from "@components/LayoutArea.astro";
@@ -11,12 +10,10 @@ import LayoutComponent from "@components/LayoutComponent.astro";
 import LinkButton from "@components/LinkButton.svelte";
 
 export interface Props {
-  currentPage: number;
-  totalPages: number;
-  paginatedPosts: CollectionEntry<"development">[];
+  posts: CollectionEntry<"development">[];
 }
 
-const { currentPage, totalPages, paginatedPosts } = Astro.props;
+const { posts } = Astro.props;
 ---
 
 <Layout title={`Development Posts | ${SITE.title}`} activeNav="developments">
@@ -40,16 +37,9 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
       </LayoutArea>
     </LayoutComponent>
     <ul>
-      <PostCards posts={paginatedPosts} />
+      <PostCards posts={posts} />
     </ul>
   </Main>
 
-  <Pagination
-    {currentPage}
-    {totalPages}
-    prevUrl={`/development${currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""}/`}
-    nextUrl={`/development/${currentPage + 1}/`}
-  />
-
-  <Footer noMarginTop={totalPages > 1} />
+  <Footer />
 </Layout>
