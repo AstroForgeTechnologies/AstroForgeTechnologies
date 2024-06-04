@@ -20,3 +20,121 @@ Talk About:
 - Beginning Ship CAD
 - Location Discussions
 - Design for Homepage of Website
+
+## Introduction
+
+This week was our first week back from the break! Therefore, we did some re-organising and planned out the time schedule for the weeks to follow, in order to ensure that we will submit the project on time. We also began the work on the CAD of the ship, confirmed the specific location for our initial base via discussions, and sketched out an initial design for the homepage of our website.
+
+## Reorganisation
+
+First, we made a Gantt Chart, in order to ensure everyone in the team knew what was happening at what time, and to ensure that we can submit the work on time. This is shown in Figure 1.
+
+{% image
+   img="/src/assets/images/wk-12/gantt-chart.png"
+   alt="Gantt Chart"
+   caption="Figure 1: Gantt Chart" /%}
+
+The Gantt Chart also provided us with a way to reflect on our progress at the end of a session, which can be used effectively to enable more reflection and make the chart more dynamic.
+
+## Location Discussions
+
+### Location
+
+As our final location for our base, we chose *Utopia Basin*, as shown in Figure 2. Specifically, we will locate our base on the East Side, close to and North of Elysium Mons.
+
+{% image
+   img="/src/assets/images/wk-12/mars-major-locations-map.jpg"
+   alt="Map of Mars with Major Locations Labelled"
+   caption="Figure 2: Map of Mars with Major Locations Labelled (Planetary Society n.d.)" /%}
+
+### Reasons
+
+This was for two main reasons:
+
+- Low Dust Storm Frequency (Figure 3)
+- Close Proximity to Potential Water Ice (Figure 4)
+
+{% image
+   img="/src/assets/images/wk-12/dust-storms.png"
+   alt="Dust Storm Frequency Map"
+   caption="Figure 3: Dust Storm Frequency Map. Red Area is Hellas Basin, Green Area is Utopia Basin. (Batallo & Wang 2018)" /%}
+
+{% image
+   img="/src/assets/images/wk-12/mars-water-ice-map.png"
+   alt="Mars Water Ice Map"
+   caption="Figure 4: Mars Water Ice Map. Gray Area is Utopia Basin, Red is Hellas Basin. (Heldmann et. al 2006)" /%}
+
+However, also shown in Figure 4, the immediate location of our base will most likely not have water ice. Therefore, we will setup our base around the longitude of Elysium Mons, but we will send missions North to collect water ice. We did not choose a location that is higher, due to the much higher frequency of dust storms, which are a much bigger concern then the level of water ice.
+
+### Alternatives
+
+The main other alternative was Hellas Basin, a large deep basin. Although it had slightly higher gravity and slightly lower solar radiation, its large dust storm frequency, as shown in Figure 3, ruled it out as our initial location.
+
+### Other Considerations
+
+Other considerations that were taken account can be seen in the [footnotes](#footnotes).
+
+## Website Design Progress
+
+### Svelte
+
+During the break, the components made in [React](https://react.dev/) was moved to [Svelte](https://svelte.dev/). This was because of three main reasons:
+
+- Svelte code is shorter and more comprehensive
+- Svelte compiles to HTML and JS instead of using the Virtual DOM, making it faster
+- Rewriting everything to Svelte helped Isaac gain valuable information on making future features
+
+See the Search Bar Component [Before](https://github.com/AstroForgeTechnologies/AstroForgeTechnologies.github.io/blob/102675cfaea996d2ff40d0e125037a2c8e277171/src/components/Search.tsx) and [After](https://github.com/AstroForgeTechnologies/AstroForgeTechnologies.github.io/blob/c8f5e96c1ea08db55c583d47e5fca30e2ea96b0e/src/components/SearchBar.svelte).
+
+### Mermaid
+
+Furthermore, support for mermaid graphs was implemented, allowing easy integration of diagrams and graphs. Figure 5 shows an example graph, made with mermaid.
+
+{% mermaid
+   caption="Figure 5: Example Mermaid Graph (from https://mermaid.js.org/syntax/classDiagram.html)" %}
+title: Animal example
+
+note "From Duck till Zebra"
+
+Animal <|-- Duck
+
+note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+
+Animal <|-- Fish
+
+Animal <|-- Zebra
+
+Animal : +int age
+
+Animal : +String gender
+
+Animal: +isMammal()
+
+Animal: +mate()
+
+class Duck{
+
++String beakColor
+
++swim()
+
++quack()
+
+}
+
+class Fish{
+
+-int sizeInFeet
+
+-canEat()
+
+}
+
+class Zebra{
+
++bool is_wild
+
++run()
+
+}
+{% /mermaid %}
