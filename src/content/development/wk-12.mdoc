@@ -91,48 +91,26 @@ See the Search Bar Component [Before](https://github.com/AstroForgeTechnologies/
 Furthermore, support for mermaid graphs was implemented, allowing easy integration of diagrams and graphs. Figure 5 shows an example graph, made with mermaid.
 
 {% mermaid
-   caption="Figure 5: Example Mermaid Graph (from https://mermaid.js.org/syntax/classDiagram.html)" %}
-classDiagram
+   caption="Figure 5: Example Mermaid Graph (from https://mermaid.js.org/syntax/flowchart.html#subgraphs)" %}
+flowchart TB
 
-Animal <|-- Duck
+c1-->a2
 
-note for Duck "can fly\ncan swim\ncan dive"
+subgraph one
 
-Animal <|-- Fish
+a1-->a2
 
-Animal <|-- Zebra
+end
 
-Animal : +int age
+subgraph two
 
-Animal : +String gender
+b1-->b2
 
-Animal: +isMammal()
+end
 
-Animal: +mate()
+subgraph three
 
-class Duck{
+c1-->c2
 
-+String beakColor
-
-+swim()
-
-+quack()
-
-}
-
-class Fish{
-
--int sizeInFeet
-
--canEat()
-
-}
-
-class Zebra{
-
-+bool is_wild
-
-+run()
-
-}
+end
 {% /mermaid %}
