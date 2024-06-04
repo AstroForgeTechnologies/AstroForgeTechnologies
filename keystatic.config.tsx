@@ -55,7 +55,7 @@ const sharedDocument = fields.document({
         ordered: true,
         unordered: true,
       },
-      headingLevels: [2, 3, 4],
+      headingLevels: [2, 3, 4, 5],
       blockTypes: {
         blockquote: true,
         code: true,

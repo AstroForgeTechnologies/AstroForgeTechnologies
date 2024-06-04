@@ -57,7 +57,8 @@
     prose-th:border-skin-line prose-td:border 
     prose-td:border-skin-line prose-img:!my-2 
     prose-img:mx-auto prose-img:border-2 
-    prose-img:border-skin-line prose-hr:!border-skin-line;
+    prose-img:border-skin-line prose-hr:!border-skin-line
+    prose-h5:italic prose-h4:text-[17px];
   }
   .prose a {
     @apply break-words hover:!text-skin-accent;
