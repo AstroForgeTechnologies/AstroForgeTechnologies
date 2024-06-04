@@ -26,11 +26,7 @@ const { Content, headings } = await credits.render();
         <h1 class="text-2xl tracking-wider sm:text-3xl">{title}</h1>
         <Content />
       </article>
-      {
-        headings.length > 0 && (
-          <TableOfContents {headings} client:only="svelte" />
-        )
-      }
+      {headings.length > 0 && <TableOfContents {headings} client:load />}
     </div>
   </Main>
   <Footer />

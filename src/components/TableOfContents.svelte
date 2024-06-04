@@ -17,10 +17,11 @@
     });
   });
 
-  // Get All Heading Anchors & Apply Actions
-  const headingAnchors = Array.from(
-    document.getElementsByClassName("heading-anchor"),
-  );
+  // Get All Heading Anchors & Apply Actions (But ensure it works with SSR)
+  const headingAnchors =
+    typeof document !== "undefined" && document
+      ? Array.from(document.getElementsByClassName("heading-anchor"))
+      : [];
 
   let closest: string = $state("");
   let ticking: boolean = $state(false);

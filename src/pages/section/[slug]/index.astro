@@ -47,11 +47,7 @@ const { Content, headings } = await section.render();
       <article id="article" class="prose max-w-5xl min-w-0">
         <Content />
       </article>
-      {
-        headings.length > 0 && (
-          <TableOfContents {headings} client:only="svelte" />
-        )
-      }
+      {headings.length > 0 && <TableOfContents {headings} client:load />}
     </div>
     <Hr noPadding />
     <div class="flex flex-row items-center justify-between mt-8">

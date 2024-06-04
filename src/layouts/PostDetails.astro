@@ -93,11 +93,7 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
       <article id="article" role="article" class="prose max-w-5xl min-w-0">
         <Content />
       </article>
-      {
-        headings.length > 0 && (
-          <TableOfContents {headings} client:only="svelte" />
-        )
-      }
+      {headings.length > 0 && <TableOfContents {headings} client:load />}
     </div>
 
     <Hr noPadding />
