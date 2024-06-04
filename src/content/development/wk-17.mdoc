@@ -17,3 +17,57 @@ Talk About:
 - Table of Contents (Website)
 - Reflections
 - Finishing off & Polishing
+
+## Introduction
+
+Due to this week being the last week, we mainly focused on finishing off the website, especially the main detailed 'sectional' components.
+
+## Continuation of Christy Leading
+
+This week, we continued with the previous week's arrangement of Christy leading the group. We decided on this due to to the lack of time, and the worry of whether we would finish everything on time, and worries about Isaac's overly perfectionist nature.
+
+Furthermore, Christy also has had more exposure to the progress of the sections, whilst Isaac did not have as much due to his work being mostly on the CAD and website.
+
+## Site Design Progress
+
+### The Mission Page (Previously Called Sections)
+
+Early this week, the navigation to and the design of 'The Mission' page and the individual section pages was finalised. Although the previous design was more complicated, after discussions with the group, Isaac decided that a simpler 'banner' layout would be more professional looking, and importantly, a better fit of the limited time. The main section page and individual section page layouts are shown below in Figure 1 and 2.
+
+#### Implementation Details
+
+This is implemented in a dynamic way, with the title being taken from the page title, and the description and image being fields editable in Keystatic. Furthermore, there are 'related tags' on the bottom of the page, also editable as fields in Keystatic. The main section page is implemented [here](https://github.com/AstroForgeTechnologies/AstroForgeTechnologies.github.io/blob/main/src/pages/section/index.astro), the individual section pages are implemented [here](https://github.com/AstroForgeTechnologies/AstroForgeTechnologies.github.io/blob/main/src/pages/section/%5Bslug%5D/index.astro). The main bulk of the implementation was in [this commit](https://github.com/AstroForgeTechnologies/AstroForgeTechnologies.github.io/commit/23e10eddf7bd7f2ca24ccf550909191742dd77bd), but related tags was implemented in [this commit](https://github.com/AstroForgeTechnologies/AstroForgeTechnologies.github.io/commit/a5c6509636206b71844ef2a10e0d00fb4d6132a9) afterwards.
+
+{% image
+   img="/src/assets/images/wk-17/main-section-layout.png"
+   alt="Layout of the Main Section Page"
+   caption="Figure 1: Layout of the Main Section Page" /%}
+
+{% image
+   img="/src/assets/images/wk-17/individual-section-layout.png"
+   alt="Individual Section Layout"
+   caption="Figure 2: Individual Section Layout" /%}
+
+### Table of Contents
+
+Also shown in Figure 2, a Table of Contents was added to every section page, development post and the credits page. This will improve navigation and readability on these pages. Furthermore, an issue with hash scrolling post-reload on Chromium Browsers was fixed. Figures 3 and 4 shows Development Posts and Credits Page with the Table of Contents.
+
+#### Implementation Details
+
+Heading Anchors were moved to a seperate anchor object, to fix scrolling behind the header. This is implemented in a custom renderer for markdoc headers.
+
+The Table of Contents takes all headers to generate, and in order to find the active header, finds the anchor behind the first anchor that has a y position relative to the viewport that is larger than 0.
+
+Since this can cause problems with the last header not being marked as active, another method was implemented, which took the distances between each element and mapped them linearly to a value between 0 and 1, 1 being at the end of the page. This was implemented in [this branch](https://github.com/AstroForgeTechnologies/AstroForgeTechnologies.github.io/tree/toc), but due to concerns of an element being clicked not marking it as active, the above method was decided to be the preferred choice.
+
+This is implemented in this [Svelte Component](https://github.com/AstroForgeTechnologies/AstroForgeTechnologies.github.io/blob/main/src/components/TableOfContents.svelte), and the bulk of it was implemented in [this commit](https://github.com/AstroForgeTechnologies/AstroForgeTechnologies.github.io/commit/5316e5710deff56d4eb437be57060cabb0ed33d5), with slight improvements in a couple of commits afterwards.
+
+{% image
+   img="/src/assets/images/wk-17/dev-post-toc.png"
+   alt="Development Posts Table of Contents"
+   caption="Figure 3: Development Posts Table of Contents" /%}
+
+{% image
+   img="/src/assets/images/wk-17/credits-toc.png"
+   alt="Credits Table of Contents"
+   caption="Figure 4: Credits Table of Contents" /%}
