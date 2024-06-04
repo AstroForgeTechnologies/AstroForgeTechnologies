@@ -9,7 +9,7 @@ tags:
   - discriminant: 📝 Site Design, Cleanup and Logging
   - discriminant: 🏗️ CAD Design
 authors:
-  - christy
+  - isaac
 ---
 Talk About:
 
@@ -26,6 +26,8 @@ Talk About:
 ## Introduction
 
 This week, Isaac finished off the final CAD design, work on the website was done, and work on the major content information, which is being called the 'sections' for now, was conducted.
+
+---
 
 ## Final CAD Design
 
@@ -55,3 +57,177 @@ The CAD Ship Design has been split into its modules, and has been rendered. Ther
    img="/src/assets/images/wk-15/final-render-1-split.jpg"
    alt="Split Image"
    caption="Figure 5: Split Image" /%}
+
+---
+
+## Website Design Progress
+
+### Colour Scheme & Typography
+
+The colour scheme and typography decided upon in [Week 14](/development/wk-14/#chosen-colour-scheme--typography) was applied to the website! Figure 6 and 7 shows a quick comparison, but the full difference can be viewed in the links in the [Site Design Difference Showcase](#site-design-difference-showcase).
+
+{% image
+   img="/src/assets/images/wk-15/before-homepage.png"
+   alt="Homepage Before Wk 15"
+   caption="Figure 6: Homepage Before Wk 15" /%}
+
+{% image
+   img="/src/assets/images/wk-15/homepage-after.png"
+   alt="Homepage After Wk 15"
+   caption="Figure 7: Homepage After Wk 15" /%}
+
+### Header Change
+
+Also shown in Figure 6 and 7, the header of the website was changed, to be a more spacious and open layout, to include the logo, and to remove some features such as the theme switcher.
+
+Furthermore, as shown in Figure 8, the header now sticks to the top of the page, and there is a shadow effect at the bottom of the header.
+
+{% image
+   img="/src/assets/images/wk-15/after-header.png"
+   alt="Header After Wk 15"
+   caption="Figure 8: Header After Wk 15" /%}
+
+### Logo Change
+
+The logo was also changed, and the before and after of this is shown in Figures 9 and 10. The new logo is simpler, has a circular footprint, and is cleaner in its svg form. We also thought that the presence of Mars better represents our company, and that the background fit better with our new colour scheme.
+
+{% image
+   img="/src/assets/images/wk-15/logo-before.png"
+   alt="Old Logo"
+   caption="Figure 9: Old Logo" /%}
+
+{% image
+   img="/src/assets/images/wk-15/logo-after.png"
+   alt="New Logo"
+   caption="Figure 10: New Logo" /%}
+
+### Site Design Difference Showcase
+
+[Before](https://astro-forge-technologies-2toe8yu25.vercel.app/)
+
+[After](https://astro-forge-technologies-iqgxvbacl.vercel.app/)
+
+---
+
+## Section Work
+
+This week, Will & Christy began work on the sections. Will began working on Location, and Christy began work on Resources. This was self appointed by Will & Christy. However, we also changed our system of work, so that multiple people are not working on the same document at the same time.
+
+This is shown clearly in Figure 11. Because Will & Christy worked on the same document at the same time, two branches must be created, and extra work must be done to merge the two branches together, potentially removing hard work if the same sections were edited.
+
+{% mermaid caption="Figure 11: Merge Conflicts and Branch Expansions" %}
+gitGraph
+
+commit
+
+commit
+
+branch Will
+
+commit
+
+commit
+
+branch Christy
+
+commit
+
+commit
+
+commit
+
+checkout main
+
+commit
+{% /mermaid %}
+
+This can lead to very messy situation as well, as exaggerated in Figure 12.
+
+{% mermaid
+   caption="Figure 12: A Messy Git System (From https://mermaid.js.org/syntax/gitgraph.html#hiding-commit-labels)" %}
+%%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': false,'showCommitLabel': false}} }%%
+
+gitGraph
+
+commit
+
+branch hotfix
+
+checkout hotfix
+
+commit
+
+branch develop
+
+checkout develop
+
+commit id:"ash"
+
+branch featureB
+
+checkout featureB
+
+commit type:HIGHLIGHT
+
+checkout main
+
+checkout hotfix
+
+commit type:NORMAL
+
+checkout develop
+
+commit type:REVERSE
+
+checkout featureB
+
+commit
+
+checkout main
+
+merge hotfix
+
+checkout featureB
+
+commit
+
+checkout develop
+
+branch featureA
+
+commit
+
+checkout develop
+
+merge hotfix
+
+checkout featureA
+
+commit
+
+checkout featureB
+
+commit
+
+checkout develop
+
+merge featureA
+
+branch release
+
+checkout release
+
+commit
+
+checkout main
+
+commit
+
+checkout release
+
+merge main
+
+checkout develop
+
+merge release
+{% /mermaid %}
