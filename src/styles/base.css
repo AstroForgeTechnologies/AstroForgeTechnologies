@@ -115,7 +115,7 @@
   }
 
   .heading-anchor {
-    @apply absolute -top-[175px];
+    @apply absolute -top-[150px];
   }
 }
 

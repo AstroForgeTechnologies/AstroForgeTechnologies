@@ -35,7 +35,7 @@
   /* Find the Best Fit Element */
   function find() {
     let currentClosest: number = headingAnchors.findIndex(
-      element => element.getBoundingClientRect().y > 0,
+      element => element.getBoundingClientRect().y > 25,
     );
 
     let element: string;
