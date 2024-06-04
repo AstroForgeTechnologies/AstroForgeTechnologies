@@ -2,11 +2,8 @@
 import { getCollection } from "astro:content";
 import TagPosts from "@layouts/TagPosts.astro";
 import getPostsByTag from "@utils/getPostsByTag";
-import getPagination from "@utils/getPagination";
 import getUniqueTags from "../../../utils/tagHelper";
 import postFilter from "../../../utils/postFilter";
-
-export const prerender = true;
 
 export async function getStaticPaths() {
   const posts = await getCollection("development", postFilter);
@@ -24,12 +21,6 @@ export async function getStaticPaths() {
 const { tag, posts } = Astro.props;
 
 const postsByTag = getPostsByTag(posts, tag);
-
-const pagination = getPagination({
-  posts: postsByTag,
-  page: 1,
-  isIndex: true,
-});
 ---
 
-<TagPosts {...pagination} {tag} />
+<TagPosts posts={postsByTag} {tag} />
