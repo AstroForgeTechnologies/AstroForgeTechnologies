@@ -136,10 +136,12 @@ commit
 This can lead to very messy situation as well, as exaggerated in Figure 12.
 
 {% mermaid
-   caption="Figure 12: A Messy Git System (From https://mermaid.js.org/syntax/gitgraph.html#hiding-commit-labels)" %}
+   caption="Figure 12: A Messy Git System (Adapted From https://mermaid.js.org/syntax/gitgraph.html#hiding-commit-labels)" %}
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'showBranches': false,'showCommitLabel': false}} }%%
 
 gitGraph
+
+commit
 
 commit
 
@@ -215,11 +217,13 @@ checkout main
 
 commit
 
-checkout release
-
-merge main
-
 checkout develop
 
 merge release
+
+checkout main
+
+merge develop
+
+commit
 {% /mermaid %}
