@@ -1,0 +1,40 @@
+---
+import { slugifyStr } from "../utils/slugify";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  before?: CollectionEntry<"section">;
+  after?: CollectionEntry<"section">;
+  prefix: string;
+}
+const { prefix, before, after }: Props = Astro.props;
+---
+
+<div class="flex flex-row items-center justify-between mt-8">
+  {
+    before && (
+      <a
+        href={`/${prefix}/${slugifyStr(before.slug)}`}
+        class="mr-auto hover:text-accent transition-colors duration-200"
+      >
+        ←{" "}
+        <span transition:name={slugifyStr(before.data.title)}>
+          {before.data.title}
+        </span>
+      </a>
+    )
+  }
+  {
+    after && (
+      <a
+        href={`/${prefix}/${slugifyStr(after.slug)}`}
+        class="ml-auto hover:text-accent transition-colors duration-200"
+      >
+        <span transition:name={slugifyStr(after.data.title)}>
+          {after.data.title}
+        </span>{" "}
+        →
+      </a>
+    )
+  }
+</div>

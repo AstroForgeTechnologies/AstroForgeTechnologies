@@ -12,6 +12,7 @@ import Main from "./Main.astro";
 import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
 import Hr from "../components/Hr.astro";
 import TableOfContents from "../components/TableOfContents.svelte";
+import Navigation from "../components/Navigation.astro";
 
 export interface Props {
   post: CollectionEntry<"development">;
@@ -97,28 +98,7 @@ const uniqueTags = getUniqueTagsOfTags(tags as InputTag[]);
     </div>
 
     <Hr noPadding />
-    <div class="flex flex-row items-center justify-between mt-8">
-      {
-        before && (
-          <a
-            href={`/development/${slugifyStr(before.slug)}`}
-            class="mr-auto hover:text-accent transition-colors duration-200"
-          >
-            ← {before.data.title}
-          </a>
-        )
-      }
-      {
-        after && (
-          <a
-            href={`/development/${slugifyStr(after.slug)}`}
-            class="ml-auto hover:text-accent transition-colors duration-200"
-          >
-            {after.data.title} →
-          </a>
-        )
-      }
-    </div>
+    <Navigation {before} {after} prefix="development" />
 
     <ul class="mt-5 mb-8">
       {uniqueTags.map(tag => <Tag tag={tag} />)}

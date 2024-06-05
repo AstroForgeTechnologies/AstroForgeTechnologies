@@ -1,16 +1,16 @@
 ---
-import { slugifyStr } from "../../../utils/slugify";
 import { getCollection } from "astro:content";
-import { slugifyStr } from "../../../utils/slugify";
+import { slugifyStr } from "@utils/slugify";
 import { SITE } from "@config";
 import Footer from "@components/Footer.astro";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import ScrollProgressIndicator from "@components/ScrollProgressIndicator.svelte";
-import Tag from "../../../components/Tag.astro";
-import Hr from "../../../components/Hr.astro";
-import { getUniqueTagsOfTagStrings } from "../../../utils/tagHelper";
-import TableOfContents from "../../../components/TableOfContents.svelte";
+import Tag from "@components/Tag.astro";
+import Hr from "@components/Hr.astro";
+import { getUniqueTagsOfTagStrings } from "@utils/tagHelper";
+import TableOfContents from "@components/TableOfContents.svelte";
+import Navigation from "@components/Navigation.astro";
 
 export async function getStaticPaths() {
   const sections = await getCollection("section");
@@ -50,28 +50,7 @@ const { Content, headings } = await section.render();
       {headings.length > 0 && <TableOfContents {headings} client:load />}
     </div>
     <Hr noPadding />
-    <div class="flex flex-row items-center justify-between mt-8">
-      {
-        before && (
-          <a
-            href={`/section/${slugifyStr(before.slug)}`}
-            class="mr-auto hover:text-accent transition-colors duration-200"
-          >
-            ← {before.data.title}
-          </a>
-        )
-      }
-      {
-        after && (
-          <a
-            href={`/section/${slugifyStr(after.slug)}`}
-            class="ml-auto hover:text-accent transition-colors duration-200"
-          >
-            {after.data.title} →
-          </a>
-        )
-      }
-    </div>
+    <Navigation {before} {after} prefix="section" />
     <ul class="mt-5 mb-8">
       Related Tags: {foundTags.map(tag => <Tag tag={tag} />)}
     </ul>
