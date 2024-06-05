@@ -122,7 +122,12 @@
                         repairability
                       </span>.
                     </p>
-                    <a class="more-info" href="/">Find Out More -> (WIP)</a>
+                    <a
+                      class="more-info"
+                      href="/section/01-ship-journey/#modularity"
+                    >
+                      Find Out More ->
+                    </a>
                   </div>
                 </TheatreTextBox>
                 <TheatreTextBox key="Resilient">
@@ -141,7 +146,12 @@
                         redundancy
                       </span>.
                     </p>
-                    <a class="more-info" href="/">Find Out More -> (WIP)</a>
+                    <a
+                      class="more-info"
+                      href="/section/01-ship-journey/#redundancy"
+                    >
+                      Find Out More ->
+                    </a>
                   </div>
                 </TheatreTextBox>
                 <TheatreTextBox key="Fast">
@@ -159,7 +169,12 @@
                         safety
                       </span>.
                     </p>
-                    <a href="/" class="more-info">Find Out More -> (WIP)</a>
+                    <a
+                      href="/section/01-ship-journey/#engines"
+                      class="more-info"
+                    >
+                      Find Out More ->
+                    </a>
                   </div>
                 </TheatreTextBox>
               </div>
