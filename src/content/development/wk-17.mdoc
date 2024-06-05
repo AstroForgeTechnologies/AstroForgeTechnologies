@@ -13,7 +13,7 @@ authors:
   - christy
   - will
 ---
-## Introduction
+## TIntroduction
 
 Due to this week being the last week, we mainly focused on finishing off the website, especially the main detailed 'sectional' components.
 
@@ -43,11 +43,27 @@ This is implemented in a dynamic way, with the title being taken from the page t
    alt="Individual Section Layout"
    caption="Figure 2: Individual Section Layout" /%}
 
-### Table of Contents
+#### Changes from Original Layout Plan
+
+The resulting final layout was *very* different to the original plan, as showcased in [Week 14](/development/wk-14/#main-content-layout), going from a complex dynamic layout to a simple banner style layout.
+
+This was mainly due to time constraints, concerns about long loading times, and concerns about a large number of edge cases, which would result in micromanagement of the design.
+
+The original design featured a very complex layout, which would take more time to build out. This was not sustainable, especially considered the much longer than estimated development time of the homepage.
+
+Furthermore, the design loaded every page at once, which could potentially lead to slow loading times.
+
+Finally, because of the header bar, if the headers got too long, this would not work, leading to a lack of general purpose usability and micromanagement.
+
+However, as the design is still very good, if more time was allocated, the design of the plan would have been explored and experimented with.
+
+### Navigation Changes
+
+#### Table of Contents
 
 Also shown in Figure 2, a Table of Contents was added to every section page, development post and the credits page. This will improve navigation and readability on these pages. Furthermore, an issue with hash scrolling post-reload on Chromium Browsers was fixed. Figures 3 and 4 shows Development Posts and Credits Page with the Table of Contents.
 
-#### Implementation Details
+##### Implementation Details
 
 Heading Anchors were moved to a seperate anchor object, to fix scrolling behind the header. This is implemented in a custom renderer for markdoc headers.
 
@@ -67,9 +83,25 @@ This is implemented in this [Svelte Component](https://github.com/AstroForgeTech
    alt="Credits Table of Contents"
    caption="Figure 4: Credits Table of Contents" /%}
 
+#### End Of Page Navigation
+
+The end of page navigation also underwent changes. The 'back to top' button and social share links, as shown in Figure 5, where removed. The back to top button was found to be fairly useless, and the share links are not relevant to our assignment.
+
+As seen in Figure 6, these buttons were replaced by two buttons allowing navigation to the post after and before the current post. This should make reading through the entire website much easier and streamlined for potential readers (and markers).
+
+{% image
+   img="/src/assets/images/wk-17/end-of-page-navigation-old.png"
+   alt="Old End of Page Navigation"
+   caption="Figure 5: Old End of Page Navigation" /%}
+
+{% image
+   img="/src/assets/images/wk-17/end-of-page-navigation-new.png"
+   alt="New End of Page Navigation"
+   caption="Figure 6: New End of Page Navigation" /%}
+
 ### Other Changes
 
-Futhermore, the Development Posts overview and tag list was changed from multiple pages to one, providing a smoother experience, the page width was expanded from `4xl` to `5xl` (from `3xl` in Week 15), and there were assorted improvements and cleanups elsewhere. The 'about us' page was also removed, with plans to incorporate its potential contents elsewhere. Finally, buttons and more information was added to the homepage.
+Futhermore, the Development Posts overview and tag list was changed from multiple pages to one, providing a smoother experience, the page width was expanded from `3xl` to `5xl`, due to the need for extra space to fit the Table of Contents, and there were assorted improvements and cleanups elsewhere. The 'about us' page was also removed, with plans to incorporate its potential contents elsewhere. Finally, buttons and more information was added to the homepage.
 
 ### Site Design Difference Showcase
 
