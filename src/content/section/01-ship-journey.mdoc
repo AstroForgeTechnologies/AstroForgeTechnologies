@@ -262,7 +262,30 @@ Although photovoltaic cells are quite heavy, according to *Ecoflow 2022*, commer
 
 ##### Centrifuge
 
-The centrifuge is of an interesting shape to transport.
+The centrifuge is of an interesting shape to transport. Because the edges of the centrifuge are straight, and the edges of the payload cylinder are… round, the size is further limited.
+
+For all future calculations, the centrifuge is viewed side on, with the *origin* of the circle being the point in the centre of the centrifuge.
+
+The maximum size for a centrifuge module, due to the straight sides, is 7.42m by 3m by 22m.
+
+```
+This was calculated via:
+
+y^2 = 16 - 2.25
+y^2 = 13.75
+
+y = 3.71
+
+Max Height = y * 2
+Max Height = 7.42
+
+Essentially, we find the height (y) of a circle, where the sides are 1.5m offset from the origin.
+(Because the centrifuge module is 3m wide, 1.5m each side)
+```
+
+Because the 3m width of the centrifuge is fixed, the optimal position is where one dimension of a module is greater than 7.42m, and the other is equal to 7.42m.
+
+The first dimension to surpass 7.42m is the y value, or the height, of the module. This happens once 'x' value of the circle surpasses
 
 ---
 
