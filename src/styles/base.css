@@ -111,8 +111,8 @@
     word-wrap: break-word;
   }
 
-  pre > code {
-    white-space: pre;
+  pre {
+    word-wrap: break-word;
   }
 
   .heading-anchor {
