@@ -284,6 +284,7 @@ The maximum size for a centrifuge module, due to the straight sides, is 7.42m by
 ```
 This was calculated via:
 
+y^2 = 16 - 1.5^2
 y^2 = 16 - 2.25
 y^2 = 13.75
 
@@ -298,7 +299,51 @@ Essentially, we find the height (y) of a circle, where the sides are 1.5m offset
 
 Because the 3m width of the centrifuge is fixed, the optimal position is where one dimension of a module is greater than 7.42m, and the other is equal to 7.42m.
 
-The first dimension to surpass 7.42m is the y value, or the height, of the module. This happens once 'x' value of the circle surpasses
+The first dimension to surpass 7.42m is the y value, or the height, of the module. This happens once 'x' value of the circle surpasses 3.30m, which is a tiny width.
+
+```
+This was calculated via:
+
+x^2 = 100 - 7.42^2
+x^2 = 100 - 55.0564
+
+x = 6.70
+
+Width: 3.3m
+```
+
+The width reaches 7.42m once the height is around 9.66m.
+
+```
+This was calculated via:
+
+y^2 = 100 - (10 - 7.42)^2
+y^2 = 100 - 2.58^2
+y^2 = 100 - 6.0564
+y^2 = 93.3436
+
+y = 9.66
+
+Height: 9.66m
+```
+
+However, this is not going to be an equal separation of the modules! To find the optimal separation for an equal module setup, which improves structure and keeps the average space per module equal, we found the optimal angle between the start and end of the module. The found angle was 68.37°.
+
+```
+This was calculated via:
+
+a = cos^-1((10-7.42) / 7)
+a = 68.37°
+
+Angle - 68.37°
+
+Although / 7 may look weird, this is because:
+Cosine uses the ratio of adjacent vs hypotenuse. 
+```
+
+We rounded this down to the nearest angle, which had equal parts in 360°. This resulted in 6x60° Modules.
+
+Although this may seem small, in reality, each module has around 10.47m by 3m of floor.
 
 ---
 
