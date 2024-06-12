@@ -5,3 +5,8 @@
     <a href="https://github.com/AstroForgeTechnologies/AstroForgeTechnologies/blob/main/LICENSE"><img src="https://img.shields.io/github/license/AstroForgeTechnologies/AstroForgeTechnologies?style=for-the-badge&logo=github" alt="License"></a>
     <a href="https://astroforgetechnologies.github.io/"><img src="https://img.shields.io/github/actions/workflow/status/AstroForgeTechnologies/AstroForgeTechnologies/build.yml?branch=main&event=push&style=for-the-badge&logo=github&label=Website" alt="Website"></a>
 </h1>
+
+## Notice of Deprecation
+This repository was for a project only, which has now concluded. Therefore, this project is now archived. Although some updates may occur in future years, such as updating depedendencies or fixing bugs, most likely, this repository will not have further changes.
+
+You are welcome to use the code in this repository, or the website, as inspiration or as source code!
